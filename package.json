@@ -11,11 +11,15 @@
     "preview": "astro preview",
     "astro": "astro"
   },
+  "pnpm": {
+    "onlyBuiltDependencies": ["sharp", "esbuild"]
+  },
   "dependencies": {
     "@fontsource/cinzel": "^5.2.8",
     "@fontsource/metamorphous": "^5.2.8",
     "@tailwindcss/vite": "^4.2.1",
     "astro": "^6.0.5",
+    "sharp": "^0.34.5",
     "tailwindcss": "^4.2.1"
   }
 }
