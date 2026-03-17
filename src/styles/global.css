@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@import "@fontsource/cinzel/400.css";
+@import "@fontsource/cinzel/600.css";
+@import "@fontsource/metamorphous/400.css";
 
 @theme {
   --font-medieval: 'Metamorphous', cursive;
