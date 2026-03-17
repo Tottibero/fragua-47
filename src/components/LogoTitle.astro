@@ -1,0 +1,53 @@
+<a href="/" class="logo-brand">
+	<img src="/VectLogoF47.png" alt="Logo Fragua47" class="logo-img" />
+	<h1 class="logo-metalico">FRAGUA47</h1>
+</a>
+
+<style>
+	.logo-brand {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		text-decoration: none;
+		transition: filter 0.4s ease;
+	}
+
+	.logo-brand:hover .logo-metalico {
+		filter: brightness(2.2) drop-shadow(0 0 10px rgba(220, 120, 30, 0.7));
+	}
+
+	.logo-img {
+		height: 72px;
+		width: auto;
+	}
+
+	.logo-metalico {
+		font-family: 'Metamorphous', cursive;
+		font-size: 58px;
+		font-weight: 400;
+		margin: 0;
+		letter-spacing: 3px;
+
+		background: linear-gradient(
+			to bottom,
+			#ffe0b0 0%,
+			#f0a060 15%,
+			#e08040 40%,
+			#d07030 65%,
+			#a04018 85%,
+			#6a2808 100%
+		);
+
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+		filter: brightness(1.6);
+		transition: filter 0.4s ease;
+
+		text-shadow:
+			1px 1px 0px #5a2006,
+			2px 2px 0px #3d1404,
+			3px 3px 0px #250a02,
+			4px 4px 10px rgba(0, 0, 0, 0.9);
+	}
+</style>

@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --font-medieval: 'Metamorphous', cursive;
+  --font-cinzel: 'Cinzel', serif;
+
+  --color-copper-100: #ffe0b0;
+  --color-copper-300: #f0a060;
+  --color-copper-500: #c86828;
+  --color-copper-700: #7a2e08;
+  --color-copper-900: #3d1404;
+
+  --color-bg-dark:    #1c1c1d;
+  --color-bg-header-dark: #111110;
+  --color-border-dark: #3a1e08;
+
+  --color-bg-light:   #f2e8d8;
+  --color-bg-header-light: #e8d4b8;
+  --color-border-light: #c8a070;
+}
+
+/* ── Metallic copper text ── */
+.text-copper {
+  font-family: var(--font-medieval);
+  background: linear-gradient(
+    to bottom,
+    #ffe0b0 0%,
+    #f0a060 15%,
+    #e08040 40%,
+    #d07030 65%,
+    #a04018 85%,
+    #6a2808 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: brightness(1.6);
+}
+
+/* ── Theme ── */
+html, body { background-color: #e8dcc8; color: #1a0e06; }
