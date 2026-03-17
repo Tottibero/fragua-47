@@ -1,6 +1,9 @@
 ---
 import '../styles/global.css';
 import LogoTitle from '../components/LogoTitle.astro';
+import cinzel400 from '@fontsource/cinzel/files/cinzel-latin-400-normal.woff2?url';
+import cinzel600 from '@fontsource/cinzel/files/cinzel-latin-600-normal.woff2?url';
+import metamorphous from '@fontsource/metamorphous/files/metamorphous-latin-400-normal.woff2?url';
 const path = Astro.url.pathname.replace(/\/$/, '');
 const { description = 'Fragua47 — Comunidad BDSM' } = Astro.props;
 ---
@@ -13,6 +16,9 @@ const { description = 'Fragua47 — Comunidad BDSM' } = Astro.props;
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
 		<meta name="generator" content={Astro.generator} />
+		<link rel="preload" as="font" type="font/woff2" href={cinzel400} crossorigin />
+		<link rel="preload" as="font" type="font/woff2" href={cinzel600} crossorigin />
+		<link rel="preload" as="font" type="font/woff2" href={metamorphous} crossorigin />
 		<meta name="description" content={description} />
 		<title>Fragua47</title>
 	</head>
