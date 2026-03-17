@@ -17,10 +17,6 @@ const path = Astro.url.pathname.replace(/\/$/, '');
 	</head>
 	<body>
 
-		<div id="loader" style="position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center">
-			<img src="/forjatransparente.gif" alt="Cargando..." id="loader-gif" />
-		</div>
-
 		<div class="header-wrap">
 			<header>
 				<div class="header-top">
@@ -70,8 +66,6 @@ const path = Astro.url.pathname.replace(/\/$/, '');
 </html>
 
 <script is:inline>
-	const GIF_DURATION = 1000;
-
 	function matchMainToHeader() {
 		const header = document.querySelector('header');
 		const main   = document.querySelector('main');
@@ -94,30 +88,6 @@ const path = Astro.url.pathname.replace(/\/$/, '');
 			const open = nav.classList.toggle('open');
 			btn.setAttribute('aria-expanded', open);
 		});
-	});
-
-	window.addEventListener('DOMContentLoaded', () => {
-		const loader = document.getElementById('loader');
-		const headerWrap = document.querySelector('.header-wrap');
-		const main = document.querySelector('main');
-
-		if (sessionStorage.getItem('intro-done')) {
-			loader.remove();
-			main.classList.add('visible');
-			return;
-		}
-
-		headerWrap.style.clipPath = 'inset(0 0 100% 0)';
-
-		setTimeout(() => {
-			loader.classList.add('fade-out');
-			headerWrap.classList.add('unroll');
-			headerWrap.addEventListener('animationend', () => {
-				main.classList.add('visible');
-				sessionStorage.setItem('intro-done', '1');
-			}, { once: true });
-			loader.addEventListener('transitionend', () => loader.remove(), { once: true });
-		}, GIF_DURATION);
 	});
 </script>
 
@@ -170,12 +140,6 @@ const path = Astro.url.pathname.replace(/\/$/, '');
 		filter: blur(3px) url(#parchment-edge);
 	}
 
-	/* ── Parchment unroll ── */
-	@keyframes unroll {
-		0%   { clip-path: inset(0 0 100% 0); }
-		100% { clip-path: inset(0 0 0% 0); }
-	}
-
 	.header-wrap {
 		position: sticky;
 		top: 0;
@@ -195,11 +159,6 @@ const path = Astro.url.pathname.replace(/\/$/, '');
 		height: 120px;
 		width: fit-content;
 	}
-
-	.header-wrap.unroll {
-		animation: unroll 2.2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
-	}
-
 
 	nav {
 		display: flex;
@@ -270,15 +229,7 @@ const path = Astro.url.pathname.replace(/\/$/, '');
 
 	main {
 		padding: 1.5rem 0;
-		opacity: 0;
-		transition: opacity 0.8s ease;
 	}
-	main.visible { opacity: 1; }
-
-	/* ── Loader ── */
-	#loader { transition: opacity 0.6s ease; }
-	#loader.fade-out { opacity: 0; pointer-events: none; }
-	#loader-gif { max-height: 60vh; max-width: 60vw; }
 
 	/* ── Hamburger ── */
 	.hamburger {
