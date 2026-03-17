@@ -1,10 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import portadaImg from '../assets/La-Mazmorra-de-Los-Reyes-01.jpeg';
 ---
 
 <Layout>
 	<article>
-		<img src="/La-Mazmorra-de-Los-Reyes-01.jpeg" alt="La Mazmorra de los Reyes" class="portada" width="1024" height="683" />
+		<Image src={portadaImg} alt="La Mazmorra de los Reyes" class="portada" format="webp" quality={80} />
 		<div class="text-col">
 			<h2>Home</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
