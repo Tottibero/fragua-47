@@ -49,6 +49,14 @@ import Layout from '../layouts/Layout.astro';
 		display: block;
 	}
 
+	@media (max-width: 768px) {
+		article {
+			grid-template-columns: 1fr;
+			margin: 1.5rem auto;
+			gap: 1.5rem;
+		}
+	}
+
 	::selection {
 		background: rgba(180, 80, 20, 0.35);
 		color: #ffe0b0;

@@ -7,7 +7,7 @@ import LogoTitle from '../components/LogoTitle.astro';
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
@@ -21,16 +21,21 @@ import LogoTitle from '../components/LogoTitle.astro';
 		</div>
 
 		<div class="header-wrap">
-		<header>
-				<LogoTitle />
-				<nav>
+			<header>
+				<div class="header-top">
+					<LogoTitle />
+					<button class="hamburger" aria-label="Menú" aria-expanded="false">
+						<span></span><span></span><span></span>
+					</button>
+				</div>
+				<nav id="main-nav">
 					<a href="/eventos"        class={Astro.url.pathname === '/eventos'        ? 'active' : ''}>Eventos</a>
 					<a href="/normas"          class={Astro.url.pathname === '/normas'          ? 'active' : ''}>Normas</a>
 					<a href="/sobre-nosotros"  class={Astro.url.pathname === '/sobre-nosotros'  ? 'active' : ''}>Sobre nosotros</a>
 					<a href="/local"           class={Astro.url.pathname === '/local'           ? 'active' : ''}>Local</a>
 					<a href="/contacto"        class={Astro.url.pathname === '/contacto'        ? 'active' : ''}>Contacto</a>
 				</nav>
-		</header>
+			</header>
 		</div>
 
 		<main>
@@ -68,10 +73,26 @@ import LogoTitle from '../components/LogoTitle.astro';
 	function matchMainToHeader() {
 		const header = document.querySelector('header');
 		const main   = document.querySelector('main');
-		if (header && main) main.style.width = header.offsetWidth + 'px';
+		if (!header || !main) return;
+		if (window.innerWidth <= 768) {
+			main.style.width = '100%';
+			main.style.padding = '1rem';
+		} else {
+			main.style.width = header.offsetWidth + 'px';
+			main.style.padding = '';
+		}
 	}
 	window.addEventListener('DOMContentLoaded', matchMainToHeader);
 	window.addEventListener('resize', matchMainToHeader);
+
+	window.addEventListener('DOMContentLoaded', () => {
+		const btn = document.querySelector('.hamburger');
+		const nav = document.getElementById('main-nav');
+		btn?.addEventListener('click', () => {
+			const open = nav.classList.toggle('open');
+			btn.setAttribute('aria-expanded', open);
+		});
+	});
 
 	window.addEventListener('DOMContentLoaded', () => {
 		const loader = document.getElementById('loader');
@@ -229,4 +250,63 @@ import LogoTitle from '../components/LogoTitle.astro';
 	#loader { transition: opacity 0.6s ease; }
 	#loader.fade-out { opacity: 0; pointer-events: none; }
 	#loader-gif { max-height: 60vh; max-width: 60vw; }
+
+	/* ── Hamburger ── */
+	.hamburger {
+		display: none;
+		flex-direction: column;
+		justify-content: center;
+		gap: 5px;
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 0.4rem;
+	}
+	.hamburger span {
+		display: block;
+		width: 26px;
+		height: 2px;
+		background: #3a1a04;
+		transition: transform 0.3s ease, opacity 0.3s ease;
+	}
+
+	/* ── Mobile ── */
+	@media (max-width: 768px) {
+		header {
+			flex-direction: column;
+			height: auto;
+			width: 100%;
+			padding: 0.8rem 1rem;
+			gap: 0;
+		}
+
+		.header-top {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+		}
+
+		.hamburger { display: flex; }
+
+		nav {
+			display: none;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-top: 0.8rem;
+			padding-bottom: 0.5rem;
+			gap: 0.9rem;
+			width: 100%;
+		}
+		nav.open { display: flex; }
+
+		nav a {
+			font-size: 0.95rem;
+			letter-spacing: 1px;
+		}
+	}
+
+	@media (min-width: 769px) {
+		.header-top { display: contents; }
+	}
 </style>
