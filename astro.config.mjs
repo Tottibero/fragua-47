@@ -1,11 +1,12 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
-import netlify from '@astrojs/netlify';
+import { defineConfig, passthroughImageService } from 'astro/config';
+import cloudflare from '@astrojs/cloudflare';
 import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  adapter: netlify(),
+  adapter: cloudflare({ platformProxy: { enabled: false } }),
+  image: { service: passthroughImageService() },
   vite: {
     plugins: [tailwindcss()]
   },

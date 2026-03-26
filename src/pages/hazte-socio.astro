@@ -418,7 +418,11 @@ import logoImg from '../assets/VectLogoF47.png';
 		btn.textContent = 'Enviando...';
 		msg.className = 'form-msg';
 		msg.textContent = '';
-		const res = await fetch('/api/socio', { method: 'POST', body: new FormData(form) });
+		const correo  = document.getElementById('correo').value.trim();
+		const alias   = document.getElementById('alias').value.trim();
+		const fetlife = document.getElementById('fetlife').value.trim();
+		const notas   = document.getElementById('notas').value.trim();
+		const res = await fetch('/api/socio', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify({ correo, alias, fetlife, notas }) });
 		if (res.ok) {
 			msg.className = 'form-msg ok';
 			msg.textContent = '¡Solicitud enviada! Te contactamos pronto.';
