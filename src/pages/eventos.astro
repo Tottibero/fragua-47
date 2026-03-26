@@ -731,12 +731,13 @@ import Layout from '../layouts/Layout.astro';
 			grid-template-rows: auto auto auto;
 			grid-template-areas:
 				"stack"
-				"foto"
-				"cal";
+				"cal"
+				"foto";
 			height: auto;
 			overflow: visible;
 		}
-		.foto-wrap { height: 280px; }
+		.foto-wrap { height: auto; }
+		.foto-eventos { height: auto; object-fit: contain; }
 		.evento-stack { overflow: visible; }
 		.text-col-evento { overflow: visible; }
 		.fila-campos { grid-template-columns: 1fr; }
