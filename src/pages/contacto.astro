@@ -1,42 +1,316 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import logoImg from '../assets/VectLogoF47.png';
 ---
 
 <Layout description="Contacta con Fragua47. Escríbenos para cualquier consulta o para conocer la comunidad.">
-	<article>
-		<h2>Contacto</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-		<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-	</article>
+	<section class="pagina">
+
+		<div class="tarjeta-texto">
+			<Image src={logoImg} alt="Logo Fragua47" class="logo" width={60} height={68} format="webp" />
+			<h2>FRAGUA47</h2>
+			<hr class="linea" />
+			<p class="subtitulo">Contacto</p>
+			<p>¿Tienes dudas, quieres saber más o simplemente quieres saludarnos? Escríbenos. Somos gente normal con muchas ganas de compartir.</p>
+			<p>También puedes escribirnos si quieres colaborar, proponer una charla o taller, o simplemente asomarte a ver qué hacemos por aquí.</p>
+		</div>
+
+		<div class="documento">
+			<div class="doc-header">
+				<Image src={logoImg} alt="Logo Fragua47" class="doc-logo" width={28} height={32} format="webp" />
+				<h3>Escríbenos</h3>
+				<span class="doc-sello">⚒</span>
+			</div>
+			<p class="doc-sub">— Formulario de contacto · Fragua47 —</p>
+			<hr class="linea" />
+
+			<form id="form-contacto">
+				<div class="fila-campos">
+					<div class="campo">
+						<label for="correo">Correo <span class="req">*</span></label>
+						<input type="email" id="correo" name="correo" required placeholder="tu@correo.com" />
+					</div>
+					<div class="campo">
+						<label for="alias">Alias <span class="req">*</span></label>
+						<input type="text" id="alias" name="alias" required placeholder="¿Cómo te llamamos?" />
+					</div>
+				</div>
+
+				<div class="campo">
+					<label for="asunto">Asunto</label>
+					<input type="text" id="asunto" name="asunto" placeholder="Motivo de tu mensaje..." />
+				</div>
+
+				<div class="campo">
+					<label for="mensaje">Mensaje <span class="req">*</span></label>
+					<textarea id="mensaje" name="mensaje" rows="4" required placeholder="Cuéntanos..."></textarea>
+				</div>
+
+				<hr class="linea" />
+
+				<div class="doc-footer">
+					<p class="form-msg" id="form-msg"></p>
+					<button type="submit" id="form-btn">Enviar mensaje ⚒</button>
+				</div>
+			</form>
+		</div>
+
+	</section>
 </Layout>
 
 <style>
-	article {
-		max-width: 720px;
-		margin: 3rem auto;
-		line-height: 1.9;
+	.pagina {
+		display: grid;
+		grid-template-columns: 2fr 3fr;
+		gap: 1.5rem;
+		align-items: stretch;
+		margin: 2.5rem auto;
 		font-family: 'Cinzel', serif;
-		font-size: 1rem;
-		font-weight: 600;
-		color: #3d2010;
+	}
+
+	/* ── Tarjeta texto ── */
+
+	.tarjeta-texto {
+		background: #d4b896;
+		border: 3px solid #2a1208;
+		outline: 1px solid #2a1208;
+		outline-offset: 4px;
+		box-shadow: 5px 5px 0 #2a1208;
+		padding: 1.2rem 1.4rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+	}
+
+	.logo {
+		display: block;
+		margin: 0 auto 0.5rem;
+		height: 60px;
+		width: auto;
+		opacity: 0.85;
 	}
 
 	h2 {
-		font-size: 1.4rem;
-		letter-spacing: 3px;
+		font-size: 1.6rem;
+		letter-spacing: 5px;
 		text-transform: uppercase;
 		color: #2a1208;
-		margin-bottom: 1.5rem;
+		margin-bottom: 0.3rem;
+		line-height: 1.1;
+		font-family: 'Metamorphous', cursive;
 	}
 
-	p {
-		margin-bottom: 1.2rem;
-		color: #3d2010;
+	.subtitulo {
+		font-size: 0.6rem !important;
+		letter-spacing: 3px;
+		text-transform: uppercase;
+		color: #5a3018 !important;
+		margin-bottom: 0.6rem !important;
 	}
+
+	.tarjeta-texto p {
+		font-size: 0.72rem;
+		font-weight: 600;
+		line-height: 1.8;
+		color: #2a1208;
+		margin-bottom: 0.5rem;
+	}
+
+	.tarjeta-texto p:last-child {
+		margin-bottom: 0;
+	}
+
+	/* ── Documento formulario ── */
+
+	.documento {
+		background: #d4b896;
+		border: 3px solid #2a1208;
+		outline: 1px solid #2a1208;
+		outline-offset: 5px;
+		box-shadow: 6px 6px 0 #2a1208;
+		padding: 1.6rem 1.8rem;
+	}
+
+	.doc-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.6rem;
+		margin-bottom: 0.3rem;
+	}
+
+	.doc-logo {
+		height: 28px;
+		width: auto;
+		flex-shrink: 0;
+	}
+
+	.doc-sello {
+		font-size: 1.8rem;
+		flex-shrink: 0;
+		line-height: 1;
+		filter: sepia(1) saturate(4) brightness(0.45) hue-rotate(-5deg);
+	}
+
+	h3 {
+		font-size: 0.9rem;
+		letter-spacing: 4px;
+		text-transform: uppercase;
+		color: #2a1208;
+		margin: 0;
+		text-align: center;
+	}
+
+	.doc-sub {
+		font-size: 0.55rem;
+		letter-spacing: 1.5px;
+		color: #5a3018;
+		text-align: center;
+		margin: 0 0 0.4rem;
+		text-transform: uppercase;
+	}
+
+	.linea {
+		border: none;
+		border-top: 1.5px solid #2a1208;
+		margin: 0.5rem 0;
+	}
+
+	.fila-campos {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1rem;
+	}
+
+	.campo {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 0.8rem;
+	}
+
+	label {
+		font-size: 0.6rem;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		color: #2a1208;
+		margin-bottom: 0.2rem;
+		font-weight: 700;
+	}
+
+	.req { color: #b44814; }
+
+	input, textarea {
+		background: rgba(255,255,255,0.3);
+		border: none;
+		border-bottom: 1.5px solid #2a1208;
+		padding: 0.4rem 0.3rem;
+		font-family: system-ui, -apple-system, sans-serif;
+		font-size: 0.82rem;
+		color: #1c0a02;
+		outline: none;
+		transition: border-color 0.2s, background 0.2s;
+	}
+
+	textarea {
+		border: 1.5px solid #2a1208;
+		padding: 0.4rem;
+		resize: none;
+	}
+
+	input:focus, textarea:focus {
+		border-color: #b44814;
+		background: rgba(255,255,255,0.5);
+	}
+
+	input::placeholder, textarea::placeholder {
+		color: #7a5035;
+		font-style: italic;
+		font-size: 0.75rem;
+	}
+
+	label {
+		font-family: 'Cinzel', serif;
+		font-size: 0.6rem;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		color: #2a1208;
+		margin-bottom: 0.3rem;
+		font-weight: 700;
+	}
+
+	.doc-footer {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	button {
+		background: #b44814;
+		color: #fff7ee;
+		border: none;
+		padding: 0.75rem 1.6rem;
+		font-family: 'Cinzel', serif;
+		font-size: 0.75rem;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		cursor: pointer;
+		transition: background 0.2s, box-shadow 0.2s;
+		white-space: nowrap;
+		box-shadow: 3px 3px 0 #6a2808;
+	}
+
+	button:hover {
+		background: #d45a18;
+		box-shadow: 4px 4px 0 #6a2808;
+	}
+
+	@media (max-width: 768px) {
+		.pagina {
+			grid-template-columns: 1fr;
+			margin: 1.5rem auto;
+			gap: 2rem;
+		}
+
+		.fila-campos {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.form-msg {
+		font-family: system-ui, -apple-system, sans-serif;
+		font-size: 0.72rem;
+		margin: 0;
+	}
+	.form-msg.ok    { color: #2a6a1a; }
+	.form-msg.error { color: #b41414; }
 
 	::selection {
 		background: rgba(180, 80, 20, 0.35);
 		color: #ffe0b0;
 	}
 </style>
+
+<script is:inline>
+	document.getElementById('form-contacto')?.addEventListener('submit', async (e) => {
+		e.preventDefault();
+		const form = e.target;
+		const btn  = document.getElementById('form-btn');
+		const msg  = document.getElementById('form-msg');
+		btn.disabled = true;
+		btn.textContent = 'Enviando...';
+		msg.className = 'form-msg';
+		msg.textContent = '';
+		const res = await fetch('/api/contacto', { method: 'POST', body: new FormData(form) });
+		if (res.ok) {
+			msg.className = 'form-msg ok';
+			msg.textContent = 'Mensaje enviado. ¡Nos ponemos en contacto pronto!';
+			form.reset();
+		} else {
+			msg.className = 'form-msg error';
+			msg.textContent = 'Error al enviar. Inténtalo de nuevo.';
+		}
+		btn.disabled = false;
+		btn.textContent = 'Enviar mensaje ⚒';
+	});
+</script>
