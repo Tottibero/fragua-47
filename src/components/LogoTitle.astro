@@ -24,6 +24,12 @@ import logoImg from '../assets/VectLogoF47.png';
 	.logo-img {
 		height: 72px;
 		width: auto;
+		filter: drop-shadow(0 0 4px rgba(220, 120, 30, 0.5)) drop-shadow(0 0 10px rgba(180, 68, 0, 0.3));
+		transition: filter 0.4s ease;
+	}
+
+	.logo-brand:hover .logo-img {
+		filter: brightness(1.3) drop-shadow(0 0 8px #ff8c00) drop-shadow(0 0 18px rgba(220, 120, 30, 0.7));
 	}
 
 	@media (max-width: 768px) {
