@@ -90,6 +90,12 @@ import Layout from '../layouts/Layout.astro';
 			</div>
 			<p class="doc-sub">— Japan & Body Sushi · Fragua47 · Valladolid —</p>
 			<hr class="doc-linea" />
+			<div class="form-exito" id="inscripcion-exito">
+				<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+				<p class="exito-titulo">¡Inscripción enviada!</p>
+				<p class="exito-sub">Te confirmamos pronto.</p>
+			</div>
+
 			<form id="form-inscripcion">
 				<div class="fila-campos">
 					<div class="campo">
@@ -140,9 +146,9 @@ import Layout from '../layouts/Layout.astro';
 		const fetlife = document.getElementById('fetlife-evento').value.trim();
 		const res = await fetch('/api/inscripcion', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify({ correo, alias, fetlife }) });
 		if (res.ok) {
-			msg.className = 'form-msg ok';
-			msg.textContent = '¡Inscripción enviada! Te confirmamos pronto.';
-			form.reset();
+			form.style.display = 'none';
+			const exito = document.getElementById('inscripcion-exito');
+			exito.style.display = 'flex';
 		} else {
 			msg.className = 'form-msg error';
 			msg.textContent = 'Error al enviar. Inténtalo de nuevo.';
@@ -570,6 +576,36 @@ import Layout from '../layouts/Layout.astro';
 	}
 	.form-msg.ok    { color: #2a6a1a; }
 	.form-msg.error { color: #b41414; }
+
+	.form-exito {
+		display: none;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 0.8rem;
+		padding: 2rem 1rem;
+		text-align: center;
+	}
+	.form-exito svg {
+		width: 72px;
+		height: 72px;
+		stroke: #2a6a1a;
+	}
+	.exito-titulo {
+		font-family: 'Cinzel', serif;
+		font-size: 1rem;
+		letter-spacing: 3px;
+		text-transform: uppercase;
+		color: #2a1208;
+		margin: 0;
+		font-weight: 700;
+	}
+	.exito-sub {
+		font-family: system-ui, -apple-system, sans-serif;
+		font-size: 0.82rem;
+		color: #5a3018;
+		margin: 0;
+	}
 
 	.btn-enviar {
 		background: #b44814;
