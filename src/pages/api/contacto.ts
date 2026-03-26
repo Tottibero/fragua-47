@@ -2,11 +2,11 @@ import type { APIRoute } from 'astro';
 import { Resend } from 'resend';
 
 export const POST: APIRoute = async ({ request }) => {
-  const data = await request.json();
-  const correo  = data.correo?.toString().trim();
-  const alias   = data.alias?.toString().trim();
-  const asunto  = data.asunto?.toString().trim() || '(sin asunto)';
-  const mensaje = data.mensaje?.toString().trim();
+  const data = await request.formData();
+  const correo  = data.get('correo')?.toString().trim();
+  const alias   = data.get('alias')?.toString().trim();
+  const asunto  = data.get('asunto')?.toString().trim() || '(sin asunto)';
+  const mensaje = data.get('mensaje')?.toString().trim();
 
   if (!correo || !alias || !mensaje) {
     return new Response(JSON.stringify({ error: 'Faltan campos obligatorios' }), { status: 400 });

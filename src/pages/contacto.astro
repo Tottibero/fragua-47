@@ -301,7 +301,7 @@ import logoImg from '../assets/VectLogoF47.png';
 		btn.textContent = 'Enviando...';
 		msg.className = 'form-msg';
 		msg.textContent = '';
-		const res = await fetch('/api/contacto', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(Object.fromEntries(new FormData(form))) });
+		const res = await fetch('/api/contacto', { method: 'POST', body: new URLSearchParams(new FormData(form)) });
 		if (res.ok) {
 			msg.className = 'form-msg ok';
 			msg.textContent = 'Mensaje enviado. ¡Nos ponemos en contacto pronto!';
