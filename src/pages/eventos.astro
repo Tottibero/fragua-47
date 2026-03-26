@@ -3,20 +3,20 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout description="Próximos eventos de Fragua47. Consulta la agenda de quedadas y actividades de la comunidad.">
-
+	<link slot="head" rel="preload" as="image" type="image/webp" href="/eventos.webp" />
 	<div class="pagina">
 
 		<!-- Columna izquierda: foto -->
 		<div class="foto-wrap">
-			<img src="/eventos.jpg" alt="Eventos Fragua47" class="foto-eventos" loading="eager" fetchpriority="high" width="600" height="900" />
+			<img src="/eventos.webp" alt="Eventos Fragua47" class="foto-eventos" loading="eager" fetchpriority="high" width="700" height="1050" />
 		</div>
 
 		<!-- Evento: foto arriba, tarjeta abajo -->
 		<div class="evento-stack">
-				<img src="/Bodysushi.png" alt="Fiesta Japan & Body Sushi" class="img-evento" loading="lazy" width="800" height="300" />
+				<img src="/Bodysushi.webp" alt="Fiesta Japan & Body Sushi" class="img-evento" loading="lazy" width="797" height="453" />
 				<div class="text-col-evento">
 					<div class="evento-header">
-						<img src="/VectLogoF47.png" alt="Logo Fragua47" class="evento-logo" />
+						<img src="/VectLogoF47.webp" alt="Logo Fragua47" class="evento-logo" width="300" height="343" />
 						<div>
 							<p class="pre-titulo">— próxima fiesta —</p>
 							<h3>Fiesta Japan &amp; Body Sushi</h3>
@@ -80,7 +80,7 @@ import Layout from '../layouts/Layout.astro';
 				<div class="cal-header">
 					<button class="cal-nav" id="cal-prev">‹</button>
 					<div class="cal-mes-wrap">
-						<img src="/VectLogoF47.png" alt="Logo Fragua47" class="cal-logo" />
+						<img src="/VectLogoF47.webp" alt="Logo Fragua47" class="cal-logo" width="300" height="343" />
 						<p class="cal-pre">— agenda —</p>
 						<h4 class="cal-titulo" id="cal-titulo"></h4>
 					</div>
@@ -99,7 +99,7 @@ import Layout from '../layouts/Layout.astro';
 		<div class="modal-documento">
 			<button class="modal-cerrar" id="modal-cerrar">✕</button>
 			<div class="doc-header">
-				<img src="/VectLogoF47.png" alt="Logo Fragua47" class="modal-logo" />
+				<img src="/VectLogoF47.webp" alt="Logo Fragua47" class="modal-logo" width="300" height="343" />
 				<h5>Inscripción</h5>
 				<span class="doc-sello">⚒</span>
 			</div>

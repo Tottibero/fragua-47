@@ -21,6 +21,7 @@ const { description = 'Fragua47 — Comunidad BDSM' } = Astro.props;
 		<link rel="preload" as="font" type="font/woff2" href={metamorphous} crossorigin />
 		<meta name="description" content={description} />
 		<title>Fragua47</title>
+		<slot name="head" />
 	</head>
 	<body>
 
