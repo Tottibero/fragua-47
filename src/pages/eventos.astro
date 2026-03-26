@@ -153,7 +153,10 @@ import logoImg from '../assets/VectLogoF47.png';
 		const msg  = document.getElementById('inscripcion-msg');
 		ibtn.disabled = true; ibtn.textContent = 'Enviando...';
 		msg.className = 'form-msg'; msg.textContent = '';
-		const res = await fetch('/api/inscripcion', { method: 'POST', body: new URLSearchParams(new FormData(form)) });
+		const correo  = document.getElementById('correo-evento').value.trim();
+		const alias   = document.getElementById('alias-evento').value.trim();
+		const fetlife = document.getElementById('fetlife-evento').value.trim();
+		const res = await fetch('/api/inscripcion', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify({ correo, alias, fetlife }) });
 		if (res.ok) {
 			msg.className = 'form-msg ok';
 			msg.textContent = '¡Inscripción enviada! Te confirmamos pronto.';
