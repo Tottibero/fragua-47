@@ -1,9 +1,4 @@
-import type { APIRoute } from 'astro';
-import { Resend } from 'resend';
-
-export const prerender = false;
-
-export const POST: APIRoute = async ({ request }) => {
+export async function onRequestPost({ request, env }) {
   const data = await request.json();
   const correo  = data.correo?.toString().trim();
   const alias   = data.alias?.toString().trim();
@@ -14,19 +9,24 @@ export const POST: APIRoute = async ({ request }) => {
     return new Response(JSON.stringify({ error: 'Faltan campos obligatorios' }), { status: 400 });
   }
 
-  const resend = new Resend(import.meta.env.RESEND_API_KEY);
-
-  const { error } = await resend.emails.send({
-    from:     'Fragua47 <noreply@fragua47.org>',
-    to:       'contacto@fragua47.org',
-    replyTo:  correo,
-    subject:  `Contacto · ${alias} · ${asunto}`,
-    text:     `De: ${alias} <${correo}>\nAsunto: ${asunto}\n\n${mensaje}`,
+  const res = await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${env.RESEND_API_KEY}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      from:     'Fragua47 <noreply@fragua47.org>',
+      to:       'contacto@fragua47.org',
+      reply_to: correo,
+      subject:  `Contacto · ${alias} · ${asunto}`,
+      text:     `De: ${alias} <${correo}>\nAsunto: ${asunto}\n\n${mensaje}`,
+    }),
   });
 
-  if (error) {
+  if (!res.ok) {
     return new Response(JSON.stringify({ error: 'Error al enviar el mensaje' }), { status: 500 });
   }
 
   return new Response(JSON.stringify({ ok: true }), { status: 200 });
-};
+}
