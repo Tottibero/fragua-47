@@ -1,0 +1,230 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Política de Privacidad" description="Política de privacidad de Fragua47. Información sobre el tratamiento de datos personales recogidos a través de nuestros formularios.">
+
+	<section class="pagina">
+
+		<div class="tarjeta-texto">
+			<img src="/VectLogoF47.webp" alt="Logo Fragua47" class="logo" width="300" height="343" />
+			<h2>Fragua47</h2>
+			<hr class="linea" />
+			<p class="subtitulo">Privacidad</p>
+			<p>Tu privacidad nos importa. Solo recogemos los datos necesarios para responder a tu mensaje o gestionar tu solicitud, y nunca los compartimos con terceros.</p>
+			<p>Si tienes cualquier duda sobre cómo tratamos tus datos, escríbenos a <strong>contacto@fragua47.org</strong>.</p>
+		</div>
+
+		<div class="documento">
+			<div class="doc-header">
+				<img src="/VectLogoF47.webp" alt="Logo Fragua47" class="doc-logo" width="300" height="343" />
+				<h3>Política de Privacidad</h3>
+				<span class="doc-sello">⚒</span>
+			</div>
+			<p class="doc-sub">— Fragua47 · Valladolid —</p>
+			<hr class="linea" />
+
+			<div class="bloque">
+				<h4>Responsable del tratamiento</h4>
+				<p>Fragua47<br />
+				Valladolid, España<br />
+				contacto@fragua47.org</p>
+			</div>
+
+			<div class="bloque">
+				<h4>Datos que recogemos</h4>
+				<p>A través de los formularios de esta web recogemos los siguientes datos según el formulario utilizado:</p>
+				<ul>
+					<li><strong>Formulario de contacto:</strong> correo electrónico, alias, asunto y mensaje.</li>
+					<li><strong>Solicitud de socio:</strong> correo electrónico, alias, perfil de FetLife (opcional) y notas (opcional).</li>
+					<li><strong>Inscripción a evento:</strong> correo electrónico, alias y perfil de FetLife (opcional).</li>
+				</ul>
+			</div>
+
+			<div class="bloque">
+				<h4>Finalidad y base legal</h4>
+				<p>Los datos se recogen exclusivamente para <strong>responder a tu consulta, gestionar tu solicitud de membresía o confirmar tu asistencia a un evento</strong>. La base legal es tu consentimiento explícito al enviar el formulario.</p>
+			</div>
+
+			<div class="bloque">
+				<h4>Conservación</h4>
+				<p>Los datos se conservan el tiempo necesario para atender tu solicitud y, en el caso de socios, mientras dure la relación. Puedes solicitar su eliminación en cualquier momento.</p>
+			</div>
+
+			<div class="bloque">
+				<h4>Destinatarios</h4>
+				<p>Los datos no se ceden a terceros. El envío de correos se realiza a través de <strong>Resend</strong> (procesador de correo), sujeto a su política de privacidad conforme al RGPD.</p>
+			</div>
+
+			<div class="bloque">
+				<h4>Tus derechos</h4>
+				<p>Puedes ejercer tus derechos de <strong>acceso, rectificación, supresión, limitación, portabilidad y oposición</strong> escribiéndonos a contacto@fragua47.org. También puedes reclamar ante la <strong>AEPD</strong> (aepd.es) si consideras que el tratamiento no es correcto.</p>
+			</div>
+
+			<hr class="linea" />
+			<p class="doc-fecha">Última actualización: marzo de 2026</p>
+		</div>
+
+	</section>
+</Layout>
+
+<style>
+	.pagina {
+		display: grid;
+		grid-template-columns: 2fr 3fr;
+		gap: 1.5rem;
+		align-items: start;
+		margin: 2.5rem auto;
+		font-family: 'Cinzel', serif;
+	}
+
+	.tarjeta-texto {
+		background: #d4b896;
+		border: 3px solid #2a1208;
+		outline: 1px solid #2a1208;
+		outline-offset: 4px;
+		box-shadow: 5px 5px 0 #2a1208;
+		padding: 1.2rem 1.4rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		position: sticky;
+		top: 1rem;
+	}
+
+	.logo {
+		height: 60px;
+		width: auto;
+		margin-bottom: 0.5rem;
+		opacity: 0.85;
+	}
+
+	h2 {
+		font-size: 1.6rem;
+		letter-spacing: 5px;
+		text-transform: uppercase;
+		color: #2a1208;
+		margin-bottom: 0.3rem;
+		font-family: 'Metamorphous', cursive;
+	}
+
+	.subtitulo {
+		font-size: 0.6rem;
+		letter-spacing: 3px;
+		text-transform: uppercase;
+		color: #5a3018;
+		margin-bottom: 0.6rem;
+	}
+
+	.tarjeta-texto p {
+		font-size: 0.72rem;
+		font-weight: 600;
+		line-height: 1.8;
+		color: #2a1208;
+		margin-bottom: 0.5rem;
+	}
+
+	.tarjeta-texto p:last-child { margin-bottom: 0; }
+
+	.documento {
+		background: #d4b896;
+		border: 3px solid #2a1208;
+		outline: 1px solid #2a1208;
+		outline-offset: 5px;
+		box-shadow: 6px 6px 0 #2a1208;
+		padding: 1.6rem 1.8rem;
+	}
+
+	.doc-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.6rem;
+		margin-bottom: 0.3rem;
+	}
+
+	.doc-logo { height: 28px; width: auto; flex-shrink: 0; }
+
+	.doc-sello {
+		font-size: 1.8rem;
+		flex-shrink: 0;
+		line-height: 1;
+		filter: sepia(1) saturate(4) brightness(0.45) hue-rotate(-5deg);
+	}
+
+	h3 {
+		font-size: 0.9rem;
+		letter-spacing: 4px;
+		text-transform: uppercase;
+		color: #2a1208;
+		margin: 0;
+		text-align: center;
+	}
+
+	.doc-sub {
+		font-size: 0.55rem;
+		letter-spacing: 1.5px;
+		color: #5a3018;
+		text-align: center;
+		margin: 0 0 0.4rem;
+		text-transform: uppercase;
+	}
+
+	.linea {
+		border: none;
+		border-top: 1.5px solid #2a1208;
+		margin: 0.5rem 0;
+	}
+
+	.bloque {
+		margin: 1rem 0;
+	}
+
+	h4 {
+		font-family: 'Cinzel', serif;
+		font-size: 0.65rem;
+		letter-spacing: 2.5px;
+		text-transform: uppercase;
+		color: #6a2808;
+		font-weight: 700;
+		margin-bottom: 0.35rem;
+	}
+
+	.documento p, .documento li {
+		font-family: system-ui, -apple-system, sans-serif;
+		font-size: 0.75rem;
+		line-height: 1.7;
+		color: #2a1208;
+	}
+
+	.documento ul {
+		padding-left: 1rem;
+		margin-top: 0.3rem;
+	}
+
+	.documento li {
+		margin-bottom: 0.2rem;
+	}
+
+	.doc-fecha {
+		font-family: 'Cinzel', serif;
+		font-size: 0.52rem;
+		letter-spacing: 1.5px;
+		color: #7a5035;
+		text-align: right;
+		margin: 0.3rem 0 0;
+		text-transform: uppercase;
+	}
+
+	@media (max-width: 768px) {
+		.pagina {
+			grid-template-columns: 1fr;
+			margin: 1.5rem auto;
+			gap: 2rem;
+		}
+		.tarjeta-texto { position: static; }
+	}
+
+	::selection { background: rgba(180, 80, 20, 0.35); color: #ffe0b0; }
+</style>

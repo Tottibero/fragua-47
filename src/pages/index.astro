@@ -113,6 +113,7 @@ import Layout from '../layouts/Layout.astro';
 					<input type="text" id="fetlife-evento" name="fetlife" placeholder="Tu nick en FetLife" />
 				</div>
 				<hr class="doc-linea" />
+				<p class="privacidad-nota">Al enviar aceptas nuestra <a href="/privacidad/">política de privacidad</a>.</p>
 				<div class="doc-footer">
 					<p class="form-msg" id="inscripcion-msg"></p>
 					<button type="submit" id="inscripcion-btn" class="btn-enviar">Enviar inscripción ⚒</button>
@@ -580,6 +581,8 @@ import Layout from '../layouts/Layout.astro';
 	}
 	.form-msg.ok    { color: #2a6a1a; }
 	.form-msg.error { color: #b41414; }
+	.privacidad-nota { font-family: system-ui, -apple-system, sans-serif; font-size: 0.62rem; color: #7a5035; margin: 0.2rem 0 0.5rem; text-align: right; }
+	.privacidad-nota a { color: #6a2808; }
 
 	.form-exito {
 		display: none;
