@@ -17,8 +17,8 @@ export const POST: APIRoute = async ({ request }) => {
   const resend = new Resend(import.meta.env.RESEND_API_KEY);
 
   const { error } = await resend.emails.send({
-    from:     'Fragua47 <onboarding@resend.dev>',
-    to:       'fragua47000@gmail.com',
+    from:     'Fragua47 <noreply@fragua47.org>',
+    to:       'contacto@fragua47.org',
     replyTo:  correo,
     subject:  `Contacto · ${alias} · ${asunto}`,
     text:     `De: ${alias} <${correo}>\nAsunto: ${asunto}\n\n${mensaje}`,
