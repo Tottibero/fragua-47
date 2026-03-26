@@ -11,11 +11,8 @@ import Layout from '../layouts/Layout.astro';
 			<img src="/eventos.jpg" alt="Eventos Fragua47" class="foto-eventos" loading="eager" fetchpriority="high" width="600" height="900" />
 		</div>
 
-		<!-- Columna derecha -->
-		<div class="col-derecha">
-
-			<!-- Evento: foto arriba, tarjeta abajo -->
-			<div class="evento-stack">
+		<!-- Evento: foto arriba, tarjeta abajo -->
+		<div class="evento-stack">
 				<img src="/Bodysushi.png" alt="Fiesta Japan & Body Sushi" class="img-evento" loading="lazy" width="800" height="300" />
 				<div class="text-col-evento">
 					<div class="evento-header">
@@ -95,7 +92,6 @@ import Layout from '../layouts/Layout.astro';
 				<ul class="agenda" id="agenda-list"></ul>
 			</div>
 
-		</div>
 	</div>
 
 	<!-- Modal inscripción -->
@@ -239,6 +235,10 @@ import Layout from '../layouts/Layout.astro';
 	.pagina {
 		display: grid;
 		grid-template-columns: 1.4fr 1fr;
+		grid-template-rows: 1fr auto;
+		grid-template-areas:
+			"foto stack"
+			"foto cal";
 		gap: 1rem;
 		margin: 0.6rem auto 0.8rem;
 		height: calc(100vh - 148px);
@@ -247,6 +247,7 @@ import Layout from '../layouts/Layout.astro';
 	}
 
 	.foto-wrap {
+		grid-area: foto;
 		border: 3px solid #2a1208;
 		outline: 1px solid #2a1208;
 		outline-offset: 4px;
@@ -262,16 +263,10 @@ import Layout from '../layouts/Layout.astro';
 		display: block;
 	}
 
-	.col-derecha {
-		display: flex;
-		flex-direction: column;
-		gap: 0.7rem;
-		min-height: 0;
-	}
-
 	/* ── Evento stack (foto arriba, tarjeta abajo) ── */
 
 	.evento-stack {
+		grid-area: stack;
 		display: flex;
 		flex-direction: column;
 		gap: 0;
@@ -444,6 +439,7 @@ import Layout from '../layouts/Layout.astro';
 	/* ── Calendario ── */
 
 	.calendario {
+		grid-area: cal;
 		background: #d4b896;
 		border: 3px solid #2a1208;
 		outline: 1px solid #2a1208;
@@ -730,7 +726,19 @@ import Layout from '../layouts/Layout.astro';
 	.btn-enviar:hover { background: #d45a18; box-shadow: 4px 4px 0 #6a2808; }
 
 	@media (max-width: 768px) {
-		.pagina { grid-template-columns: 1fr; }
+		.pagina {
+			grid-template-columns: 1fr;
+			grid-template-rows: auto auto auto;
+			grid-template-areas:
+				"stack"
+				"foto"
+				"cal";
+			height: auto;
+			overflow: visible;
+		}
+		.foto-wrap { height: 280px; }
+		.evento-stack { overflow: visible; }
+		.text-col-evento { overflow: visible; }
 		.fila-campos { grid-template-columns: 1fr; }
 		.modal-documento { margin: 1rem; }
 	}
