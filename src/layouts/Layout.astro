@@ -34,9 +34,6 @@ const { description = 'Fragua47 — Comunidad BDSM' } = Astro.props;
 				</div>
 				<nav id="main-nav">
 					<a href="/eventos"        class={path === '/eventos'        ? 'active' : ''}>Eventos</a>
-					<a href="/normas"          class={path === '/normas'          ? 'active' : ''}>Normas</a>
-					<a href="/sobre-nosotros"  class={path === '/sobre-nosotros'  ? 'active' : ''}>Sobre nosotros</a>
-					<a href="/local"           class={path === '/local'           ? 'active' : ''}>Local</a>
 					<a href="/hazte-socio"     class={path === '/hazte-socio'     ? 'active' : ''}>Hazte socio</a>
 					<a href="/contacto"        class={path === '/contacto'        ? 'active' : ''}>Contacto</a>
 				</nav>
@@ -72,6 +69,49 @@ const { description = 'Fragua47 — Comunidad BDSM' } = Astro.props;
 	</body>
 </html>
 
+<style is:global>
+	.nav-spark {
+		position: fixed;
+		width: var(--size);
+		height: var(--size);
+		border-radius: 50%;
+		background: var(--color);
+		pointer-events: none;
+		z-index: 10000;
+		animation: spark-burst var(--duration) ease-out forwards;
+	}
+	@keyframes spark-burst {
+		0%   { transform: translate(0, 0) scale(1.2); opacity: 1; }
+		60%  { opacity: 0.8; }
+		100% { transform: translate(var(--dx), var(--dy)) scale(0); opacity: 0; }
+	}
+	nav a.golpe {
+		display: inline-block;
+		transform-origin: left center;
+		animation: barra-golpe 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+	}
+	nav a.golpe::after {
+		transform-origin: right center;
+		animation: ember-aparece 0.8s ease-in forwards !important;
+	}
+	@keyframes ember-aparece {
+		0%   { transform: scaleX(0); opacity: 0; }
+		40%  { opacity: 0.4; }
+		100% { transform: scaleX(1); opacity: 1; }
+	}
+	@keyframes barra-golpe {
+		0%   { transform: rotate(0deg)    translateX(0px);  }
+		6%   { transform: rotate(8deg)    translateX(5px);  }
+		18%  { transform: rotate(-5deg)   translateX(-3px); }
+		30%  { transform: rotate(3deg)    translateX(2px);  }
+		42%  { transform: rotate(-2deg)   translateX(-1px); }
+		55%  { transform: rotate(1deg)    translateX(1px);  }
+		67%  { transform: rotate(-0.6deg) translateX(0px);  }
+		80%  { transform: rotate(0.3deg)  translateX(0px);  }
+		100% { transform: rotate(0deg)    translateX(0px);  }
+	}
+</style>
+
 <script is:inline>
 	function matchMainToHeader() {
 		const header = document.querySelector('header');
@@ -96,6 +136,186 @@ const { description = 'Fragua47 — Comunidad BDSM' } = Astro.props;
 			btn.setAttribute('aria-expanded', open);
 		});
 	});
+
+	const colors = ['#ffcc00', '#ffaa00', '#ff8800', '#ff5500', '#ffee88'];
+
+	function createSparks(el) {
+		const rect = el.getBoundingClientRect();
+		for (let i = 0; i < 18; i++) {
+			const spark = document.createElement('span');
+			spark.className = 'nav-spark';
+			const angle = (Math.random() * 260) - 130;
+			const dist = 30 + Math.random() * 60;
+			const dx = Math.sin(angle * Math.PI / 180) * dist;
+			const dy = -(Math.abs(Math.cos(angle * Math.PI / 180)) * dist + 15);
+			spark.style.cssText = `
+				left:${(rect.left + Math.random() * rect.width).toFixed(1)}px;
+				top:${(rect.bottom - 2).toFixed(1)}px;
+				--dx:${dx.toFixed(1)}px;
+				--dy:${dy.toFixed(1)}px;
+				--size:${(2 + Math.random() * 5).toFixed(1)}px;
+				--color:${colors[Math.floor(Math.random() * colors.length)]};
+				--duration:${(0.7 + Math.random() * 0.6).toFixed(2)}s;
+				animation-delay:${(Math.random() * 0.15).toFixed(2)}s;
+			`;
+			document.body.appendChild(spark);
+			spark.addEventListener('animationend', () => spark.remove());
+		}
+	}
+
+	function spawnSpark(sx, sy, angle, dist) {
+		const spark = document.createElement('span');
+		spark.className = 'nav-spark';
+		const dx = Math.sin(angle * Math.PI / 180) * dist;
+		const dy = -(Math.abs(Math.cos(angle * Math.PI / 180)) * dist + 10);
+		spark.style.cssText = `
+			left:${sx.toFixed(1)}px;
+			top:${sy.toFixed(1)}px;
+			--dx:${dx.toFixed(1)}px;
+			--dy:${dy.toFixed(1)}px;
+			--size:${(1.5 + Math.random() * 3).toFixed(1)}px;
+			--color:${colors[Math.floor(Math.random() * colors.length)]};
+			--duration:${(0.5 + Math.random() * 0.5).toFixed(2)}s;
+			animation-delay:${(Math.random() * 0.1).toFixed(2)}s;
+		`;
+		document.body.appendChild(spark);
+		spark.addEventListener('animationend', () => spark.remove());
+	}
+
+	function createFewSparksAllSides(el) {
+		if (Math.random() > 0.5) return; // 50% chance cada tick, como el active
+		const rect = el.getBoundingClientRect();
+		const count = 1 + Math.floor(Math.random() * 3);
+		for (let i = 0; i < count; i++) {
+			const edge = Math.floor(Math.random() * 4);
+			let sx, sy, angle;
+			if (edge === 0) {
+				sx = rect.left + Math.random() * rect.width;
+				sy = rect.top + 2;
+				angle = -(50 + Math.random() * 80);
+			} else if (edge === 1) {
+				sx = rect.right - 2;
+				sy = rect.top + Math.random() * rect.height;
+				angle = 20 + Math.random() * 140;
+			} else if (edge === 2) {
+				sx = rect.left + Math.random() * rect.width;
+				sy = rect.bottom - 2;
+				angle = -(Math.random() * 260 - 130);
+			} else {
+				sx = rect.left + 2;
+				sy = rect.top + Math.random() * rect.height;
+				angle = -(160 + Math.random() * 140);
+			}
+			spawnSpark(sx, sy, angle, 15 + Math.random() * 35);
+		}
+	}
+
+	function createSparksAllSides(el) {
+		const rect = el.getBoundingClientRect();
+		for (let i = 0; i < 60; i++) {
+			const spark = document.createElement('span');
+			spark.className = 'nav-spark';
+			const edge = Math.floor(Math.random() * 4);
+			let sx, sy, angle;
+			if (edge === 0) {
+				sx = rect.left + Math.random() * rect.width;
+				sy = rect.top + 2;
+				angle = -(50 + Math.random() * 80);
+			} else if (edge === 1) {
+				sx = rect.right - 2;
+				sy = rect.top + Math.random() * rect.height;
+				angle = 20 + Math.random() * 140;
+			} else if (edge === 2) {
+				sx = rect.left + Math.random() * rect.width;
+				sy = rect.bottom - 2;
+				angle = -(Math.random() * 260 - 130);
+			} else {
+				sx = rect.left + 2;
+				sy = rect.top + Math.random() * rect.height;
+				angle = -(160 + Math.random() * 140);
+			}
+			const dist = 30 + Math.random() * 60;
+			const dx = Math.sin(angle * Math.PI / 180) * dist;
+			const dy = -(Math.abs(Math.cos(angle * Math.PI / 180)) * dist + 15);
+			spark.style.cssText = `
+				left:${sx.toFixed(1)}px;
+				top:${sy.toFixed(1)}px;
+				--dx:${dx.toFixed(1)}px;
+				--dy:${dy.toFixed(1)}px;
+				--size:${(2 + Math.random() * 5).toFixed(1)}px;
+				--color:${colors[Math.floor(Math.random() * colors.length)]};
+				--duration:${(0.7 + Math.random() * 0.6).toFixed(2)}s;
+				animation-delay:${(Math.random() * 0.15).toFixed(2)}s;
+			`;
+			document.body.appendChild(spark);
+			spark.addEventListener('animationend', () => spark.remove());
+		}
+	}
+
+	const logoText = document.querySelector('.logo-metalico');
+	let logoSparkInterval = null;
+	document.querySelector('.logo-brand')?.addEventListener('mouseenter', () => {
+		if (logoText) {
+			createSparksAllSides(logoText);
+			logoSparkInterval = setInterval(() => createFewSparksAllSides(logoText), 700);
+		}
+	});
+	document.querySelector('.logo-brand')?.addEventListener('mouseleave', () => {
+		clearInterval(logoSparkInterval);
+		logoSparkInterval = null;
+	});
+
+	document.querySelectorAll('nav a').forEach(link => {
+		let navSparkInterval = null;
+		link.addEventListener('mouseenter', () => {
+			createSparks(link);
+			navSparkInterval = setInterval(() => createFewSparksAllSides(link), 700);
+		});
+		link.addEventListener('mouseleave', () => {
+			clearInterval(navSparkInterval);
+			navSparkInterval = null;
+		});
+		link.addEventListener('click', (e) => {
+			const href = link.getAttribute('href');
+			if (!href || href.startsWith('#')) return;
+			e.preventDefault();
+			link.classList.add('golpe');
+			createSparks(link);
+			setTimeout(() => {
+				window.location.href = href;
+			}, 400);
+		});
+	});
+
+	function createFewSparks(el) {
+		const rect = el.getBoundingClientRect();
+		const count = 2 + Math.floor(Math.random() * 4);
+		for (let i = 0; i < count; i++) {
+			const spark = document.createElement('span');
+			spark.className = 'nav-spark';
+			const angle = (Math.random() * 200) - 100;
+			const dist = 15 + Math.random() * 35;
+			const dx = Math.sin(angle * Math.PI / 180) * dist;
+			const dy = -(Math.abs(Math.cos(angle * Math.PI / 180)) * dist + 8);
+			spark.style.cssText = `
+				left:${(rect.left + Math.random() * rect.width).toFixed(1)}px;
+				top:${(rect.bottom - 2).toFixed(1)}px;
+				--dx:${dx.toFixed(1)}px;
+				--dy:${dy.toFixed(1)}px;
+				--size:${(1.5 + Math.random() * 3).toFixed(1)}px;
+				--color:${colors[Math.floor(Math.random() * colors.length)]};
+				--duration:${(0.5 + Math.random() * 0.5).toFixed(2)}s;
+				animation-delay:${(Math.random() * 0.1).toFixed(2)}s;
+			`;
+			document.body.appendChild(spark);
+			spark.addEventListener('animationend', () => spark.remove());
+		}
+	}
+
+	setInterval(() => {
+		const active = document.querySelector('nav a.active');
+		if (active && Math.random() < 0.4) createFewSparks(active);
+	}, 800);
 </script>
 
 <style>
@@ -174,13 +394,19 @@ const { description = 'Fragua47 — Comunidad BDSM' } = Astro.props;
 		padding-top: 3.4rem;
 	}
 
-	@keyframes draw-line {
-		from { transform: scaleX(0); }
-		to   { transform: scaleX(1); }
+	@keyframes ember-trail {
+		0%   { transform: scaleX(0); opacity: 1; }
+		100% { transform: scaleX(1); opacity: 1; }
 	}
-	@keyframes feather-write {
-		0%   { left: 0%;   opacity: 1; }
-		100% { left: 100%; opacity: 1; }
+	@keyframes spark-fly {
+		0%   { left: -4px;   opacity: 0; transform: translateY(0) scale(1); }
+		10%  { opacity: 1; }
+		80%  { opacity: 1; transform: translateY(-2px) scale(1.2); }
+		100% { left: calc(100% + 2px); opacity: 0; transform: translateY(1px) scale(0.6); }
+	}
+	@keyframes ember-glow {
+		0%, 100% { opacity: 0.7; box-shadow: 0 0 4px 1px #ff6a00, 0 0 8px 2px #c84400; }
+		50%       { opacity: 1;   box-shadow: 0 0 6px 2px #ffaa00, 0 0 12px 4px #ff6a00; }
 	}
 
 	nav a {
@@ -195,16 +421,20 @@ const { description = 'Fragua47 — Comunidad BDSM' } = Astro.props;
 		position: relative;
 		transition: color 0.3s ease, text-shadow 0.3s ease;
 	}
+	/* chispa que vuela */
 	nav a::before {
 		content: '';
 		position: absolute;
-		bottom: 0.1rem;
-		width: 0.9rem;
-		height: 1.1rem;
-		background: url('/pluma.svg') no-repeat center / contain;
+		bottom: 2px;
+		width: 5px;
+		height: 5px;
+		border-radius: 50% 50% 50% 0;
+		background: #ffaa00;
 		opacity: 0;
 		pointer-events: none;
+		transform-origin: center;
 	}
+	/* brasa bajo el texto */
 	nav a::after {
 		content: '';
 		position: absolute;
@@ -212,31 +442,25 @@ const { description = 'Fragua47 — Comunidad BDSM' } = Astro.props;
 		bottom: 0;
 		height: 2px;
 		width: 100%;
-		background: #1a0a02;
-		filter: url(#ink-stroke);
+		background: linear-gradient(to right, #c84400, #ff8c00, #ffcc00, #ff8c00, #c84400);
 		transform: scaleX(0);
 		transform-origin: left center;
 		pointer-events: none;
 	}
 	nav a:hover,
 	nav a.active {
-		color: #a84e18;
-		text-shadow: 0 0 10px rgba(160, 70, 15, 0.4);
+		color: #c85a10;
+		text-shadow: 0 0 8px rgba(220, 100, 10, 0.5), 0 0 20px rgba(180, 60, 0, 0.25);
 	}
-
 	nav a.active::after {
 		transform: scaleX(1);
-	}
-	nav a:hover::after {
-		animation: draw-line 0.9s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-	}
-	nav a:hover::before {
-		animation: feather-write 0.95s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+		animation: ember-glow 2s ease-in-out infinite;
 	}
 
 	main {
 		padding: 1.5rem 0;
 	}
+
 
 	/* ── Hamburger ── */
 	.hamburger {

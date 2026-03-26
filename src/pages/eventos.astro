@@ -1,42 +1,758 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import logoImg from '../assets/VectLogoF47.png';
 ---
 
 <Layout description="Próximos eventos de Fragua47. Consulta la agenda de quedadas y actividades de la comunidad.">
-	<article>
-		<h2>Próximos Eventos</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-		<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-	</article>
+
+	<div class="pagina">
+
+		<!-- Columna izquierda: foto -->
+		<div class="foto-wrap">
+			<img src="/eventos.jpg" alt="Eventos Fragua47" class="foto-eventos" loading="eager" fetchpriority="high" width="600" height="900" />
+		</div>
+
+		<!-- Columna derecha -->
+		<div class="col-derecha">
+
+			<!-- Evento: foto arriba, tarjeta abajo -->
+			<div class="evento-stack">
+				<img src="/Bodysushi.png" alt="Fiesta Japan & Body Sushi" class="img-evento" loading="lazy" width="800" height="300" />
+				<div class="text-col-evento">
+					<div class="evento-header">
+						<Image src={logoImg} alt="Logo Fragua47" class="evento-logo" width={36} height={41} format="webp" />
+						<div>
+							<p class="pre-titulo">— próxima fiesta —</p>
+							<h3>Fiesta Japan &amp; Body Sushi</h3>
+						</div>
+					</div>
+					<ul class="sentidos">
+						<li class="s-vista">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+							<span>Vista</span>
+						</li>
+						<li class="s-oido">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+							<span>Oído</span>
+						</li>
+						<li class="s-olfato">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
+							<span>Olfato</span>
+						</li>
+						<li class="s-gusto">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+							<span>Gusto</span>
+						</li>
+						<li class="s-tacto">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/><path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/><path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v3"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
+							<span>Tacto</span>
+						</li>
+					</ul>
+					<p class="cuerpo">La próxima fiesta cumplirá todos los requisitos para que se disfrute con todos ellos. Te esperamos, porque si además el placer es compartido, se multiplica.</p>
+					<div class="datos-evento">
+						<div class="dato-fila">
+							<span class="dato-label">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+								Fecha
+							</span>
+							<span class="dato-valor">18 de Abril</span>
+						</div>
+						<div class="dato-fila">
+							<span class="dato-label">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+								Hora
+							</span>
+							<span class="dato-valor">21:00 h</span>
+						</div>
+						<div class="dato-fila">
+							<span class="dato-label">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+								Lugar
+							</span>
+							<span class="dato-valor dato-privado">Se indicará al confirmar asistencia</span>
+						</div>
+					</div>
+					<hr class="linea" />
+					<div class="footer-card">
+						<button class="btn-inscribete" id="btn-inscribete">Inscríbete ⚒</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- Calendario navegable -->
+			<div class="calendario">
+				<div class="cal-header">
+					<button class="cal-nav" id="cal-prev">‹</button>
+					<div class="cal-mes-wrap">
+						<Image src={logoImg} alt="Logo Fragua47" class="cal-logo" width={20} height={23} format="webp" />
+						<p class="cal-pre">— agenda —</p>
+						<h4 class="cal-titulo" id="cal-titulo"></h4>
+					</div>
+					<button class="cal-nav" id="cal-next">›</button>
+				</div>
+				<hr class="linea" />
+				<div class="cal-grid" id="cal-grid"></div>
+				<hr class="linea" />
+				<ul class="agenda" id="agenda-list"></ul>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- Modal inscripción -->
+	<div class="modal-overlay" id="modal-overlay">
+		<div class="modal-documento">
+			<button class="modal-cerrar" id="modal-cerrar">✕</button>
+			<div class="doc-header">
+				<Image src={logoImg} alt="Logo Fragua47" class="modal-logo" width={24} height={27} format="webp" />
+				<h5>Inscripción</h5>
+				<span class="doc-sello">⚒</span>
+			</div>
+			<p class="doc-sub">— Japan &amp; Body Sushi · Fragua47 · Valladolid —</p>
+			<hr class="doc-linea" />
+			<form id="form-inscripcion">
+				<div class="fila-campos">
+					<div class="campo">
+						<label for="correo-evento">Correo <span class="req">*</span></label>
+						<input type="email" id="correo-evento" name="correo" required placeholder="tu@correo.com" />
+					</div>
+					<div class="campo">
+						<label for="alias-evento">Alias <span class="req">*</span></label>
+						<input type="text" id="alias-evento" name="alias" required placeholder="¿Cómo te conocemos?" />
+					</div>
+				</div>
+				<div class="campo">
+					<label for="fetlife-evento">FetLife <span class="opcional">(opcional)</span></label>
+					<input type="text" id="fetlife-evento" name="fetlife" placeholder="Tu nick en FetLife" />
+				</div>
+				<hr class="doc-linea" />
+				<div class="doc-footer">
+					<p class="form-msg" id="inscripcion-msg"></p>
+					<button type="submit" id="inscripcion-btn" class="btn-enviar">Enviar inscripción ⚒</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
 </Layout>
 
-<style>
-	article {
-		max-width: 720px;
-		margin: 3rem auto;
-		line-height: 1.9;
-		font-family: 'Cinzel', serif;
-		font-size: 1rem;
-		font-weight: 600;
-		color: #3d2010;
+<script is:inline>
+	// ── Modal ──
+	const btn     = document.getElementById('btn-inscribete');
+	const overlay = document.getElementById('modal-overlay');
+	const cerrar  = document.getElementById('modal-cerrar');
+	btn?.addEventListener('click', () => overlay.classList.add('abierto'));
+	cerrar?.addEventListener('click', () => overlay.classList.remove('abierto'));
+	overlay?.addEventListener('click', (e) => { if (e.target === overlay) overlay.classList.remove('abierto'); });
+
+	document.getElementById('form-inscripcion')?.addEventListener('submit', async (e) => {
+		e.preventDefault();
+		const form = e.target;
+		const ibtn = document.getElementById('inscripcion-btn');
+		const msg  = document.getElementById('inscripcion-msg');
+		ibtn.disabled = true; ibtn.textContent = 'Enviando...';
+		msg.className = 'form-msg'; msg.textContent = '';
+		const res = await fetch('/api/inscripcion', { method: 'POST', body: new FormData(form) });
+		if (res.ok) {
+			msg.className = 'form-msg ok';
+			msg.textContent = '¡Inscripción enviada! Te confirmamos pronto.';
+			form.reset();
+		} else {
+			msg.className = 'form-msg error';
+			msg.textContent = 'Error al enviar. Inténtalo de nuevo.';
+		}
+		ibtn.disabled = false; ibtn.textContent = 'Enviar inscripción ⚒';
+	});
+
+	// ── Calendario ──
+	const EVENTOS = [
+		{ year: 2026, month: 2,  day: 14, nombre: 'D&B: Dungeons & Bondage' },
+		{ year: 2026, month: 3,  day: 18, nombre: 'Fiesta Japan & Body Sushi' },
+		{ year: 2026, month: 4,  day:  2, nombre: 'Fetish Uniform Night' },
+		{ year: 2026, month: 5,  day:  6, nombre: 'Noche de Velas' },
+		{ year: 2026, month: 6,  day:  4, nombre: 'Desfile Fetish Queer' },
+		{ year: 2026, month: 7,  day:  1, nombre: 'Barbacoa & Escape Room' },
+	];
+
+	const MESES = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+	const DIAS  = ['L','M','X','J','V','S','D'];
+
+	const now = new Date();
+	let curYear  = now.getFullYear();
+	let curMonth = now.getMonth(); // 0-indexed
+
+	function render() {
+		const titulo = document.getElementById('cal-titulo');
+		const grid   = document.getElementById('cal-grid');
+		const agenda = document.getElementById('agenda-list');
+		titulo.textContent = `${MESES[curMonth]} ${curYear}`;
+
+		// Grid
+		const firstDay = new Date(curYear, curMonth, 1).getDay(); // 0=Sun
+		const offset   = firstDay === 0 ? 6 : firstDay - 1; // Mon-first
+		const daysInMonth = new Date(curYear, curMonth + 1, 0).getDate();
+		const today = new Date();
+
+		let html = DIAS.map(d => `<span class="cal-dia-nombre">${d}</span>`).join('');
+		for (let i = 0; i < offset; i++) html += `<span class="vacio"></span>`;
+		for (let d = 1; d <= daysInMonth; d++) {
+			const ev      = EVENTOS.find(e => e.year === curYear && e.month === curMonth && e.day === d);
+			const isToday = curYear === today.getFullYear() && curMonth === today.getMonth() && d === today.getDate();
+			const isPast  = new Date(curYear, curMonth, d) < new Date(today.getFullYear(), today.getMonth(), today.getDate());
+			let cls = '';
+			if (isToday && ev) cls = 'evento-dia hoy-dia';
+			else if (isToday)  cls = 'hoy-dia';
+			else if (ev && isPast) cls = 'evento-dia pasado-dia';
+			else if (ev)       cls = 'evento-dia';
+			html += `<span class="${cls}">${d}</span>`;
+		}
+		grid.innerHTML = html;
+
+		// Agenda: solo eventos de este mes
+		const mesEventos = EVENTOS.filter(e => e.year === curYear && e.month === curMonth);
+		if (mesEventos.length === 0) {
+			agenda.innerHTML = `<li class="sin-eventos"><span class="agenda-nombre">Sin eventos este mes</span></li>`;
+		} else {
+			agenda.innerHTML = mesEventos.map(e => {
+				const isPast = new Date(curYear, curMonth, e.day) < new Date(today.getFullYear(), today.getMonth(), today.getDate());
+				return `<li class="${isPast ? 'pasado' : ''}">
+					<span class="agenda-fecha">${String(e.day).padStart(2,'0')} ${MESES[curMonth].slice(0,3)}</span>
+					<span class="agenda-nombre">${e.nombre}</span>
+				</li>`;
+			}).join('');
+		}
 	}
 
-	h2 {
-		font-size: 1.4rem;
-		letter-spacing: 3px;
+	document.getElementById('cal-prev')?.addEventListener('click', () => {
+		curMonth--; if (curMonth < 0) { curMonth = 11; curYear--; } render();
+	});
+	document.getElementById('cal-next')?.addEventListener('click', () => {
+		curMonth++; if (curMonth > 11) { curMonth = 0; curYear++; } render();
+	});
+
+	render();
+</script>
+
+<style>
+	.pagina {
+		display: grid;
+		grid-template-columns: 1.4fr 1fr;
+		gap: 1rem;
+		margin: 0.6rem auto 0.8rem;
+		height: calc(100vh - 148px);
+		align-items: stretch;
+		overflow: hidden;
+	}
+
+	.foto-wrap {
+		border: 3px solid #2a1208;
+		outline: 1px solid #2a1208;
+		outline-offset: 4px;
+		box-shadow: 5px 5px 0 #2a1208;
+		overflow: hidden;
+	}
+
+	.foto-eventos {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center top;
+		display: block;
+	}
+
+	.col-derecha {
+		display: flex;
+		flex-direction: column;
+		gap: 0.7rem;
+		min-height: 0;
+	}
+
+	/* ── Evento stack (foto arriba, tarjeta abajo) ── */
+
+	.evento-stack {
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+		flex: 1;
+		min-height: 0;
+		border: 3px solid #2a1208;
+		outline: 1px solid #2a1208;
+		outline-offset: 4px;
+		box-shadow: 5px 5px 0 #2a1208;
+		overflow: hidden;
+	}
+
+	.img-evento {
+		width: 100%;
+		height: 110px;
+		object-fit: cover;
+		object-position: center 30%;
+		display: block;
+		flex-shrink: 0;
+		border-bottom: 2px solid #2a1208;
+	}
+
+	.cuerpo {
+		font-family: system-ui, -apple-system, sans-serif;
+		font-size: 0.62rem;
+		color: #2a1208;
+		line-height: 1.5;
+		margin: 0.15rem 0 0.2rem;
+	}
+
+	/* ── Tarjeta evento ── */
+
+	.text-col-evento {
+		background: #d4b896;
+		padding: 0.5rem 0.8rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		font-family: 'Cinzel', serif;
+		flex: 1;
+		min-height: 0;
+		overflow-y: auto;
+	}
+
+	.evento-header {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		margin-bottom: 0.1rem;
+	}
+
+	.evento-logo { height: 22px; width: auto; opacity: 0.9; flex-shrink: 0; }
+
+	.pre-titulo {
+		font-size: 0.45rem;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		color: #5a3018;
+		margin: 0;
+	}
+
+	h3 {
+		font-family: 'Metamorphous', cursive;
+		font-size: 0.85rem;
+		letter-spacing: 2px;
 		text-transform: uppercase;
 		color: #2a1208;
-		margin-bottom: 1.5rem;
+		margin: 0;
+		line-height: 1.1;
+		flex: 1;
 	}
 
-	p {
-		margin-bottom: 1.2rem;
-		color: #3d2010;
+	.linea {
+		border: none;
+		border-top: 1.5px solid #2a1208;
+		margin: 0.25rem 0;
 	}
 
-	::selection {
-		background: rgba(180, 80, 20, 0.35);
-		color: #ffe0b0;
+	.sentidos {
+		list-style: none;
+		padding: 0;
+		margin: 0 0 0.25rem;
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		gap: 0.2rem;
+	}
+
+	.sentidos li {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 0.1rem;
+		padding: 0.2rem 0.1rem;
+		font-family: 'Cinzel', serif;
+		font-size: 0.38rem;
+		letter-spacing: 1.5px;
+		text-transform: uppercase;
+		color: #fff;
+		font-weight: 700;
+	}
+
+	.sentidos li svg { width: 0.6rem; height: 0.6rem; stroke: currentColor; }
+
+	.s-vista  { background: #c03818; box-shadow: 2px 2px 0 rgba(0,0,0,0.3); }
+	.s-oido   { background: #b47808; box-shadow: 2px 2px 0 rgba(0,0,0,0.3); }
+	.s-olfato { background: #7c3890; box-shadow: 2px 2px 0 rgba(0,0,0,0.3); }
+	.s-gusto  { background: #b82850; box-shadow: 2px 2px 0 rgba(0,0,0,0.3); }
+	.s-tacto  { background: #206858; box-shadow: 2px 2px 0 rgba(0,0,0,0.3); }
+
+	.datos-evento {
+		margin: 0.15rem 0;
+		border-top: 1px solid rgba(42,18,8,0.25);
+		border-bottom: 1px solid rgba(42,18,8,0.25);
+		padding: 0.15rem 0;
+	}
+
+	.dato-fila {
+		display: flex;
+		align-items: baseline;
+		gap: 0.5rem;
+		padding: 0.1rem 0;
+	}
+
+	.dato-fila + .dato-fila { border-top: 1px solid rgba(42,18,8,0.15); }
+
+	.dato-label {
+		font-family: 'Cinzel', serif;
+		font-size: 0.48rem;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		color: #b44814;
+		font-weight: 700;
+		min-width: 2.8rem;
+		flex-shrink: 0;
+		display: flex;
+		align-items: center;
+		gap: 0.2rem;
+	}
+
+	.dato-label svg { width: 0.6rem; height: 0.6rem; flex-shrink: 0; }
+
+	.dato-valor {
+		font-family: system-ui, -apple-system, sans-serif;
+		color: #2a1208;
+		font-size: 0.65rem;
+		font-weight: 600;
+	}
+
+	.dato-privado { font-weight: 700; }
+
+	.footer-card { display: flex; justify-content: center; margin-top: 0.2rem; }
+
+	.btn-inscribete {
+		background: #b44814;
+		color: #fff7ee;
+		border: none;
+		padding: 0.45rem 1.1rem;
+		font-family: 'Cinzel', serif;
+		font-size: 0.6rem;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		cursor: pointer;
+		transition: background 0.2s, box-shadow 0.2s;
+		box-shadow: 3px 3px 0 #6a2808;
+	}
+
+	.btn-inscribete:hover { background: #d45a18; box-shadow: 4px 4px 0 #6a2808; }
+
+	/* ── Calendario ── */
+
+	.calendario {
+		background: #d4b896;
+		border: 3px solid #2a1208;
+		outline: 1px solid #2a1208;
+		outline-offset: 4px;
+		box-shadow: 5px 5px 0 #2a1208;
+		padding: 0.5rem 0.8rem;
+		font-family: 'Cinzel', serif;
+		flex-shrink: 0;
+	}
+
+	.cal-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.5rem;
+		margin-bottom: 0.1rem;
+	}
+
+	.cal-nav {
+		background: #2a1208;
+		border: none;
+		color: #f5e6d0;
+		font-size: 1.1rem;
+		width: 28px;
+		height: 28px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		flex-shrink: 0;
+		padding: 0;
+		line-height: 1;
+		transition: background 0.15s;
+	}
+
+	.cal-nav:hover { background: #b44814; }
+
+	.cal-logo {
+		height: 18px;
+		width: auto;
+		opacity: 0.85;
+		flex-shrink: 0;
+	}
+
+	.cal-mes-wrap {
+		display: flex;
+		align-items: center;
+		gap: 0.4rem;
+	}
+
+	.cal-pre {
+		font-size: 0.42rem;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		color: #5a3018;
+		margin: 0;
+	}
+
+	h4.cal-titulo {
+		font-family: 'Metamorphous', cursive;
+		font-size: 0.85rem;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		color: #2a1208;
+		margin: 0;
+		line-height: 1;
+	}
+
+	.cal-grid {
+		display: grid;
+		grid-template-columns: repeat(7, 1fr);
+		gap: 0.1rem;
+		margin: 0.25rem 0;
+	}
+
+	.cal-dia-nombre {
+		font-family: 'Cinzel', serif;
+		font-size: 0.45rem;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		color: #b44814;
+		font-weight: 700;
+		text-align: center;
+		padding-bottom: 0.12rem;
+		border-bottom: 1px solid rgba(42,18,8,0.2);
+	}
+
+	.cal-grid span:not(.cal-dia-nombre):not(.vacio) {
+		font-family: system-ui, -apple-system, sans-serif;
+		font-size: 0.65rem;
+		color: #2a1208;
+		text-align: center;
+		padding: 0.15rem 0;
+		line-height: 1;
+	}
+
+	.vacio { visibility: hidden; }
+
+	.agenda { list-style: none; padding: 0; margin: 0.1rem 0 0; }
+
+	/* ── Agenda ── */
+
+	.agenda {
+		list-style: none;
+		padding: 0;
+		margin: 0.1rem 0 0;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.agenda li {
+		display: flex;
+		align-items: baseline;
+		gap: 0.5rem;
+		padding: 0.18rem 0;
+		border-bottom: 1px solid rgba(42,18,8,0.12);
+	}
+
+	.agenda li:last-child { border-bottom: none; }
+
+	.agenda-fecha {
+		font-family: 'Cinzel', serif;
+		font-size: 0.48rem;
+		letter-spacing: 1.5px;
+		text-transform: uppercase;
+		color: #b44814;
+		font-weight: 700;
+		min-width: 2.8rem;
+		flex-shrink: 0;
+	}
+
+	.agenda-nombre {
+		font-family: system-ui, -apple-system, sans-serif;
+		font-size: 0.63rem;
+		color: #2a1208;
+	}
+
+	.agenda li.pasado .agenda-fecha,
+	.agenda li.pasado .agenda-nombre {
+		color: #9a7a60;
+		text-decoration: line-through;
+		text-decoration-color: rgba(154,122,96,0.5);
+	}
+
+	.sin-eventos .agenda-nombre {
+		color: #7a5035;
+		font-style: italic;
+	}
+
+	/* ── Modal ── */
+
+	.modal-overlay {
+		display: none;
+		position: fixed;
+		inset: 0;
+		background: rgba(20, 8, 2, 0.75);
+		z-index: 500;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.modal-overlay.abierto { display: flex; }
+
+	.modal-documento {
+		background: #d4b896;
+		border: 3px solid #2a1208;
+		outline: 1px solid #2a1208;
+		outline-offset: 5px;
+		box-shadow: 8px 8px 0 #2a1208;
+		padding: 1.8rem 2rem;
+		width: 100%;
+		max-width: 480px;
+		position: relative;
+		font-family: 'Cinzel', serif;
+	}
+
+	.modal-cerrar {
+		position: absolute;
+		top: 0.6rem;
+		right: 0.8rem;
+		background: none;
+		border: none;
+		font-size: 1rem;
+		color: #2a1208;
+		cursor: pointer;
+		padding: 0;
+	}
+
+	.modal-cerrar:hover { color: #b44814; }
+
+	.doc-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.8rem;
+		margin-bottom: 0.3rem;
+	}
+
+	.modal-logo { height: 24px; width: auto; flex-shrink: 0; }
+
+	.doc-sello { font-size: 1.2rem; font-weight: 900; color: #b44814; letter-spacing: 2px; }
+
+	h5 {
+		font-size: 0.95rem;
+		letter-spacing: 4px;
+		text-transform: uppercase;
+		color: #2a1208;
+		margin: 0;
+		text-align: center;
+		font-family: 'Cinzel', serif;
+	}
+
+	.doc-sub {
+		font-size: 0.55rem;
+		letter-spacing: 1.5px;
+		color: #5a3018;
+		text-align: center;
+		margin: 0 0 0.4rem;
+		text-transform: uppercase;
+	}
+
+	.doc-linea { border: none; border-top: 1.5px solid #2a1208; margin: 0.8rem 0; }
+
+	.fila-campos { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+	.campo { display: flex; flex-direction: column; margin-bottom: 0.9rem; }
+
+	label {
+		font-family: 'Cinzel', serif;
+		font-size: 0.6rem;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		color: #2a1208;
+		margin-bottom: 0.3rem;
+		font-weight: 700;
+	}
+
+	.req { color: #b44814; }
+
+	.opcional {
+		font-family: system-ui, -apple-system, sans-serif;
+		font-weight: 400;
+		text-transform: none;
+		letter-spacing: 0;
+		color: #5a3018;
+		font-size: 0.65rem;
+	}
+
+	input {
+		background: rgba(255,255,255,0.3);
+		border: none;
+		border-bottom: 1.5px solid #2a1208;
+		padding: 0.4rem 0.3rem;
+		font-family: system-ui, -apple-system, sans-serif;
+		font-size: 0.82rem;
+		color: #1c0a02;
+		outline: none;
+		transition: border-color 0.2s, background 0.2s;
+	}
+
+	input:focus { border-color: #b44814; background: rgba(255,255,255,0.5); }
+	input::placeholder { color: #7a5035; font-style: italic; font-size: 0.75rem; }
+
+	.doc-footer { display: flex; align-items: center; justify-content: flex-end; gap: 0.8rem; flex-wrap: wrap; }
+
+	.form-msg { font-family: system-ui, -apple-system, sans-serif; font-size: 0.72rem; margin: 0; }
+	.form-msg.ok    { color: #2a6a1a; }
+	.form-msg.error { color: #b41414; }
+
+	.btn-enviar {
+		background: #b44814;
+		color: #fff7ee;
+		border: none;
+		padding: 0.7rem 1.4rem;
+		font-family: 'Cinzel', serif;
+		font-size: 0.72rem;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		cursor: pointer;
+		transition: background 0.2s, box-shadow 0.2s;
+		box-shadow: 3px 3px 0 #6a2808;
+	}
+
+	.btn-enviar:hover { background: #d45a18; box-shadow: 4px 4px 0 #6a2808; }
+
+	@media (max-width: 768px) {
+		.pagina { grid-template-columns: 1fr; }
+		.fila-campos { grid-template-columns: 1fr; }
+		.modal-documento { margin: 1rem; }
+	}
+
+	::selection { background: rgba(180, 80, 20, 0.35); color: #ffe0b0; }
+</style>
+
+<style is:global>
+	/* Estilos del calendario aplicados a spans creados por JS */
+	.evento-dia {
+		background: #b44814!important;
+		color: #fff7ee !important;
+		font-weight: 700 !important;
+		box-shadow: 1px 1px 0 #6a2808 !important;
+	}
+	.pasado-dia {
+		background: #9a7a60 !important;
+		color: #fff7ee !important;
+		box-shadow: none !important;
+	}
+	.hoy-dia {
+		background: #2a1208 !important;
+		color: #f5e6d0 !important;
+		font-weight: 700 !important;
 	}
 </style>

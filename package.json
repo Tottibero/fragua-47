@@ -12,13 +12,18 @@
     "astro": "astro"
   },
   "pnpm": {
-    "onlyBuiltDependencies": ["sharp", "esbuild"]
+    "onlyBuiltDependencies": [
+      "sharp",
+      "esbuild"
+    ]
   },
   "dependencies": {
+    "@astrojs/netlify": "^7.0.4",
     "@fontsource/cinzel": "^5.2.8",
     "@fontsource/metamorphous": "^5.2.8",
     "@tailwindcss/vite": "^4.2.1",
     "astro": "^6.0.5",
+    "resend": "^6.9.4",
     "sharp": "^0.34.5",
     "tailwindcss": "^4.2.1"
   }
