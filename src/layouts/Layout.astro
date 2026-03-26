@@ -184,9 +184,8 @@ const { description = 'Fragua47 — Comunidad BDSM' } = Astro.props;
 	}
 
 	function createFewSparksAllSides(el) {
-		if (Math.random() > 0.5) return; // 50% chance cada tick, como el active
 		const rect = el.getBoundingClientRect();
-		const count = 1 + Math.floor(Math.random() * 3);
+		const count = 3 + Math.floor(Math.random() * 4);
 		for (let i = 0; i < count; i++) {
 			const edge = Math.floor(Math.random() * 4);
 			let sx, sy, angle;
@@ -258,7 +257,7 @@ const { description = 'Fragua47 — Comunidad BDSM' } = Astro.props;
 	document.querySelector('.logo-brand')?.addEventListener('mouseenter', () => {
 		if (logoText) {
 			createSparksAllSides(logoText);
-			logoSparkInterval = setInterval(() => createFewSparksAllSides(logoText), 700);
+			logoSparkInterval = setInterval(() => createFewSparksAllSides(logoText), 500);
 		}
 	});
 	document.querySelector('.logo-brand')?.addEventListener('mouseleave', () => {
@@ -269,8 +268,8 @@ const { description = 'Fragua47 — Comunidad BDSM' } = Astro.props;
 	document.querySelectorAll('nav a').forEach(link => {
 		let navSparkInterval = null;
 		link.addEventListener('mouseenter', () => {
-			createSparks(link);
-			navSparkInterval = setInterval(() => createFewSparksAllSides(link), 700);
+			createSparksAllSides(link);
+			navSparkInterval = setInterval(() => createFewSparksAllSides(link), 500);
 		});
 		link.addEventListener('mouseleave', () => {
 			clearInterval(navSparkInterval);
