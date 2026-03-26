@@ -5,7 +5,9 @@ import cinzel400 from '@fontsource/cinzel/files/cinzel-latin-400-normal.woff2?ur
 import cinzel600 from '@fontsource/cinzel/files/cinzel-latin-600-normal.woff2?url';
 import metamorphous from '@fontsource/metamorphous/files/metamorphous-latin-400-normal.woff2?url';
 const path = Astro.url.pathname.replace(/\/$/, '');
-const { description = 'Fragua47 — Comunidad BDSM' } = Astro.props;
+const { description = 'Fragua47 — Comunidad BDSM', title: pageTitle = '' } = Astro.props;
+const fullTitle = pageTitle ? `${pageTitle} · Fragua47` : 'Fragua47 — Comunidad BDSM en Valladolid';
+const canonicalURL = new URL(Astro.url.pathname, 'https://fragua47.org').href;
 ---
 
 <!doctype html>
@@ -20,10 +22,20 @@ const { description = 'Fragua47 — Comunidad BDSM' } = Astro.props;
 		<link rel="preload" as="font" type="font/woff2" href={cinzel600} crossorigin />
 		<link rel="preload" as="font" type="font/woff2" href={metamorphous} crossorigin />
 		<meta name="description" content={description} />
-		<title>Fragua47</title>
+		<title>{fullTitle}</title>
+		<link rel="canonical" href={canonicalURL} />
+		<meta property="og:title" content={fullTitle} />
+		<meta property="og:description" content={description} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:image" content="https://fragua47.org/juguetes-f47.webp" />
+		<meta property="og:site_name" content="Fragua47" />
+		<meta property="og:locale" content="es_ES" />
 		<slot name="head" />
 	</head>
 	<body>
+
+		<a href="#contenido-principal" class="skip-nav">Saltar al contenido</a>
 
 		<div class="header-wrap">
 			<header>
@@ -41,7 +53,7 @@ const { description = 'Fragua47 — Comunidad BDSM' } = Astro.props;
 			</header>
 		</div>
 
-		<main>
+		<main id="contenido-principal">
 			<slot />
 		</main>
 
@@ -319,6 +331,22 @@ const { description = 'Fragua47 — Comunidad BDSM' } = Astro.props;
 </script>
 
 <style>
+	.skip-nav {
+		position: absolute;
+		top: -100%;
+		left: 0;
+		background: #2a1208;
+		color: #f5e6d0;
+		padding: 0.5rem 1.2rem;
+		z-index: 10001;
+		font-family: 'Cinzel', serif;
+		font-size: 0.75rem;
+		letter-spacing: 1px;
+		text-decoration: none;
+		transition: top 0.15s;
+	}
+	.skip-nav:focus { top: 0; }
+
 	*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 	html { background: #e8dcc8; color: #1c0f06; }
