@@ -1,7 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { Image } from 'astro:assets';
-import logoImg from '../assets/VectLogoF47.png';
 ---
 
 <Layout description="Próximos eventos de Fragua47. Consulta la agenda de quedadas y actividades de la comunidad.">
@@ -21,7 +19,7 @@ import logoImg from '../assets/VectLogoF47.png';
 				<img src="/Bodysushi.png" alt="Fiesta Japan & Body Sushi" class="img-evento" loading="lazy" width="800" height="300" />
 				<div class="text-col-evento">
 					<div class="evento-header">
-						<Image src={logoImg} alt="Logo Fragua47" class="evento-logo" width={36} height={41} format="webp" />
+						<img src="/VectLogoF47.png" alt="Logo Fragua47" class="evento-logo" />
 						<div>
 							<p class="pre-titulo">— próxima fiesta —</p>
 							<h3>Fiesta Japan &amp; Body Sushi</h3>
@@ -85,7 +83,7 @@ import logoImg from '../assets/VectLogoF47.png';
 				<div class="cal-header">
 					<button class="cal-nav" id="cal-prev">‹</button>
 					<div class="cal-mes-wrap">
-						<Image src={logoImg} alt="Logo Fragua47" class="cal-logo" width={20} height={23} format="webp" />
+						<img src="/VectLogoF47.png" alt="Logo Fragua47" class="cal-logo" />
 						<p class="cal-pre">— agenda —</p>
 						<h4 class="cal-titulo" id="cal-titulo"></h4>
 					</div>
@@ -105,7 +103,7 @@ import logoImg from '../assets/VectLogoF47.png';
 		<div class="modal-documento">
 			<button class="modal-cerrar" id="modal-cerrar">✕</button>
 			<div class="doc-header">
-				<Image src={logoImg} alt="Logo Fragua47" class="modal-logo" width={24} height={27} format="webp" />
+				<img src="/VectLogoF47.png" alt="Logo Fragua47" class="modal-logo" />
 				<h5>Inscripción</h5>
 				<span class="doc-sello">⚒</span>
 			</div>
