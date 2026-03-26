@@ -1,7 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { Image } from 'astro:assets';
-import logoImg from '../assets/VectLogoF47.png';
 ---
 
 <Layout description="Fragua47, comunidad BDSM. Espacio seguro, consensuado y de confianza.">
@@ -21,7 +19,7 @@ import logoImg from '../assets/VectLogoF47.png';
 	<section class="evento">
 		<div class="text-col-evento">
 			<div class="evento-header">
-				<Image src={logoImg} alt="Logo Fragua47" class="evento-logo" width={36} height={41} format="webp" />
+				<img src="/VectLogoF47.png" alt="Logo Fragua47" class="evento-logo" />
 				<p class="pre-titulo">— próxima fiesta —</p>
 			</div>
 			<h3>Fiesta Japan<br/>&amp; Body Sushi</h3>
@@ -86,7 +84,7 @@ import logoImg from '../assets/VectLogoF47.png';
 		<div class="modal-documento">
 			<button class="modal-cerrar" id="modal-cerrar">✕</button>
 			<div class="doc-header">
-				<Image src={logoImg} alt="Logo Fragua47" class="modal-logo" width={24} height={27} format="webp" />
+				<img src="/VectLogoF47.png" alt="Logo Fragua47" class="modal-logo" />
 				<h4>Inscripción</h4>
 				<span class="doc-sello">⚒</span>
 			</div>
