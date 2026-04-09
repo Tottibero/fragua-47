@@ -12,6 +12,8 @@ const posts = [
     imagenAlt: 'Kitagawa Utamaro, Tres Bellezas del Tiempo Presente, 1793 — ukiyo-e, período Edo',
     etiquetas: ['Historia', 'Arte japonés'],
     lectura: '18 min',
+    autor: 'tottibero',
+    autorURL: 'https://fetlife.com/tottibero',
   },
 ];
 ---
@@ -55,6 +57,18 @@ const posts = [
                         <path d="M8 4.5V8.5L10.5 10" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
                       </svg>
                       {post.lectura}
+                    </span>
+                  )}
+                  {post.autor && (
+                    <span class="post-autor">
+                      <svg class="icono-autor" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <circle cx="8" cy="5.5" r="2.5" stroke="currentColor" stroke-width="1.2"/>
+                        <path d="M2.5 13.5c0-3 2.5-4.5 5.5-4.5s5.5 1.5 5.5 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                      </svg>
+                      {post.autorURL
+                        ? <a href={post.autorURL} class="post-autor-enlace" target="_blank" rel="noopener noreferrer">{post.autor}</a>
+                        : post.autor
+                      }
                     </span>
                   )}
                 </div>
@@ -268,6 +282,32 @@ const posts = [
     color: #b44814;
     flex-shrink: 0;
   }
+
+  .post-autor {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.46rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #7a3a10;
+  }
+
+  .icono-autor {
+    width: 11px;
+    height: 11px;
+    color: #b44814;
+    flex-shrink: 0;
+  }
+
+  .post-autor-enlace {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid #8B1A1A;
+    transition: color 0.2s;
+  }
+  .post-autor-enlace:hover { color: #8B1A1A; }
 
   .post-leer {
     font-family: 'Cinzel', serif;
