@@ -17,7 +17,7 @@ const jsonLd = JSON.stringify({
   "datePublished": fechaISO,
   "dateModified": fechaModificadaISO,
   "image": ogImageURL,
-  "author": { "@type": "Organization", "name": "Fragua47", "url": "https://fragua47.org" },
+  "author": { "@type": "Person", "name": "tottibero" },
   "publisher": { "@type": "Organization", "name": "Fragua47", "url": "https://fragua47.org", "logo": { "@type": "ImageObject", "url": "https://fragua47.org/favicon-32.png" } },
   "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalURL },
   "inLanguage": "es-ES",
@@ -29,7 +29,7 @@ const jsonLd = JSON.stringify({
   <script type="application/ld+json" slot="head" set:html={jsonLd} />
   <meta slot="head" property="article:published_time" content={fechaISO} />
   <meta slot="head" property="article:modified_time" content={fechaModificadaISO} />
-  <meta slot="head" property="article:author" content="Fragua47" />
+  <meta slot="head" property="article:author" content="tottibero" />
   <meta slot="head" property="article:section" content="Historia del Arte" />
   <meta slot="head" property="article:tag" content="shunga" />
   <meta slot="head" property="article:tag" content="abunae" />
@@ -119,7 +119,7 @@ const jsonLd = JSON.stringify({
         <div class="meta-articulo">
           <time itemprop="datePublished" datetime={fechaISO}>{fechaMostrar}</time>
           <span aria-hidden="true" class="meta-sep">·</span>
-          <span itemprop="author">Fragua47</span>
+          <span itemprop="author">Fragua47 · <a href="https://fetlife.com/tottibero" class="autor-enlace" target="_blank" rel="noopener noreferrer">tottibero</a></span>
           <span aria-hidden="true" class="meta-sep">·</span>
           <span>Historia del erotismo</span>
         </div>
@@ -811,6 +811,14 @@ const jsonLd = JSON.stringify({
     margin-bottom: 1.1rem;
   }
   .meta-sep { opacity: 0.42; }
+
+  .autor-enlace {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid #8B1A1A;
+    transition: color 0.2s;
+  }
+  .autor-enlace:hover { color: #8B1A1A; }
 
   /* ── Lead paragraph (entradilla) ── */
   .entradilla {
