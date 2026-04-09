@@ -31,17 +31,19 @@ const posts = [
     <ul class="lista-posts" role="list">
       {posts.map(post => (
         <li class="post-card">
-          <a href={`/blog/${post.slug}/`} class="post-enlace">
+          <div class="post-enlace">
             {post.imagen && (
-              <div class="post-imagen-wrap">
+              <a href={`/blog/${post.slug}/`} class="post-imagen-wrap" tabindex="-1" aria-hidden="true">
                 <img src={post.imagen} alt={post.imagenAlt} class="post-imagen" loading="lazy" decoding="async" />
-              </div>
+              </a>
             )}
             <div class="post-contenido">
               <div class="post-meta">
                 <time class="post-fecha" datetime={post.fecha}>{post.fechaMostrar}</time>
               </div>
-              <h2 class="post-titulo">{post.titulo}</h2>
+              <h2 class="post-titulo">
+                <a href={`/blog/${post.slug}/`} class="post-titulo-enlace">{post.titulo}</a>
+              </h2>
               <p class="post-resumen">{post.resumen}</p>
               <div class="post-footer">
                 <div class="post-footer-izq">
@@ -72,10 +74,10 @@ const posts = [
                     </span>
                   )}
                 </div>
-                <span class="post-leer" aria-hidden="true">Leer artículo →</span>
+                <a href={`/blog/${post.slug}/`} class="post-leer">Leer artículo →</a>
               </div>
             </div>
-          </a>
+          </div>
         </li>
       ))}
     </ul>
@@ -156,7 +158,6 @@ const posts = [
 
   .post-enlace {
     display: flex;
-    text-decoration: none;
     color: inherit;
   }
 
@@ -164,6 +165,7 @@ const posts = [
     flex: 0 0 130px;
     overflow: hidden;
     border-right: 2px solid #2a1208;
+    text-decoration: none;
   }
 
   .post-imagen {
@@ -175,8 +177,29 @@ const posts = [
     transition: transform 0.4s ease;
   }
 
-  .post-card:hover .post-imagen {
+  .post-imagen-wrap:hover .post-imagen {
     transform: scale(1.03);
+  }
+
+  .post-titulo-enlace {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .post-titulo-enlace:hover {
+    color: #b44814;
+  }
+
+  .post-leer {
+    font-family: 'Cinzel', serif;
+    font-size: 0.58rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #b44814;
+    font-weight: 700;
+    white-space: nowrap;
+    text-decoration: none;
   }
 
   .post-contenido {
@@ -308,16 +331,6 @@ const posts = [
     transition: color 0.2s;
   }
   .post-autor-enlace:hover { color: #8B1A1A; }
-
-  .post-leer {
-    font-family: 'Cinzel', serif;
-    font-size: 0.58rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #b44814;
-    font-weight: 700;
-    white-space: nowrap;
-  }
 
   @media (max-width: 768px) {
     .blog-index { padding: 1rem 0; }
