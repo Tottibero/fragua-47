@@ -38,16 +38,26 @@ const posts = [
             <div class="post-contenido">
               <div class="post-meta">
                 <time class="post-fecha" datetime={post.fecha}>{post.fechaMostrar}</time>
-                {post.lectura && <span class="post-lectura">{post.lectura} de lectura</span>}
               </div>
               <h2 class="post-titulo">{post.titulo}</h2>
               <p class="post-resumen">{post.resumen}</p>
               <div class="post-footer">
-                {post.etiquetas && (
-                  <ul class="post-etiquetas" aria-label="Categorías">
-                    {post.etiquetas.map(e => <li class="post-etiqueta">{e}</li>)}
-                  </ul>
-                )}
+                <div class="post-footer-izq">
+                  {post.etiquetas && (
+                    <ul class="post-etiquetas" aria-label="Categorías">
+                      {post.etiquetas.map(e => <li class="post-etiqueta">{e}</li>)}
+                    </ul>
+                  )}
+                  {post.lectura && (
+                    <span class="post-lectura">
+                      <svg class="icono-reloj" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.2"/>
+                        <path d="M8 4.5V8.5L10.5 10" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                      </svg>
+                      {post.lectura}
+                    </span>
+                  )}
+                </div>
                 <span class="post-leer" aria-hidden="true">Leer artículo →</span>
               </div>
             </div>
@@ -206,14 +216,6 @@ const posts = [
     margin-bottom: 0.35rem;
   }
 
-  .post-lectura {
-    font-family: 'Cinzel', serif;
-    font-size: 0.48rem;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: #8a5030;
-  }
-
   .post-footer {
     display: flex;
     align-items: center;
@@ -221,6 +223,13 @@ const posts = [
     gap: 0.5rem;
     flex-wrap: wrap;
     margin-top: 0.8rem;
+  }
+
+  .post-footer-izq {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
   }
 
   .post-etiquetas {
@@ -240,6 +249,24 @@ const posts = [
     color: #2a1208;
     border: 1px solid #2a1208;
     padding: 0.15rem 0.5rem;
+  }
+
+  .post-lectura {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.46rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #7a3a10;
+  }
+
+  .icono-reloj {
+    width: 11px;
+    height: 11px;
+    color: #b44814;
+    flex-shrink: 0;
   }
 
   .post-leer {
