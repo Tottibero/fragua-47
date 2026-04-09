@@ -5,7 +5,7 @@ import cinzel400 from '@fontsource/cinzel/files/cinzel-latin-400-normal.woff2?ur
 import cinzel600 from '@fontsource/cinzel/files/cinzel-latin-600-normal.woff2?url';
 import metamorphous from '@fontsource/metamorphous/files/metamorphous-latin-400-normal.woff2?url';
 const path = Astro.url.pathname.replace(/\/$/, '');
-const { description = 'Fragua47 — Comunidad BDSM', title: pageTitle = '' } = Astro.props;
+const { description = 'Fragua47 — Comunidad BDSM', title: pageTitle = '', ogType = 'website' } = Astro.props;
 const fullTitle = pageTitle ? `${pageTitle} · Fragua47` : 'Fragua47 — Comunidad BDSM en Valladolid';
 const canonicalURL = new URL(Astro.url.pathname, 'https://fragua47.org').href;
 ---
@@ -26,7 +26,7 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://fragua47.org').href;
 		<link rel="canonical" href={canonicalURL} />
 		<meta property="og:title" content={fullTitle} />
 		<meta property="og:description" content={description} />
-		<meta property="og:type" content="website" />
+		<meta property="og:type" content={ogType} />
 		<meta property="og:url" content={canonicalURL} />
 		<meta property="og:image" content="https://fragua47.org/juguetes-f47.webp" />
 		<meta property="og:site_name" content="Fragua47" />
@@ -48,6 +48,7 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://fragua47.org').href;
 				<nav id="main-nav">
 					<a href="/eventos/"        class={path === '/eventos'        ? 'active' : ''}>Eventos</a>
 					<a href="/hazte-socio/"    class={path === '/hazte-socio'     ? 'active' : ''}>Hazte socio</a>
+					<a href="/blog/"           class={path === '/blog' || path.startsWith('/blog/') ? 'active' : ''}>Blog</a>
 					<a href="/contacto/"       class={path === '/contacto'        ? 'active' : ''}>Contacto</a>
 				</nav>
 			</header>

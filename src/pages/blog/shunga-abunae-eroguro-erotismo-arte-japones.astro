@@ -1,0 +1,1131 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const titulo = 'Shunga, Abunae y Eroguro: La Evolución del Erotismo en el Arte Japonés';
+const descripcion = 'Descubre la historia del arte erótico japonés: del shunga del período Edo al eroguro de vanguardia. Arte, censura, poder y sensualidad en tres siglos de transgresión.';
+const fechaISO = '2026-04-08';
+const fechaMostrar = '8 de abril de 2026';
+const canonicalURL = 'https://fragua47.org/blog/shunga-abunae-eroguro-erotismo-arte-japones/';
+
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": titulo,
+  "description": descripcion,
+  "datePublished": fechaISO,
+  "author": { "@type": "Organization", "name": "Fragua47", "url": "https://fragua47.org" },
+  "publisher": { "@type": "Organization", "name": "Fragua47", "url": "https://fragua47.org" },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalURL },
+  "inLanguage": "es-ES",
+  "keywords": ["shunga","abunae","eroguro","arte japonés","erotismo japonés","ukiyo-e","woodblock","Hokusai","arte erótico","historia del erotismo"]
+});
+---
+
+<Layout title={titulo} description={descripcion} ogType="article">
+  <script type="application/ld+json" slot="head" set:html={jsonLd} />
+  <meta slot="head" property="article:published_time" content={fechaISO} />
+  <meta slot="head" property="article:author" content="Fragua47" />
+  <meta slot="head" property="article:section" content="Cultura" />
+  <meta slot="head" property="article:tag" content="shunga" />
+  <meta slot="head" property="article:tag" content="arte japonés" />
+  <meta slot="head" property="article:tag" content="erotismo" />
+
+  <!-- Hidden SVG filter for hanko worn-stamp effect -->
+  <svg width="0" height="0" style="position:absolute;overflow:hidden" aria-hidden="true">
+    <defs>
+      <filter id="hanko-roughen" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="3" stitchTiles="stitch" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.8" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- Breadcrumb — outside the washi sheet -->
+  <nav class="breadcrumb" aria-label="Ruta de navegación">
+    <a href="/">Inicio</a><span aria-hidden="true">›</span>
+    <a href="/blog/">Blog</a><span aria-hidden="true">›</span>
+    <span aria-current="page">Shunga, Abunae y Eroguro</span>
+  </nav>
+
+  <!-- ░░ WASHI PAPER SHEET ░░ -->
+  <div class="washi-wrap">
+
+    <!-- Corner diamond ornaments -->
+    <span class="corner corner-tl" aria-hidden="true">◆</span>
+    <span class="corner corner-tr" aria-hidden="true">◆</span>
+    <span class="corner corner-bl" aria-hidden="true">◆</span>
+    <span class="corner corner-br" aria-hidden="true">◆</span>
+
+    <!-- Seigaiha top border -->
+    <div class="nami nami-top" aria-hidden="true">
+      <svg width="100%" height="30" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <pattern id="sgt-a" width="28" height="20" patternUnits="userSpaceOnUse">
+            <path d="M0,14 A14,14 0 0,1 28,14 L28,20 L0,20 Z" fill="#f7f2e6" stroke="#8B1A1A" stroke-width="1.1"/>
+            <path d="M5,14 A9,9 0 0,1 23,14" fill="none" stroke="#8B1A1A" stroke-width="0.5" opacity="0.5"/>
+            <circle cx="14" cy="8" r="1.4" fill="#8B1A1A" opacity="0.4"/>
+          </pattern>
+          <pattern id="sgt-b" width="28" height="20" patternUnits="userSpaceOnUse" x="14" y="10">
+            <path d="M0,14 A14,14 0 0,1 28,14 L28,20 L0,20 Z" fill="#f7f2e6" stroke="#8B1A1A" stroke-width="1.1"/>
+            <path d="M5,14 A9,9 0 0,1 23,14" fill="none" stroke="#8B1A1A" stroke-width="0.5" opacity="0.5"/>
+            <circle cx="14" cy="8" r="1.4" fill="#8B1A1A" opacity="0.4"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="30" fill="url(#sgt-b)"/>
+        <rect width="100%" height="30" fill="url(#sgt-a)"/>
+      </svg>
+    </div>
+
+
+    <!-- ── Article content ── -->
+    <article class="washi-content" itemscope itemtype="https://schema.org/Article">
+
+      <!-- Hanko red seal -->
+      <div class="hanko" aria-hidden="true">
+        <svg viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg" style="filter:url(#hanko-roughen)">
+          <circle cx="35" cy="35" r="33" fill="#8B1A1A" opacity="0.9"/>
+          <circle cx="35" cy="35" r="30" fill="none" stroke="#f7f2e6" stroke-width="1.2" opacity="0.6"/>
+          <text x="35" y="27" text-anchor="middle" dominant-baseline="middle"
+                font-family="Hiragino Mincho Pro, Noto Serif JP, Yu Mincho, serif"
+                font-size="16" fill="#f7f2e6" letter-spacing="1">春</text>
+          <text x="35" y="47" text-anchor="middle" dominant-baseline="middle"
+                font-family="Hiragino Mincho Pro, Noto Serif JP, Yu Mincho, serif"
+                font-size="16" fill="#f7f2e6" letter-spacing="1">画</text>
+        </svg>
+      </div>
+
+      <header class="articulo-header">
+        <p class="pre-titulo">— 文化 · 歴史 —</p>
+        <h1 itemprop="headline">{titulo}</h1>
+
+        <!-- Brush stroke divider -->
+        <svg class="fude-sen" viewBox="0 0 360 18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14,9 C70,4 155,14 205,8 C255,2 310,11 346,8 C312,13 256,6 204,12 C154,17 68,11 14,10 Z"
+                fill="#1a0c05" opacity="0.52"/>
+          <path d="M18,9 C74,5 158,13 206,8 C254,4 308,10 342,9 C309,11 254,7 205,11 C157,15 72,10 18,10 Z"
+                fill="#3a1a08" opacity="0.18"/>
+        </svg>
+
+        <div class="meta-articulo">
+          <time itemprop="datePublished" datetime={fechaISO}>{fechaMostrar}</time>
+          <span aria-hidden="true" class="meta-sep">·</span>
+          <span itemprop="author">Fragua47</span>
+          <span aria-hidden="true" class="meta-sep">·</span>
+          <span>Historia del erotismo</span>
+        </div>
+
+        <p class="entradilla" itemprop="description">
+          Durante siglos, Japón desarrolló un lenguaje visual del deseo tan sofisticado como transgresor.
+          Del refinado <em>shunga</em> del período Edo a la oscuridad fascinante del <em>eroguro</em>
+          de vanguardia, el arte erótico japonés navegó entre lo sagrado y lo prohibido, entre la
+          contemplación y el escándalo. Este artículo traza ese recorrido.
+        </p>
+      </header>
+
+      <div class="cuerpo-articulo" itemprop="articleBody">
+
+        <!-- ·· Sección 1 ·· -->
+        <svg class="fude-sen fude-sen--section" viewBox="0 0 360 18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14,9 C70,4 155,14 205,8 C255,2 310,11 346,8 C312,13 256,6 204,12 C154,17 68,11 14,10 Z"
+                fill="#1a0c05" opacity="0.52"/>
+          <path d="M18,9 C74,5 158,13 206,8 C254,4 308,10 342,9 C309,11 254,7 205,11 C157,15 72,10 18,10 Z"
+                fill="#3a1a08" opacity="0.18"/>
+        </svg>
+
+        <h2>El contexto: el cuerpo como lienzo cultural</h2>
+        <p>
+          Para entender el arte erótico japonés es necesario alejarse de las categorías occidentales. En Japón,
+          la representación explícita del cuerpo y la sexualidad no nació de la transgresión moral sino de una
+          cosmovisión en la que el placer era una dimensión legítima de la existencia humana. Los dioses shinto
+          copulaban para crear el mundo; el deseo era, en esencia, fuerza creadora.
+        </p>
+        <p>
+          Sobre ese sustrato cultural florecieron, a lo largo de tres siglos, tres corrientes diferenciadas:
+          el <strong>shunga</strong>, el <strong>abunae</strong> y el <strong>eroguro</strong>. Cada una respondió
+          a su tiempo, a sus censuras y a sus públicos. Juntas forman uno de los relatos visuales del erotismo
+          más ricos y complejos de la historia del arte.
+        </p>
+
+        <div class="img-con-kanji">
+          <div class="tate-moji" aria-hidden="true">
+            <span class="kanji" data-trad="imágenes del mundo flotante">浮世絵</span>
+            <span class="kanji" data-trad="imágenes de primavera · erotismo">春画</span>
+            <span class="kanji" data-trad="bellas artes">美術</span>
+          </div>
+          <figure class="img-articulo">
+            <img
+              src="/blog/japan/img1.png"
+              alt="Yoshiwara Yozakura (吉原夜桜図) de Utagawa Hiroshige — el barrio del placer de Edo de noche con cerezos en flor, escena del mundo flotante ukiyo"
+              loading="lazy"
+              decoding="async"
+              class="img-articulo-img"
+            />
+            <figcaption>Utagawa Hiroshige, <em>Yoshiwara Yozakura</em> (吉原夜桜図), c. 1840 — El barrio del placer de Edo durante la floración nocturna de los cerezos. Dominio público.</figcaption>
+          </figure>
+        </div>
+
+        <!-- ·· Sección 2 ·· -->
+        <svg class="fude-sen fude-sen--section" viewBox="0 0 360 18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14,9 C70,4 155,14 205,8 C255,2 310,11 346,8 C312,13 256,6 204,12 C154,17 68,11 14,10 Z"
+                fill="#1a0c05" opacity="0.52"/>
+          <path d="M18,9 C74,5 158,13 206,8 C254,4 308,10 342,9 C309,11 254,7 205,11 C157,15 72,10 18,10 Z"
+                fill="#3a1a08" opacity="0.18"/>
+        </svg>
+
+        <h2>Shunga: imágenes de primavera</h2>
+        <p>
+          <em>Shunga</em> (春画) significa literalmente «imagen de primavera», y la primavera en japonés clásico
+          era eufemismo del sexo. El género floreció durante el período Edo (1603–1868), cuando Japón vivió
+          dos siglos y medio de paz interna bajo el shogunato Tokugawa.
+        </p>
+        <p>
+          Esa estabilidad política generó una clase mercantil urbana —la <em>chōnin</em>— con tiempo, dinero
+          y apetito cultural. La cultura <em>ukiyo</em>, «del mundo flotante», que celebraba los placeres
+          efímeros del kabuki, las geishas y los baños públicos, encontró en el grabado en madera (<em>mokuhanga</em>)
+          su medio de expresión masiva. El shunga era la extensión natural de esa cultura.
+        </p>
+
+        <figure class="img-articulo">
+          <img
+            src="/blog/japan/RP-P-1999-252.jpg"
+            alt="Álbum shunga leporello con portada roja desplegado mostrando dos grabados eróticos en color, anónimo japonés, 1830-1850, colección Rijksmuseum"
+            loading="lazy"
+            decoding="async"
+            class="img-articulo-img"
+          />
+          <figcaption>Anónimo, <em>Tonen musume kurabe</em> (当年娘競, «Comparación de jóvenes del año en curso»), c. 1830–1850 — Álbum leporello de shunga con portada roja; doce grabados en color con cortesanas y clientes. Rijksmuseum, RP-P-1999-252. Dominio público.</figcaption>
+        </figure>
+
+        <h3>Los maestros del shunga</h3>
+        <figure class="img-articulo img-articulo--float-right">
+          <img
+            src="/blog/japan/viejo.png"
+            alt="Autorretrato de Katsushika Hokusai como anciano, tinta sobre papel, c. 1839"
+            loading="lazy"
+            decoding="async"
+            class="img-articulo-img"
+          />
+          <figcaption>Hokusai, <em>Autorretrato</em>, c. 1839.</figcaption>
+        </figure>
+        <p>
+          Los grandes nombres del ukiyo-e —la estampa japonesa en madera, literalmente «imágenes del mundo flotante», el arte popular por excelencia del período Edo— produjeron shunga de forma paralela a su obra «oficial».
+          <strong>Katsushika Hokusai</strong> (1760–1849), el mismo genio de las <em class="obra">Treinta y seis vistas
+          del Monte Fuji</em>, creó en 1814 <em>Kinoe no Komatsu</em>, cuya imagen más popular es
+          hoy quizá la más reconocida del shunga a nivel mundial: una <em>ama</em> —pescadora de perlas
+          japonesa que buceaba a pulmón libre, figura mítica entre lo terrenal y lo marino— es poseída
+          por dos pulpos gigantes en una escena de éxtasis que mezcla fantasía, naturaleza desbordada
+          y deseo sin disculpas.
+          Su fuerza no reside solo en la explicitud sino en la composición: el dinamismo de los tentáculos,
+          la expresión de abandono del rostro, el contraste entre la frialdad del mar y el calor del momento.
+        </p>
+
+        <figure class="img-articulo img-articulo--medium">
+          <img
+            src="/blog/japan/pulpo.png"
+            alt="Katsushika Hokusai, Tako to ama (蛸と海女の図), del álbum Kinoe no Komatsu, 1814 — shunga con buceadora ama y dos pulpos, la imagen más célebre del género"
+            loading="lazy"
+            decoding="async"
+            class="img-articulo-img"
+          />
+          <figcaption>Katsushika Hokusai, <em class="obra">Tako to ama</em> (蛸と海女の図), del álbum <em class="obra">Kinoe no Komatsu</em>, 1814. La imagen más reconocida del shunga en el mundo. Dominio público.</figcaption>
+        </figure>
+
+        <p>
+          <strong>Utagawa Hiroshige</strong>, <strong>Suzuki Harunobu</strong> y <strong>Kitagawa Utamaro</strong>
+          también cultivaron el género. Utamaro merece mención aparte: en series como <em class="obra">Fujin
+          sōgaku jittai</em> («Diez tipos en el estudio fisionómico de las mujeres», c. 1792) retrató no
+          cuerpos sino estados interiores — la coquetería distraída, la melancolía erótica, la espera
+          cargada de tensión. Mientras en Europa la mujer era objeto de representación, Utamaro la convirtió
+          en sujeto con psicología propia. Algo que el arte occidental no intentaría seriamente hasta
+          Degas o Klimt, casi un siglo después.
+        </p>
+
+        <figure class="img-articulo img-articulo--small">
+          <img
+            src="/blog/japan/Fujin_sōgaku_juttai,_Kamisuki_by_Utamaro.jpg"
+            alt="Kitagawa Utamaro, Kamisuki (peinándose), de la serie Fujin sogaku jittai, c. 1792 — mujer semidesnuda de espaldas peinándose, estudio psicológico del carácter femenino"
+            loading="lazy"
+            decoding="async"
+            class="img-articulo-img"
+          />
+          <figcaption>Kitagawa Utamaro, <em class="obra">Kamisuki</em> (髪梳き, «peinándose»), de <em class="obra">Fujin sōgaku jittai</em>, c. 1792 — un momento privado, íntimo, sin espectador. Dominio público.</figcaption>
+        </figure>
+
+        <h3>La paradoja de la censura</h3>
+        <p>
+          El shogunato Tokugawa promulgó edictos sucesivos contra el shunga —en 1722, 1791 y 1842— con
+          escaso efecto. Los grabados circulaban como regalo de boda, amuleto de guerra (para proteger
+          a los soldados de la muerte y el fuego), elemento pedagógico y, naturalmente, como material
+          de placer. La censura no lo extinguió: lo volvió más ingenioso.
+        </p>
+        <p>
+          Hay algo que llama la atención al ver shunga por primera vez: los genitales aparecen con
+          una escala exagerada, a veces casi absurda. No es torpeza del artista. Es una decisión
+          deliberada: señalar dónde está la carga emocional de la escena, igual que un director de
+          cine encuadra lo que quiere que veas. El maestro dibuja lo que importa grande.
+        </p>
+
+        <figure class="img-articulo img-articulo--large">
+          <img
+            src="/blog/japan/Utamaro_F.jpg"
+            alt="Kitagawa Utamaro, shunga con pareja, período Edo — ejemplo de la convención de proporciones exageradas como código visual del género"
+            loading="lazy"
+            decoding="async"
+            class="img-articulo-img"
+          />
+          <figcaption>Kitagawa Utamaro, shunga, período Edo. Dominio público.</figcaption>
+        </figure>
+
+        <h3>Shunga y BDSM: vínculos históricos</h3>
+        <p>
+          El shunga no fue ajeno a las prácticas que hoy llamamos BDSM. Escenas de ataduras, sumisión
+          y dominación aparecen con regularidad en los álbumes del período Edo. El <em>kinbaku</em> —la
+          práctica de atar con cuerda— tiene raíces documentadas en los woodblocks del siglo XVIII,
+          en los que la cuerda no era solo restricción física sino elemento compositivo y simbólico.
+          La estética de la cuerda como extensión del cuerpo, como segundo trazo, es una continuidad
+          que llega hasta el kinbaku contemporáneo.
+        </p>
+
+        <figure class="img-articulo img-articulo--medium">
+          <img
+            src="/blog/japan/shibari.gif"
+            alt="Ukiyo-e japonés con figura femenina suspendida con cuerdas sobre una cubeta, escena de kabuki o narrativa, período Edo — la cuerda como elemento compositivo y simbólico"
+            loading="lazy"
+            decoding="async"
+            class="img-articulo-img"
+          />
+          <figcaption>Anónimo, escena de suspensión con cuerdas, ukiyo-e, período Edo — la cuerda como eje compositivo y dramático de la imagen, no solo como restricción física. Dominio público.</figcaption>
+        </figure>
+
+        <!-- ·· Sección 3 ·· -->
+        <svg class="fude-sen fude-sen--section" viewBox="0 0 360 18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14,9 C70,4 155,14 205,8 C255,2 310,11 346,8 C312,13 256,6 204,12 C154,17 68,11 14,10 Z"
+                fill="#1a0c05" opacity="0.52"/>
+          <path d="M18,9 C74,5 158,13 206,8 C254,4 308,10 342,9 C309,11 254,7 205,11 C157,15 72,10 18,10 Z"
+                fill="#3a1a08" opacity="0.18"/>
+        </svg>
+
+        <h2>Abunae: la sugerencia y el borde</h2>
+        <p>
+          El término <em>abunae</em> (危な絵) —«imagen peligrosa»— designa un subgénero a caballo entre
+          el shunga explícito y la imagen convencional. En el abunae, la escena permanece en el umbral:
+          la ropa a medio caer, la mirada que anticipa, el gesto que no llega a completarse.
+        </p>
+        <p>
+          Surge como respuesta directa a las presiones censoras del período Edo. Cuando los edictos
+          arreciaban, los artistas desplazaban la tensión erótica hacia lo implícito: la insinuación
+          valía más que la mostración. El abunae enseñó al arte japonés que la sugerencia es una forma
+          de poder, que lo no mostrado puede ser más cargado que lo explícito.
+        </p>
+        <p>
+          Esta lección resonó a través de los siglos. La tensión entre lo velado y lo revelado, entre
+          la superficie y lo que late debajo, es una constante de la estética japonesa (<em>mono no aware</em>,
+          <em>ma</em>, <em>wabi-sabi</em>) que el abunae tradujo al terreno del deseo. No es casual que
+          la fotografía de moda japonesa contemporánea o el cine de directores como Nagisa Oshima
+          (<em>El imperio de los sentidos</em>, 1976) sigan trabajando esa misma tensión.
+        </p>
+
+        <figure class="img-articulo img-articulo--medium">
+          <img
+            src="/blog/japan/Utamaro_(1793)_Three_Beauties_of_the_Present_Time.jpg"
+            alt="Kitagawa Utamaro, Tōji san bijin (Tres Bellezas del Tiempo Presente), 1793 — tres cortesanas de Edo en bijinga, tensión erótica en el gesto y la mirada sin explicitud"
+            loading="lazy"
+            decoding="async"
+            class="img-articulo-img"
+          />
+          <figcaption>Kitagawa Utamaro, <em>Tōji san bijin</em> (当時三美人, «Tres Bellezas del Tiempo Presente»), 1793 — bijinga por excelencia: la tensión erótica reside en la mirada, el peinado y el kimono. Dominio público.</figcaption>
+        </figure>
+
+        <h3>La ruptura Meiji: cuando la modernidad introdujo la vergüenza</h3>
+
+        <figure class="img-articulo img-articulo--medium">
+          <img
+            src="/blog/japan/yokohama-otamachi-in-the-meiji-era-519ecf-small.jpg"
+            alt="Yokohama, barrio de Otamachi, era Meiji — la modernización occidental transformó el paisaje urbano y también la moral pública del Japón del siglo XIX"
+            loading="lazy"
+            decoding="async"
+            class="img-articulo-img"
+          />
+          <figcaption>Japón en la era Meiji: la modernización occidental que transformó también la moral.</figcaption>
+        </figure>
+
+        <p>
+          La Restauración Meiji de 1868 supuso el corte más violento en la historia del erotismo
+          japonés. El nuevo gobierno —decidido a modernizarse a imagen de las potencias occidentales—
+          adoptó también sus códigos morales. En 1872, una ordenanza específica criminalizó los «libros
+          obscenos y cuadros lascivos»: el shunga, que había florecido abiertamente durante dos siglos
+          y medio, pasó a ser ilegal de la noche a la mañana.
+        </p>
+        <p>
+          La paradoja es que fue precisamente la mirada occidental la que introdujo la vergüenza. El
+          cuerpo, que en el período Edo era materia legítima de arte y de celebración, se convirtió en
+          fuente de escándalo. Los artistas que hasta entonces firmaban sus shunga con el mismo orgullo
+          que sus paisajes o retratos tuvieron que elegir entre la clandestinidad y el abandono del
+          género. El shunga no desapareció, pero se subyugó: circuló en redes privadas, se coleccionó
+          en secreto, perdió su estatus de alta cultura.
+        </p>
+        <p>
+          En ese espacio de represión y semiclandestinidad, el abunae —que ya existía como estrategia
+          defensiva de los maestros del ukiyo-e frente a los edictos Tokugawa— encontró una segunda
+          vida, ahora con una lógica distinta: ya no era evasión artística sino la única válvula de
+          escape tolerada por una sociedad que había aprendido a avergonzarse del deseo.
+        </p>
+
+        <h3>El abunae moderno: entre la permisividad y el tabú</h3>
+
+        <figure class="img-articulo img-articulo--medium">
+          <img
+            src="/blog/japan/gravure.png"
+            alt="Portadas de la revista Bomb! (ボム!), Japón — ejemplo del formato gravure idol: insinuación calculada dentro de los límites de la ley de obscenidad vigente hasta 1999"
+            loading="lazy"
+            decoding="async"
+            class="img-articulo-img"
+          />
+          <figcaption>Portadas de <em>Bomb!</em> (ボム!, Gakken, desde 1979) — la revista gravure idol por excelencia: erotismo sin desnudo, construido enteramente sobre la sugerencia que la ley obligaba.</figcaption>
+        </figure>
+
+        <p>
+          El Japón de posguerra heredó esa contradicción y la intensificó. La sociedad se abría
+          aceleradamente a la cultura de masas occidental, pero mantenía la prohibición de mostrar
+          pubis y genitales en publicaciones —una ley que no se derogó hasta 1999. En ese intersticio
+          legal y moral floreció un fenómeno específicamente japonés: la <em>gravure idol</em>
+          (グラビアアイドル).
+        </p>
+        <p>
+          Las gravure idols eran mujeres jóvenes —a veces con cierta fama, a veces completamente
+          desconocidas— que posaban en revistas sin cruzar nunca la línea de lo explícito. Un bañador,
+          una mirada, un ángulo de cámara: todo estudiado para rozar el límite sin traspasarlo. En los
+          años ochenta y noventa esas revistas estaban en los <em>conbini</em>, las tiendas de
+          conveniencia japonesas abiertas toda la noche, entre los periódicos y los onigiri.
+        </p>
+        <p>
+          Todo el mundo las compraba, nadie las admitía en voz alta. Estaban en cualquier barrio, al
+          alcance de cualquier adolescente, y sin embargo cargaban con esa incomodidad de lo que se
+          consume pero no se nombra. La misma lógica que el shunga clandestino del período Meiji,
+          solo que sin el arte detrás.
+          Cuando llegó internet, el género simplemente dejó de tener sentido. Si puedes ver cualquier
+          cosa, ¿para qué conformarte con la insinuación? Las gravure idols siguen existiendo, pero
+          como nostalgia, no como necesidad.
+        </p>
+
+        <!-- ·· Sección 4 ·· -->
+        <svg class="fude-sen fude-sen--section" viewBox="0 0 360 18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14,9 C70,4 155,14 205,8 C255,2 310,11 346,8 C312,13 256,6 204,12 C154,17 68,11 14,10 Z"
+                fill="#1a0c05" opacity="0.52"/>
+          <path d="M18,9 C74,5 158,13 206,8 C254,4 308,10 342,9 C309,11 254,7 205,11 C157,15 72,10 18,10 Z"
+                fill="#3a1a08" opacity="0.18"/>
+        </svg>
+
+        <h2>Eroguro: la belleza de lo oscuro</h2>
+        <p>
+          El <em>eroguro</em> —contracción de «erótico-grotesco»— es la corriente más radical y perturbadora
+          de las tres. No es un género pictórico tradicional sino un movimiento de vanguardia que floreció
+          entre el período Taisho (1912–1926) y los años de entreguerras, antes de que la censura
+          militarista lo silenciara en los años treinta.
+        </p>
+        <p>
+          Su contexto es la modernización traumática de Japón: la industrialización acelerada, la Primera
+          Guerra Mundial, el Gran Terremoto de Kanto de 1923, el colonialismo y la urbanización
+          deshumanizadora. El eroguro fue la respuesta estética a ese mundo en convulsión, y encontró
+          en la mezcla de erotismo y horror, belleza y muerte, placer y dolor, su idioma propio.
+        </p>
+
+        <h3>El precursor: Tsukioka Yoshitoshi</h3>
+        <p>
+          Aunque el término «eroguro» es del siglo XX, sus raíces visuales se rastrean hasta
+          <strong>Tsukioka Yoshitoshi</strong> (1839–1892), el último gran maestro del ukiyo-e y uno
+          de los artistas más perturbadores de todo el período Meiji. Yoshitoshi fue el primero en
+          fusionar de manera sistemática lo erótico con lo grotesco: violencia, mutilación, cuerpos
+          femeninos en situaciones de horror, todo ello con la técnica depurada de los mejores grabados
+          del período Edo.
+        </p>
+        <p>
+          Su serie más extrema, <em>Eimei nijūhasshō</em> (英名二十八衆句, «Veintiocho Famosos Asesinatos
+          con Verso», 1866–67), realizada junto a Utagawa Yoshiiku, muestra escenas de crimen y
+          violencia con una franqueza que escandalizó a sus contemporáneos. Algunas imágenes presentan
+          cuerpos desnudos en contextos de horror surrealista; otras mezclan la tensión erótica con
+          la amenaza física de un modo que no tiene parangón en el arte japonés anterior.
+        </p>
+
+        <figure class="img-articulo img-articulo--medium">
+          <img
+            src="/blog/japan/Yoshitoshi.jpg"
+            alt="Tsukioka Yoshitoshi, grabado ukiyo-e — la mezcla de horror, violencia y cuerpo que prefigura el vocabulario visual del eroguro del siglo XX"
+            loading="lazy"
+            decoding="async"
+            class="img-articulo-img"
+          />
+          <figcaption>Tsukioka Yoshitoshi, grabado de la serie <em>Eimei nijūhasshō</em> (1866–67) — violencia y cuerpo entrelazados con la precisión técnica del ukiyo-e. Dominio público.</figcaption>
+        </figure>
+        <p>
+          En los años setenta del siglo XIX, Yoshitoshi se hundió. Pobreza, colapso nervioso,
+          años sin grabar. Sus contemporáneos lo daban por acabado, y algunos directamente por loco. Murió en 1892, justo cuando el período Meiji consumaba
+          la represión del erotismo en el arte. Pero su obra sobrevivió como semilla: los artistas
+          del eroguro de los años veinte y treinta lo conocían, y su vocabulario visual —la belleza
+          que convive con el horror, el cuerpo como territorio de ambigüedad— es reconociblemente
+          el mismo.
+        </p>
+
+        <figure class="img-articulo img-articulo--medium">
+          <img
+            src="/blog/japan/ito-seiu-tortured-women-527x762.png"
+            alt="Ito Seiu, ilustración de mujeres atadas y torturadas, años 1910-1920 — eroguro en su forma más pura: erotismo y horror entrelazados con precisión técnica"
+            loading="lazy"
+            decoding="async"
+            class="img-articulo-img"
+          />
+          <figcaption>Ito Seiu (伊藤晴雨), ilustración, c. 1910–1920 — la semilla de Yoshitoshi florecida: el cuerpo como territorio donde el placer y el dolor se vuelven indistinguibles. Dominio público.</figcaption>
+        </figure>
+
+        <h3>Edogawa Rampo y la narrativa del eroguro</h3>
+
+        <figure class="img-articulo img-articulo--float-right">
+          <img
+            src="/blog/japan/2302953MXFXLQwm1.jpg"
+            alt="Fotografía de Edogawa Rampo en su estudio, rodeado de libros, con gafas redondas y kimono oscuro, c. 1940-1950"
+            loading="lazy"
+            decoding="async"
+            class="img-articulo-img"
+          />
+          <figcaption>Edogawa Rampo (1894–1965) en su estudio.</figcaption>
+        </figure>
+
+        <p>
+          El escritor <strong>Edogawa Rampo</strong> (1894–1965) —cuyo seudónimo es transliteración
+          de Edgar Allan Poe— es la figura central del eroguro literario. Sus relatos exploran el deseo
+          en sus formas más aberrantes: el fetichismo extremo, el voyeurismo, la necrofilia, la
+          amputación como objeto erótico. Pero Rampo no buscaba el escándalo por sí mismo; buscaba
+          revelar la fragilidad de la frontera entre lo normal y lo abyecto, entre el ciudadano
+          respetable y el monstruo que habita en él.
+        </p>
+        <p>
+          Su cuento <em>El hombre-sillón</em> (1925), en el que un artesano se oculta en el interior
+          de un sillón para sentir el cuerpo de quienes se sientan sobre él, no es solo una perturbación
+          sexual: es una meditación sobre la invisibilidad, el deseo de contacto y la soledad urbana moderna.
+        </p>
+
+        <figure class="img-articulo img-articulo--small">
+          <img
+            src="/blog/japan/rampo-mirada.png"
+            alt="Ilustración o fotografía evocadora de Edogawa Rampo — la mirada del escritor del eroguro japonés"
+            loading="lazy"
+            decoding="async"
+            class="img-articulo-img"
+          />
+          <figcaption>La mirada de Rampo: el escritor que convirtió el abismo en literatura.</figcaption>
+        </figure>
+
+        <h3>Suehiro Maruo y el eroguro contemporáneo</h3>
+        <p>
+          En las décadas de 1980 y 1990, el mangaka <strong>Suehiro Maruo</strong> rescató y radicalizó
+          la tradición eroguro. Sus obras —<em>La chica con los ojos de cristal</em>, <em>Shojo Tsubaki</em>—
+          combinan la estética del ukiyo-e, imágenes de circo y freakshow, violencia extrema y erotismo
+          en una síntesis deliberadamente desestabilizadora. Maruo no pretende excitar ni horrorizar:
+          pretende que el lector no pueda separar ambas respuestas.
+        </p>
+        <p>
+          El eroguro de Maruo y sus contemporáneos —<strong>Shintaro Kago</strong>, <strong>Jun Hayami</strong>—
+          funcionó como precursor directo de corrientes visuales que hoy encontramos en la fotografía
+          de moda oscura, en el body horror estético, en ciertas ramas del arte BDSM que trabajan
+          con la ambigüedad entre el daño y el deseo.
+        </p>
+
+        <figure class="img-articulo img-articulo--medium">
+          <img
+            src="/blog/japan/gm5e61qmp9qd1.jpeg"
+            alt="Colección de obras de Suehiro Maruo: Shojo Tsubaki (少女椿), Ultra Gash Inferno, Midori y Panorama Island — manga eroguro contemporáneo"
+            loading="lazy"
+            decoding="async"
+            class="img-articulo-img"
+          />
+          <figcaption>Obras de Suehiro Maruo: <em>Shojo Tsubaki</em> (少女椿, 1984), <em>Ultra Gash Inferno</em>, <em>Midori</em> y <em>Panorama Island</em>. © Suehiro Maruo — uso editorial.</figcaption>
+        </figure>
+
+        <!-- ·· Sección 5 ·· -->
+        <svg class="fude-sen fude-sen--section" viewBox="0 0 360 18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14,9 C70,4 155,14 205,8 C255,2 310,11 346,8 C312,13 256,6 204,12 C154,17 68,11 14,10 Z"
+                fill="#1a0c05" opacity="0.52"/>
+          <path d="M18,9 C74,5 158,13 206,8 C254,4 308,10 342,9 C309,11 254,7 205,11 C157,15 72,10 18,10 Z"
+                fill="#3a1a08" opacity="0.18"/>
+        </svg>
+
+        <h2>Tres corrientes, una continuidad</h2>
+        <p>
+          Shunga, abunae y eroguro no son géneros estancos sino momentos de un mismo relato: el de
+          una cultura que tomó el deseo en serio, que le dio forma visual sofisticada, y que exploró
+          sus zonas más oscuras con la misma atención que sus expresiones más luminosas.
+        </p>
+        <p>
+          Lo que distingue a estas tradiciones del erotismo visual occidental de sus épocas es,
+          precisamente, la ausencia de culpa como motor narrativo. El shunga no necesita redención;
+          el abunae no pide disculpas; el eroguro no se justifica. Cada uno habla desde la certeza
+          de que el deseo —en todas sus formas, incluidas las más incómodas— es una dimensión
+          irreducible de la experiencia humana y, como tal, merece ser representado con destreza,
+          honestidad e inteligencia.
+        </p>
+        <p>
+          Para quienes transitamos hoy espacios de práctica consensuada y exploración del deseo,
+          estas tradiciones ofrecen algo más que antecedentes históricos: ofrecen un linaje estético,
+          una prueba de que el margen entre el placer y el arte, entre el cuerpo y la imagen,
+          siempre ha sido un territorio fértil.
+        </p>
+
+        <div class="cta-eventos">
+          <p class="cta-texto">
+            En <strong>Fragua47</strong> seguimos explorando ese territorio. Próximamente celebramos
+            una velada de <strong>body sushi</strong> —<em>nyotaimori</em>—, la práctica japonesa
+            de servir sushi sobre el cuerpo humano: un ejercicio de presencia, ritualidad y deseo
+            que conecta directamente con esta tradición de hacer del cuerpo materia estética.
+          </p>
+          <a href="/eventos/" class="cta-enlace">Ver próximos eventos →</a>
+        </div>
+
+      </div><!-- /cuerpo-articulo -->
+
+      <footer class="articulo-footer">
+        <svg class="fude-sen fude-sen--section" viewBox="0 0 360 18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14,9 C70,4 155,14 205,8 C255,2 310,11 346,8 C312,13 256,6 204,12 C154,17 68,11 14,10 Z"
+                fill="#1a0c05" opacity="0.52"/>
+          <path d="M18,9 C74,5 158,13 206,8 C254,4 308,10 342,9 C309,11 254,7 205,11 C157,15 72,10 18,10 Z"
+                fill="#3a1a08" opacity="0.18"/>
+        </svg>
+        <div class="footer-meta">
+          <p class="footer-tags">
+            <span class="tag-label">Temas</span>
+            <a href="/blog/" class="tag">Historia del erotismo</a>
+            <a href="/blog/" class="tag">Arte japonés</a>
+            <a href="/blog/" class="tag">Shunga</a>
+            <a href="/blog/" class="tag">Cultura BDSM</a>
+          </p>
+          <a href="/blog/" class="volver-blog">← Volver al blog</a>
+        </div>
+      </footer>
+
+    </article>
+
+    <!-- Seigaiha bottom border (rotated 180°) -->
+    <div class="nami nami-bottom" aria-hidden="true">
+      <svg width="100%" height="30" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <pattern id="sgb-a" width="28" height="20" patternUnits="userSpaceOnUse">
+            <path d="M0,14 A14,14 0 0,1 28,14 L28,20 L0,20 Z" fill="#f7f2e6" stroke="#8B1A1A" stroke-width="1.1"/>
+            <path d="M5,14 A9,9 0 0,1 23,14" fill="none" stroke="#8B1A1A" stroke-width="0.5" opacity="0.5"/>
+            <circle cx="14" cy="8" r="1.4" fill="#8B1A1A" opacity="0.4"/>
+          </pattern>
+          <pattern id="sgb-b" width="28" height="20" patternUnits="userSpaceOnUse" x="14" y="10">
+            <path d="M0,14 A14,14 0 0,1 28,14 L28,20 L0,20 Z" fill="#f7f2e6" stroke="#8B1A1A" stroke-width="1.1"/>
+            <path d="M5,14 A9,9 0 0,1 23,14" fill="none" stroke="#8B1A1A" stroke-width="0.5" opacity="0.5"/>
+            <circle cx="14" cy="8" r="1.4" fill="#8B1A1A" opacity="0.4"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="30" fill="url(#sgb-b)"/>
+        <rect width="100%" height="30" fill="url(#sgb-a)"/>
+      </svg>
+    </div>
+
+  </div><!-- /washi-wrap -->
+</Layout>
+
+<style>
+  /* ── Breadcrumb (above the washi sheet) ── */
+  .breadcrumb {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.67rem;
+    color: #6a3010;
+    margin-bottom: 0.9rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    align-items: center;
+  }
+  .breadcrumb a { color: #6a3010; text-decoration: none; transition: color 0.2s; }
+  .breadcrumb a:hover { color: #8B1A1A; }
+  .breadcrumb span[aria-current] { color: #3d2010; font-style: italic; }
+
+  /* ═══════════════════════════════════════════
+     WASHI PAPER SHEET
+  ═══════════════════════════════════════════ */
+  .washi-wrap {
+    position: relative;
+    max-width: 720px;
+    margin: 0 auto 2.5rem;
+
+    /* Washi ivory + subtle fibre texture */
+    background:
+      radial-gradient(ellipse 65% 42% at 15% 22%, rgba(218,193,130,0.20) 0%, transparent 58%),
+      radial-gradient(ellipse 52% 48% at 85% 70%, rgba(200,168,108,0.16) 0%, transparent 54%),
+      radial-gradient(ellipse 88% 68% at 50% 50%, rgba(255,250,228,0.22) 0%, transparent 72%),
+      repeating-linear-gradient(89deg,  transparent 0px, transparent 3px, rgba(190,158,82,0.048) 3px, rgba(190,158,82,0.048) 4px),
+      repeating-linear-gradient(91deg,  transparent 0px, transparent 4px, rgba(170,142,64,0.032) 4px, rgba(170,142,64,0.032) 5px),
+      repeating-linear-gradient(175deg, transparent 0px, transparent 9px, rgba(182,150,72,0.026) 9px, rgba(182,150,72,0.026) 10px),
+      #f7f2e6;
+
+    /* Floating paper shadows */
+    box-shadow:
+      0 2px 6px  rgba(26,16,7,0.11),
+      0 8px 30px rgba(26,16,7,0.13),
+      3px 5px 0  rgba(198,158,78,0.14),
+      inset 0 0 44px rgba(178,138,58,0.07);
+
+    /* Inner border line (shikishi style) */
+    outline: 1px solid rgba(138,101,48,0.32);
+    outline-offset: -9px;
+  }
+
+  /* ── Corner ornaments ── */
+  .corner {
+    position: absolute;
+    font-size: 7px;
+    color: #8B1A1A;
+    opacity: 0.70;
+    line-height: 1;
+    z-index: 3;
+    pointer-events: none;
+  }
+  .corner-tl { top: 11px;  left: 13px;  }
+  .corner-tr { top: 11px;  right: 13px; }
+  .corner-bl { bottom: 11px; left: 13px;  }
+  .corner-br { bottom: 11px; right: 13px; }
+
+  /* ── Seigaiha wave borders ── */
+  .nami { width: 100%; line-height: 0; overflow: hidden; }
+  .nami-top  { border-top: 2px solid #8B1A1A; }
+  .nami-bottom {
+    border-bottom: 2px solid #8B1A1A;
+    transform: rotate(180deg);
+  }
+
+  /* ── Kanji strip next to image ── */
+  .img-con-kanji {
+    display: flex;
+    align-items: stretch;
+    gap: 0.1rem;
+    margin: 1rem 0 0.5rem;
+  }
+  .img-con-kanji .img-articulo { margin: 0; flex: 1; min-width: 0; }
+
+  .tate-moji {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.2rem;
+    font-family: 'Hiragino Mincho Pro', 'Noto Serif JP', 'Yu Mincho', Georgia, serif;
+    font-size: 0.85rem;
+    letter-spacing: 5px;
+    color: #8B1A1A;
+    opacity: 0.65;
+    user-select: none;
+    flex-shrink: 0;
+  }
+
+  .kanji { cursor: default; }
+
+  @media (max-width: 500px) {
+    .tate-moji { display: none; }
+  }
+
+  /* ── Article content padding ── */
+  .washi-content {
+    position: relative;
+    padding: 1.6rem 3.2rem 1.6rem 2.8rem;
+  }
+
+  /* ── Hanko stamp ── */
+  .hanko {
+    position: absolute;
+    top: 1.8rem;
+    right: 2.2rem;
+    width: 60px;
+    height: 60px;
+    transform: rotate(-13deg);
+    z-index: 4;
+    opacity: 0.83;
+  }
+
+  /* ── Header ── */
+  .articulo-header {
+    margin-bottom: 1.2rem;
+    padding-right: 4.5rem; /* room for hanko */
+  }
+
+  .pre-titulo {
+    font-family: 'Hiragino Mincho Pro', 'Noto Serif JP', 'Yu Mincho', Georgia, serif;
+    font-size: 0.56rem;
+    letter-spacing: 3.5px;
+    color: #8a6530;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+  }
+
+  h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(0.88rem, 2vw, 1.25rem);
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #1a1007;
+    text-align: center;
+    line-height: 1.48;
+    margin: 0 0 0.4rem;
+  }
+
+  /* ── Brush stroke fude-sen ── */
+  .fude-sen {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: 18px;
+    margin: 0.4rem auto 0.5rem;
+  }
+  .fude-sen--section {
+    max-width: 100%;
+    height: 18px;
+    margin: 1.1rem 0 0.6rem;
+  }
+
+  /* ── Meta line ── */
+  .meta-articulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.63rem;
+    color: #8a6530;
+    letter-spacing: 0.5px;
+    font-style: italic;
+    margin-bottom: 1.1rem;
+  }
+  .meta-sep { opacity: 0.42; }
+
+  /* ── Lead paragraph (entradilla) ── */
+  .entradilla {
+    padding: 0.8rem 1rem 0.8rem 1.3rem;
+    border-left: 2.5px solid #8B1A1A;
+    background: rgba(139,26,26,0.045);
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.84rem;
+    line-height: 1.72;
+    color: #2a1808;
+    font-style: italic;
+    margin: 0;
+    position: relative;
+  }
+  .entradilla em {
+    font-style: normal;
+    color: #8B1A1A;
+    font-weight: 500;
+  }
+
+  /* ── Body text ── */
+  .cuerpo-articulo { margin-top: 0.2rem; }
+
+  h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.72rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.86rem;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #1a1007;
+    margin: 0 0 0.65rem;
+    padding-top: 0.15rem;
+  }
+
+  /* Mon (concentric-ring crest) before H2 */
+  h2::before {
+    content: '';
+    display: inline-block;
+    flex-shrink: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1.5px solid #8B1A1A;
+    box-shadow:
+      inset 0 0 0 2.8px #f7f2e6,
+      inset 0 0 0 4.2px #8B1A1A;
+  }
+
+  h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #1e3a5f;
+    margin: 1.45rem 0 0.48rem;
+    padding-left: 0.8rem;
+    border-left: 2.5px solid #8B1A1A;
+  }
+
+  .cuerpo-articulo p {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.87rem;
+    line-height: 1.80;
+    color: #2a1808;
+    margin-bottom: 0.82rem;
+  }
+
+  .cuerpo-articulo strong {
+    font-weight: 700;
+    color: #1a1007;
+  }
+
+  .cuerpo-articulo em {
+    font-style: italic;
+    color: #7a1818;
+  }
+  .cuerpo-articulo em.obra {
+    font-style: italic;
+    color: #8B1A1A;
+    font-weight: 600;
+  }
+
+  /* ── CTA eventos ── */
+  .cta-eventos {
+    margin: 2rem 0 0.5rem;
+    padding: 1.2rem 1.5rem;
+    border: 2px solid #8B1A1A;
+    border-left: 5px solid #8B1A1A;
+    background: rgba(139, 26, 26, 0.05);
+  }
+
+  .cta-texto {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.82rem;
+    line-height: 1.7;
+    color: #2a1208;
+    margin: 0 0 1rem;
+  }
+
+  .cta-enlace {
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #8B1A1A;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1px solid #8B1A1A;
+    padding-bottom: 1px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .cta-enlace:hover {
+    color: #b44814;
+    border-color: #b44814;
+  }
+
+  /* ── Footer ── */
+  .articulo-footer { margin-top: 0.3rem; padding-bottom: 0.2rem; }
+
+  .footer-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding-top: 0.4rem;
+  }
+
+  .footer-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.38rem;
+    align-items: center;
+    margin: 0;
+  }
+
+  .tag-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #8a6530;
+    margin-right: 0.18rem;
+  }
+
+  .tag {
+    background: transparent;
+    color: #8B1A1A;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.61rem;
+    padding: 0.1rem 0.52rem;
+    border: 1px solid rgba(139,26,26,0.6);
+    transition: background 0.18s, color 0.18s, border-color 0.18s;
+    letter-spacing: 0.4px;
+  }
+  .tag:hover { background: #8B1A1A; color: #f7f2e6; border-color: #8B1A1A; }
+
+  .volver-blog {
+    font-family: 'Cinzel', serif;
+    font-size: 0.57rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #8a6530;
+    text-decoration: none;
+    transition: color 0.18s;
+    white-space: nowrap;
+  }
+  .volver-blog:hover { color: #8B1A1A; }
+
+  ::selection { background: rgba(139,26,26,0.18); color: #1a1007; }
+
+  /* ── Real images ── */
+  .img-articulo {
+    margin: 1rem 0 0.5rem;
+  }
+  .img-articulo-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid rgba(139,26,26,0.48);
+    padding: 4px;
+    background: #ece5d2;
+    box-sizing: border-box;
+    outline: 0.5px solid rgba(139,26,26,0.20);
+    outline-offset: -6px;
+  }
+  .img-articulo--medium {
+    max-width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .img-articulo--large {
+    max-width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .img-articulo--small {
+    max-width: 35%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media (max-width: 500px) {
+    .img-articulo--small { max-width: 70%; }
+  }
+  @media (max-width: 500px) {
+    .img-articulo--medium { max-width: 100%; }
+  }
+
+  .img-articulo--float-right {
+    float: right;
+    max-width: 200px;
+    margin: 0 0 0.8rem 1.4rem;
+    clear: right;
+  }
+  @media (max-width: 500px) {
+    .img-articulo--float-right { float: none; max-width: 100%; margin: 1rem 0 0.5rem; }
+  }
+
+  .img-articulo figcaption {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.63rem;
+    color: #6a3010;
+    font-style: italic;
+    text-align: center;
+    margin-top: 0.3rem;
+    line-height: 1.48;
+  }
+
+  /* ── Image placeholders ── */
+  .img-ph { margin: 1rem 0 0.5rem; }
+
+  .img-ph-frame {
+    border: 1px solid rgba(139,26,26,0.48);
+    padding: 4px;
+    position: relative;
+  }
+  .img-ph-frame::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    border: 0.5px solid rgba(139,26,26,0.20);
+    pointer-events: none;
+  }
+
+  .img-ph-inner {
+    aspect-ratio: var(--ar, 3/2);
+    background:
+      repeating-linear-gradient(
+        45deg,
+        transparent 0px, transparent 7px,
+        rgba(139,26,26,0.04) 7px, rgba(139,26,26,0.04) 8px
+      ),
+      #ece5d2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    padding: 1rem;
+    color: rgba(139,26,26,0.32);
+  }
+
+  .img-ph-icon { width: 26px; height: auto; }
+
+  .img-ph-num {
+    font-family: 'Cinzel', serif;
+    font-size: 0.46rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(139,26,26,0.45);
+  }
+
+  .img-ph figcaption {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.63rem;
+    color: #6a3010;
+    font-style: italic;
+    text-align: center;
+    margin-top: 0.3rem;
+    line-height: 1.48;
+    padding: 0 0.2rem;
+  }
+
+  /* Portrait: max-width so it doesn't stretch full width */
+  .img-ph--portrait {
+    max-width: 280px;
+  }
+  .img-ph--center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Float right: image floats beside the following text */
+  .img-ph--float-right {
+    float: right;
+    max-width: 200px;
+    margin: 0 0 0.8rem 1.4rem;
+    clear: right;
+  }
+
+  @media (max-width: 500px) {
+    .img-ph--float-right {
+      float: none;
+      max-width: 100%;
+      margin: 1rem 0 0.5rem;
+    }
+    .img-ph--portrait { max-width: 100%; }
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 768px) {
+    .washi-content { padding: 1.3rem 1.4rem 1.3rem 1.3rem; }
+    .articulo-header { padding-right: 3.8rem; }
+    .hanko { width: 48px; height: 48px; top: 1.3rem; right: 1.3rem; }
+    h1 { font-size: 0.88rem; letter-spacing: 1.5px; }
+    h2 { font-size: 0.8rem; }
+    .cuerpo-articulo p { font-size: 0.83rem; }
+    .footer-meta { flex-direction: column; align-items: flex-start; }
+    .entradilla { font-size: 0.8rem; }
+  }
+</style>
