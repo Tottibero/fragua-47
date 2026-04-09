@@ -2,10 +2,12 @@
 import Layout from '../../layouts/Layout.astro';
 
 const titulo = 'Shunga, Abunae y Eroguro: La Evolución del Erotismo en el Arte Japonés';
-const descripcion = 'Descubre la historia del arte erótico japonés: del shunga del período Edo al eroguro de vanguardia. Arte, censura, poder y sensualidad en tres siglos de transgresión.';
+const descripcion = 'Shunga, abunae y eroguro: tres siglos de arte erótico japonés desde Hokusai y Utamaro hasta Yoshitoshi y las gravure idols. Historia, censura Meiji y el origen visual del BDSM japonés.';
 const fechaISO = '2026-04-08';
+const fechaModificadaISO = '2026-04-09';
 const fechaMostrar = '8 de abril de 2026';
 const canonicalURL = 'https://fragua47.org/blog/shunga-abunae-eroguro-erotismo-arte-japones/';
+const ogImageURL = 'https://fragua47.org/blog/japan/Utamaro_(1793)_Three_Beauties_of_the_Present_Time.jpg';
 
 const jsonLd = JSON.stringify({
   "@context": "https://schema.org",
@@ -13,22 +15,30 @@ const jsonLd = JSON.stringify({
   "headline": titulo,
   "description": descripcion,
   "datePublished": fechaISO,
+  "dateModified": fechaModificadaISO,
+  "image": ogImageURL,
   "author": { "@type": "Organization", "name": "Fragua47", "url": "https://fragua47.org" },
-  "publisher": { "@type": "Organization", "name": "Fragua47", "url": "https://fragua47.org" },
+  "publisher": { "@type": "Organization", "name": "Fragua47", "url": "https://fragua47.org", "logo": { "@type": "ImageObject", "url": "https://fragua47.org/favicon-32.png" } },
   "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalURL },
   "inLanguage": "es-ES",
-  "keywords": ["shunga","abunae","eroguro","arte japonés","erotismo japonés","ukiyo-e","woodblock","Hokusai","arte erótico","historia del erotismo"]
+  "keywords": ["shunga","abunae","eroguro","arte japonés","erotismo japonés","ukiyo-e","Hokusai","Utamaro","Yoshitoshi","Ito Seiu","período Edo","Meiji","gravure idol","kinbaku","arte erótico","historia del erotismo","historia del arte japonés","nyotaimori","BDSM japonés"]
 });
 ---
 
-<Layout title={titulo} description={descripcion} ogType="article">
+<Layout title={titulo} description={descripcion} ogType="article" ogImage={ogImageURL}>
   <script type="application/ld+json" slot="head" set:html={jsonLd} />
   <meta slot="head" property="article:published_time" content={fechaISO} />
+  <meta slot="head" property="article:modified_time" content={fechaModificadaISO} />
   <meta slot="head" property="article:author" content="Fragua47" />
-  <meta slot="head" property="article:section" content="Cultura" />
+  <meta slot="head" property="article:section" content="Historia del Arte" />
   <meta slot="head" property="article:tag" content="shunga" />
+  <meta slot="head" property="article:tag" content="abunae" />
+  <meta slot="head" property="article:tag" content="eroguro" />
   <meta slot="head" property="article:tag" content="arte japonés" />
+  <meta slot="head" property="article:tag" content="ukiyo-e" />
   <meta slot="head" property="article:tag" content="erotismo" />
+  <meta slot="head" property="article:tag" content="historia del arte" />
+  <meta slot="head" property="article:tag" content="BDSM" />
 
   <!-- Hidden SVG filter for hanko worn-stamp effect -->
   <svg width="0" height="0" style="position:absolute;overflow:hidden" aria-hidden="true">
