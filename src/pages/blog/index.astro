@@ -8,6 +8,10 @@ const posts = [
     resumen: 'Del período Edo hasta la vanguardia del siglo XX, el arte erótico japonés recorrió un camino fascinante entre lo sagrado, lo prohibido y lo transgresor. Un viaje por el shunga, el abunae y el eroguro.',
     fecha: '2026-04-08',
     fechaMostrar: '8 de abril de 2026',
+    imagen: '/blog/japan/Utamaro_(1793)_Three_Beauties_of_the_Present_Time.jpg',
+    imagenAlt: 'Kitagawa Utamaro, Tres Bellezas del Tiempo Presente, 1793 — ukiyo-e, período Edo',
+    etiquetas: ['Historia', 'Arte japonés'],
+    lectura: '18 min',
   },
 ];
 ---
@@ -26,10 +30,27 @@ const posts = [
       {posts.map(post => (
         <li class="post-card">
           <a href={`/blog/${post.slug}/`} class="post-enlace">
-            <time class="post-fecha" datetime={post.fecha}>{post.fechaMostrar}</time>
-            <h2 class="post-titulo">{post.titulo}</h2>
-            <p class="post-resumen">{post.resumen}</p>
-            <span class="post-leer" aria-hidden="true">Leer artículo →</span>
+            {post.imagen && (
+              <div class="post-imagen-wrap">
+                <img src={post.imagen} alt={post.imagenAlt} class="post-imagen" loading="lazy" decoding="async" />
+              </div>
+            )}
+            <div class="post-contenido">
+              <div class="post-meta">
+                <time class="post-fecha" datetime={post.fecha}>{post.fechaMostrar}</time>
+                {post.lectura && <span class="post-lectura">{post.lectura} de lectura</span>}
+              </div>
+              <h2 class="post-titulo">{post.titulo}</h2>
+              <p class="post-resumen">{post.resumen}</p>
+              <div class="post-footer">
+                {post.etiquetas && (
+                  <ul class="post-etiquetas" aria-label="Categorías">
+                    {post.etiquetas.map(e => <li class="post-etiqueta">{e}</li>)}
+                  </ul>
+                )}
+                <span class="post-leer" aria-hidden="true">Leer artículo →</span>
+              </div>
+            </div>
           </a>
         </li>
       ))}
@@ -77,11 +98,13 @@ const posts = [
     max-width: 340px;
   }
 
-  .intro {
+  .blog-intro {
     font-family: system-ui, -apple-system, sans-serif;
     font-size: 0.78rem;
+    line-height: 1.7;
     color: #5a3018;
-    margin: 0;
+    margin: 0.5rem auto 0;
+    max-width: 420px;
   }
 
   .lista-posts {
@@ -108,10 +131,38 @@ const posts = [
   }
 
   .post-enlace {
-    display: block;
-    padding: 1.2rem 1.5rem;
+    display: flex;
     text-decoration: none;
     color: inherit;
+  }
+
+  .post-imagen-wrap {
+    flex: 0 0 130px;
+    overflow: hidden;
+    border-right: 2px solid #2a1208;
+  }
+
+  .post-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .post-card:hover .post-imagen {
+    transform: scale(1.03);
+  }
+
+  .post-contenido {
+    padding: 1.2rem 1.5rem;
+    flex: 1;
+  }
+
+  @media (max-width: 480px) {
+    .post-enlace { flex-direction: column; }
+    .post-imagen-wrap { flex: none; width: 100%; height: 120px; border-right: none; border-bottom: 2px solid #2a1208; }
   }
 
   .post-fecha {
@@ -148,6 +199,49 @@ const posts = [
     margin: 0 0 0.8rem;
   }
 
+  .post-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .post-lectura {
+    font-family: 'Cinzel', serif;
+    font-size: 0.48rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #8a5030;
+  }
+
+  .post-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.8rem;
+  }
+
+  .post-etiquetas {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+  }
+
+  .post-etiqueta {
+    font-family: 'Cinzel', serif;
+    font-size: 0.46rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #2a1208;
+    border: 1px solid #2a1208;
+    padding: 0.15rem 0.5rem;
+  }
+
   .post-leer {
     font-family: 'Cinzel', serif;
     font-size: 0.58rem;
@@ -155,11 +249,13 @@ const posts = [
     text-transform: uppercase;
     color: #b44814;
     font-weight: 700;
+    white-space: nowrap;
   }
 
   @media (max-width: 768px) {
     .blog-index { padding: 1rem 0; }
-    .post-enlace { padding: 1rem; }
+    .post-contenido { padding: 1rem; }
     .post-titulo { font-size: 0.88rem; }
+    .post-imagen-wrap { flex: 0 0 100px; }
   }
 </style>
