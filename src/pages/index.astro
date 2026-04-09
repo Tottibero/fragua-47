@@ -14,10 +14,16 @@ import Layout from '../layouts/Layout.astro';
 			<p>Un espacio asociado en el que poder disfrutar y aprender del BDSMK.</p>
 			<p>El proyecto nace de una locura colectiva de unos pocos para revivir el panorama bedesemero en Valladolid y tener un sitio propio para seguir compartiendo y aprendiendo de manera <strong>segura y libre</strong>.</p>
 			<p>Siéntete libre de compartir con nosotros la experiencia y de sumarte a la iniciativa y aportar. No sería posible sin ti.</p>
-			<a href="https://t.me/+dFpFhSU40jhhMDVk" class="btn-telegram" target="_blank" rel="noopener noreferrer">
-				<svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-				Únete al grupo de Telegram
-			</a>
+			<div class="btns-bienvenida">
+				<a href="https://t.me/+dFpFhSU40jhhMDVk" class="btn-social" target="_blank" rel="noopener noreferrer">
+					<svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+					Telegram
+				</a>
+				<a href="https://fetlife.com/Fragua47" class="btn-social" target="_blank" rel="noopener noreferrer">
+					<svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm1 14.5H9v-5H7.5v-2H9V8c0-1.93 1.57-3.5 3.5-3.5H15v2h-1.5C12.67 6.5 12 7.17 12 8v1.5h3l-.5 2H12v5z"/></svg>
+					FetLife
+				</a>
+			</div>
 		</div>
 	</article>
 
@@ -236,18 +242,24 @@ import Layout from '../layouts/Layout.astro';
 		justify-content: center;
 	}
 
-	.btn-telegram {
+	.btns-bienvenida {
+		display: flex;
+		gap: 0.6rem;
+		flex-wrap: wrap;
+		margin-top: 1rem;
+	}
+
+	.btn-social {
 		display: inline-flex;
 		align-items: center;
-		gap: 0.5rem;
-		margin-top: 1rem;
-		padding: 0.6rem 1.4rem;
+		gap: 0.4rem;
+		padding: 0.45rem 1rem;
 		background: #b44814;
 		color: #fff7ee;
 		border: none;
 		box-shadow: 3px 3px 0 #6a2808;
 		font-family: 'Cinzel', serif;
-		font-size: 0.58rem;
+		font-size: 0.5rem;
 		letter-spacing: 2px;
 		text-transform: uppercase;
 		text-decoration: none;
@@ -255,16 +267,15 @@ import Layout from '../layouts/Layout.astro';
 		transition: background 0.2s, box-shadow 0.2s;
 	}
 
-	.btn-telegram:hover {
+	.btn-social:hover {
 		background: #d45a18;
 		box-shadow: 4px 4px 0 #6a2808;
 	}
 
-	.btn-telegram svg {
-		width: 16px;
-		height: 16px;
+	.btn-social svg {
+		width: 14px;
+		height: 14px;
 		flex-shrink: 0;
-		color: #fff7ee;
 	}
 
 	/* ── Tarjeta evento ── */
