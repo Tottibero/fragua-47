@@ -819,10 +819,44 @@ import Layout from '../layouts/Layout.astro';
 				"foto";
 			height: auto;
 			overflow: visible;
+			gap: 1.2rem;
+			margin: 0.6rem 0.5rem 1.5rem;
 		}
-		.proximos-wrap { min-height: 300px; }
-		.evento-stack { overflow: visible; }
-		.text-col-evento { overflow: visible; }
+
+		/* ── Poster evento: altura fija + imagen contenida ── */
+		.evento-stack {
+			min-height: 300px;
+			overflow: hidden;
+		}
+
+		.evento-content {
+			height: auto;
+			min-height: 300px;
+		}
+
+		/* Sacar .evento-bottom del flujo absoluto en móvil */
+		.evento-bottom {
+			position: relative;
+			bottom: auto;
+			left: auto;
+			right: auto;
+			padding: 0 0.8rem 0.8rem;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 0.6rem;
+		}
+
+		.footer-card { align-self: flex-end; }
+
+		/* ── Calendario: cabecera flexible ── */
+		.cal-mes-wrap {
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 0.3rem;
+		}
+
+		.proximos-wrap { min-height: 280px; }
+
 		.fila-campos { grid-template-columns: 1fr; }
 		.modal-documento { margin: 1rem; }
 	}
