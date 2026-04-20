@@ -3,12 +3,16 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Eventos" description="Próximos eventos de Fragua47. Consulta la agenda de quedadas y actividades de la comunidad.">
-	<link slot="head" rel="preload" as="image" type="image/webp" href="/eventos.webp" />
 	<div class="pagina">
 
-		<!-- Columna izquierda: foto -->
-		<div class="foto-wrap">
-			<img src="/eventos.webp" alt="Eventos Fragua47" class="foto-eventos" loading="eager" fetchpriority="high" width="700" height="1050" />
+		<!-- Columna izquierda: próximos eventos -->
+		<div class="proximos-wrap">
+			<div class="proximos-header">
+				<img src="/VectLogoF47.webp" alt="Logo Fragua47" class="proximos-logo" width="300" height="343" />
+				<h2 class="proximos-titulo">Próximos Eventos</h2>
+				<div class="proximos-sep"></div>
+			</div>
+			<ul class="proximos-lista" id="proximos-lista"></ul>
 		</div>
 
 		<!-- Evento: poster style -->
@@ -143,6 +147,9 @@ import Layout from '../layouts/Layout.astro';
 		ibtn.disabled = false; ibtn.textContent = 'Enviar inscripción ⚒';
 	});
 
+	// ── Próximos eventos (panel izquierdo) ──
+	const MESES_FULL = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+
 	// ── Calendario ──
 	const EVENTOS = [
 		{ year: 2026, month: 2,  day: 14, nombre: 'D&B: Dungeons & Bondage' },
@@ -153,7 +160,7 @@ import Layout from '../layouts/Layout.astro';
 		{ year: 2026, month: 7,  day:  1, nombre: 'Barbacoa & Escape Room' },
 	];
 
-	const MESES = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+	const MESES = MESES_FULL;
 	const DIAS  = ['L','M','X','J','V','S','D'];
 
 	const now = new Date();
@@ -210,6 +217,31 @@ import Layout from '../layouts/Layout.astro';
 	});
 
 	render();
+
+	// ── Render panel próximos eventos ──
+	(function renderProximos() {
+		const lista = document.getElementById('proximos-lista');
+		if (!lista) return;
+		const today = new Date();
+		const todayMidnight = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+		const futuroIdx = EVENTOS.findIndex(e => new Date(e.year, e.month, e.day) >= todayMidnight);
+		lista.innerHTML = EVENTOS.map((e, i) => {
+			const isPast = new Date(e.year, e.month, e.day) < todayMidnight;
+			const isNext = i === futuroIdx;
+			return `<li class="prox-item${isPast ? ' prox-pasado' : ''}${isNext ? ' prox-next' : ''}">
+				<div class="prox-sello">
+					<span class="prox-dia">${e.day}</span>
+					<span class="prox-mes">${MESES_FULL[e.month]}</span>
+				</div>
+				<div class="prox-pivot">⚒</div>
+				<div class="prox-info">
+					<span class="prox-nombre">${e.nombre}</span>
+					${isPast ? '<span class="prox-check">✓</span>' : ''}
+					${isNext ? '<span class="prox-badge">próxima</span>' : ''}
+				</div>
+			</li>`;
+		}).join('');
+	})();
 </script>
 
 <style>
@@ -227,21 +259,75 @@ import Layout from '../layouts/Layout.astro';
 		overflow: hidden;
 	}
 
-	.foto-wrap {
+	/* ── Panel Próximos Eventos (estructura, no dinámica) ── */
+
+	.proximos-wrap {
 		grid-area: foto;
+		background: linear-gradient(to bottom, #1e1008 0%, #120802 100%);
 		border: 3px solid #2a1208;
-		outline: 1px solid #2a1208;
+		outline: 1px solid rgba(210,120,40,0.5);
 		outline-offset: 4px;
 		box-shadow: 5px 5px 0 #2a1208;
+		display: flex;
+		flex-direction: column;
 		overflow: hidden;
+		padding: 0.9rem 0.8rem 0.8rem;
+		font-family: 'Cinzel', serif;
+		position: relative;
 	}
 
-	.foto-eventos {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		object-position: center top;
-		display: block;
+	.proximos-wrap::after {
+		content: '';
+		position: absolute;
+		inset: 6px;
+		border: 1px solid rgba(210,120,40,0.2);
+		pointer-events: none;
+	}
+
+	.proximos-header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.3rem;
+		margin-bottom: 0.6rem;
+		flex-shrink: 0;
+		position: relative;
+		z-index: 1;
+	}
+
+	.proximos-logo { height: 30px; width: auto; opacity: 0.9; }
+
+	.proximos-titulo {
+		font-family: 'Metamorphous', cursive;
+		font-size: 0.95rem;
+		letter-spacing: 4px;
+		text-transform: uppercase;
+		background: linear-gradient(to bottom, #ffe0b0 0%, #f0a060 30%, #d07030 70%, #a04018 100%);
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+		filter: brightness(1.4);
+		margin: 0;
+		text-align: center;
+	}
+
+	.proximos-sep {
+		width: 55%;
+		height: 1px;
+		background: linear-gradient(to right, transparent, rgba(210,120,40,0.7), transparent);
+	}
+
+	.proximos-lista {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		justify-content: space-evenly;
+		gap: 0.35rem;
+		position: relative;
+		z-index: 1;
 	}
 
 	/* ── Evento stack — poster style ── */
@@ -263,7 +349,7 @@ import Layout from '../layouts/Layout.astro';
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		object-position: center 20%;
+		object-position: 66% 20%;
 		display: block;
 	}
 
@@ -735,8 +821,7 @@ import Layout from '../layouts/Layout.astro';
 			height: auto;
 			overflow: visible;
 		}
-		.foto-wrap { height: auto; }
-		.foto-eventos { height: auto; object-fit: contain; }
+		.proximos-wrap { min-height: 300px; }
 		.evento-stack { overflow: visible; }
 		.text-col-evento { overflow: visible; }
 		.fila-campos { grid-template-columns: 1fr; }
@@ -747,7 +832,123 @@ import Layout from '../layouts/Layout.astro';
 </style>
 
 <style is:global>
-	/* Estilos del calendario aplicados a spans creados por JS */
+	/* ── Próximos eventos — elementos creados por JS ── */
+
+	/* Futuros: recuadro crema cálido */
+	.prox-item {
+		display: grid;
+		grid-template-columns: 3.8rem 1.6rem 1fr;
+		align-items: stretch;
+		background: rgba(240,216,152,0.14);
+		border: 1px solid rgba(210,120,40,0.4);
+	}
+
+	.prox-sello {
+		background: #2a1208;
+		border-right: 1px solid rgba(210,120,40,0.3);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 0.45rem 0.2rem;
+		gap: 0.05rem;
+	}
+	.prox-dia {
+		font-family: 'Metamorphous', cursive;
+		font-size: 2rem;
+		color: #f0d898;
+		line-height: 1;
+	}
+	.prox-mes {
+		font-family: 'Cinzel', serif;
+		font-size: 0.38rem;
+		letter-spacing: 2.5px;
+		text-transform: uppercase;
+		color: #c05820;
+		font-weight: 700;
+	}
+	.prox-pivot {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		color: rgba(210,120,40,0.5);
+		font-size: 0.7rem;
+	}
+	.prox-pivot::before,
+	.prox-pivot::after {
+		content: '';
+		display: block;
+		width: 1px;
+		flex: 1;
+		background: rgba(210,120,40,0.2);
+	}
+	.prox-info {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		padding: 0.4rem 0.55rem;
+		gap: 0.28rem;
+	}
+	.prox-nombre {
+		font-family: 'Metamorphous', cursive;
+		font-size: 0.72rem;
+		color: #f0d898;
+		line-height: 1.35;
+	}
+	.prox-badge {
+		font-family: 'Cinzel', serif;
+		font-size: 0.33rem;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		color: #fff7ee;
+		background: #b44814;
+		padding: 0.1rem 0.3rem;
+		box-shadow: 2px 2px 0 #6a2808;
+	}
+
+	/* Próximo evento: sello naranja */
+	.prox-next {
+		background: rgba(180,72,20,0.22);
+		border-color: rgba(210,120,40,0.65);
+	}
+	.prox-next .prox-sello { background: #b44814; border-color: rgba(210,120,40,0.5); }
+	.prox-next .prox-dia { color: #fff7ee; }
+	.prox-next .prox-mes { color: #ffe0b0; }
+	.prox-next .prox-nombre { color: #f0d898; }
+
+	/* Pasados: oscuros pero legibles */
+	.prox-pasado {
+		background: rgba(6,2,1,0.18);
+		border-color: rgba(210,120,40,0.15);
+	}
+	.prox-pasado .prox-sello {
+		background: rgba(6,2,1,0.18);
+		border-color: rgba(210,120,40,0.12);
+	}
+	.prox-pasado .prox-dia    { color: rgba(240,216,152,0.8) !important; }
+	.prox-pasado .prox-mes    { color: rgba(180,80,20,0.8) !important; }
+	.prox-pasado .prox-nombre { color: rgba(240,216,152,0.8) !important; }
+	.prox-pasado .prox-pivot  { color: rgba(210,120,40,0.3); }
+	.prox-pasado .prox-pivot::before,
+	.prox-pasado .prox-pivot::after { background: rgba(210,120,40,0.08); }
+
+	.prox-pasado .prox-info {
+		flex-direction: row;
+		align-items: center;
+	}
+	.prox-pasado .prox-nombre { flex: 1; }
+
+	.prox-check {
+		font-family: 'Cinzel', serif;
+		font-size: 0.65rem;
+		color: rgba(240,216,152,0.8);
+		flex-shrink: 0;
+		padding-left: 0.4rem;
+	}
+
+	/* ── Calendario — spans creados por JS ── */
 	.evento-dia {
 		background: #b44814!important;
 		color: #fff7ee !important;
