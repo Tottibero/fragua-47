@@ -25,3 +25,6 @@ pnpm-debug.log*
 
 # Local Netlify folder
 .netlify
+
+# Carteles locales (uso interno, no publicar)
+carteles/
