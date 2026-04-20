@@ -825,13 +825,20 @@ import Layout from '../layouts/Layout.astro';
 
 		/* ── Poster evento: altura fija + imagen contenida ── */
 		.evento-stack {
-			min-height: 300px;
+			min-height: 380px;
 			overflow: hidden;
+		}
+
+		.img-evento-bg {
+			object-fit: cover;
+			object-position: 66% 15%;
 		}
 
 		.evento-content {
 			height: auto;
-			min-height: 300px;
+			min-height: 380px;
+			justify-content: space-between;
+			padding-bottom: 0.8rem;
 		}
 
 		/* Sacar .evento-bottom del flujo absoluto en móvil */
@@ -840,7 +847,7 @@ import Layout from '../layouts/Layout.astro';
 			bottom: auto;
 			left: auto;
 			right: auto;
-			padding: 0 0.8rem 0.8rem;
+			padding: 0 0.8rem 0;
 			flex-direction: column;
 			align-items: flex-start;
 			gap: 0.6rem;
