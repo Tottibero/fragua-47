@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Code Night — Tu Pecado Capital</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Raleway:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 1280px;
+      height: 720px;
+      overflow: hidden;
+      background: #0a0c0b;
+    }
+
+    .flyer {
+      width: 1280px;
+      height: 720px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* ── CORNER BRACKETS ── */
+    .c {
+      position: fixed;
+      width: 32px;
+      height: 32px;
+      z-index: 50;
+    }
+
+    .c-tl {
+      top: 14px;
+      left: 14px;
+      border-top: 2px solid rgba(201, 168, 76, 0.9);
+      border-left: 2px solid rgba(201, 168, 76, 0.9);
+    }
+
+    .c-tr {
+      top: 14px;
+      right: 14px;
+      border-top: 2px solid rgba(201, 168, 76, 0.9);
+      border-right: 2px solid rgba(201, 168, 76, 0.9);
+    }
+
+    .c-bl {
+      bottom: 14px;
+      left: 14px;
+      border-bottom: 2px solid rgba(201, 168, 76, 0.9);
+      border-left: 2px solid rgba(201, 168, 76, 0.9);
+    }
+
+    .c-br {
+      bottom: 14px;
+      right: 14px;
+      border-bottom: 2px solid rgba(201, 168, 76, 0.9);
+      border-right: 2px solid rgba(201, 168, 76, 0.9);
+    }
+
+    /* ── LEFT STRIPE ── */
+    .stripe {
+      display: none;
+    }
+
+    /* ── MAIN SECTION ── */
+    .main {
+      display: grid;
+      grid-template-columns: 640px 640px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 720px;
+      overflow: hidden;
+    }
+
+    /* ── LEFT PHOTO ── */
+    .left {
+      width: 640px;
+      height: 720px;
+      overflow: hidden;
+      position: relative;
+      padding: 14px 0 14px 14px;
+      background: #0a0c0b;
+    }
+
+    .left img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    /* ── RIGHT CONTENT ── */
+    .right {
+      height: 720px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 36px 44px 28px;
+      background:
+        radial-gradient(ellipse at 75% 15%, rgba(201, 168, 76, 0.06) 0%, transparent 50%),
+        radial-gradient(ellipse at 25% 85%, rgba(46, 139, 110, 0.06) 0%, transparent 45%),
+        linear-gradient(160deg, #131510 0%, #0a0c0b 55%, #0d0f0c 100%);
+      gap: 0;
+    }
+
+    /* ── HEADER ── */
+    .event-label {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 600;
+      font-style: italic;
+      letter-spacing: 0.2em;
+      color: #C9A84C;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 62px;
+      font-weight: 700;
+      line-height: 1;
+      color: #f5f0e8;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      white-space: nowrap;
+    }
+
+    .title .accent {
+      color: #C9A84C;
+    }
+
+    .date-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid rgba(201, 168, 76, 0.75);
+      background: rgba(201, 168, 76, 0.12);
+      padding: 6px 24px;
+      margin-bottom: 0;
+    }
+
+    .date-dot {
+      width: 6px;
+      height: 6px;
+      background: #2E8B6E;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .date-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-style: italic;
+      color: #f5f0e8;
+      letter-spacing: 0.08em;
+    }
+
+    /* ── SEPARATOR ── */
+    .sep {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(201, 168, 76, 0.4) 50%, transparent);
+      margin: 9px 0;
+      flex-shrink: 0;
+    }
+
+    /* ── INTRO ── */
+    .intro {
+      font-family: 'Raleway', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1.7;
+      color: #f5f0e8;
+      letter-spacing: 0.025em;
+      font-style: italic;
+      flex-shrink: 0;
+    }
+
+    /* ── INFO ROWS ── */
+    .info-block {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex-shrink: 0;
+      width: 100%;
+    }
+
+    .info-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 9px;
+      text-align: left;
+    }
+
+    .info-emoji {
+      font-size: 15px;
+      line-height: 1.6;
+      flex-shrink: 0;
+      width: 20px;
+      text-align: center;
+    }
+
+    .info-text {
+      font-family: 'Raleway', sans-serif;
+      font-size: 14.5px;
+      font-weight: 500;
+      color: #f5f0e8;
+      line-height: 1.6;
+      letter-spacing: 0.01em;
+      flex: 1;
+    }
+
+    .info-text strong {
+      color: #C9A84C;
+      font-weight: 600;
+    }
+
+    /* ── FOOTER INFO ── */
+    .footer-info {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      flex-shrink: 0;
+      align-items: center;
+    }
+
+    .price-line {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 9px;
+    }
+
+    .price-amount {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 46px;
+      font-weight: 700;
+      color: #e2c97e;
+      line-height: 1;
+    }
+
+    .price-pp {
+      font-family: 'Raleway', sans-serif;
+      font-size: 14px;
+      color: rgba(245, 240, 232, 0.8);
+      letter-spacing: 0.06em;
+    }
+
+    .web-line {
+      font-family: 'Raleway', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: #f5f0e8;
+    }
+
+    .web-line .link {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 19px;
+      font-style: italic;
+      font-weight: 600;
+      color: #C9A84C;
+    }
+
+    .contact-line {
+      font-family: 'Raleway', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      color: #f5f0e8;
+      letter-spacing: 0.02em;
+    }
+
+    .contact-line .handle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-style: italic;
+      font-weight: 600;
+      color: #C9A84C;
+    }
+
+    .contact-line .note {
+      color: rgba(201, 168, 76, 0.7);
+      font-size: 12px;
+    }
+
+    /* Spacer flexible para empujar contenido al centro */
+    .spacer {
+      flex: 1;
+    }
+
+    /* ── TPC EN PANEL DERECHO ── */
+    .tpc-block {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 4;
+      min-height: 0;
+      padding-bottom: 0;
+    }
+
+    .tpc-block img {
+      width: 250px;
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flyer">
+
+    <!-- Corner brackets -->
+    <div class="c c-tl"></div>
+    <div class="c c-tr"></div>
+    <div class="c c-bl"></div>
+    <div class="c c-br"></div>
+
+    <!-- Main: foto + info -->
+    <div class="main">
+      <div class="stripe"></div>
+
+      <!-- LEFT: Foto -->
+      <div class="left">
+        <img src="gemini_panel.png" alt="Code Night">
+      </div>
+
+      <!-- RIGHT: Info -->
+      <div class="right">
+        <div class="event-label">Noche de Protocolo</div>
+        <div class="title">Code <span class="accent">Night</span></div>
+        <div class="date-badge">
+          <div class="date-dot"></div>
+          <div class="date-text">11 de Abril · 21:00h</div>
+        </div>
+
+        <div class="sep"></div>
+
+        <div class="intro">
+          Una noche donde el protocolo manda… pero las reglas son las más tentadoras que hayas conocido. Elegancia,
+          provocación y una dosis generosa de picardía.
+        </div>
+
+        <div class="sep"></div>
+
+        <div class="info-block">
+          <div class="info-row">
+            <span class="info-emoji">📍</span>
+            <div class="info-text"><strong>Lugar:</strong> Cerca de la estación de tren de Valladolid<br>Dirección
+              tras
+              adquirir la entrada</div>
+          </div>
+          <div class="info-row">
+            <span class="info-emoji">🎭</span>
+            <div class="info-text"><strong>Dress code:</strong> Se requiere vestimenta formal o estética Fetish (Látex,
+              Cuero, Vinilo). Prohibido calzado deportivo o ropa de calle.</div>
+          </div>
+          <div class="info-row">
+            <span class="info-emoji">🥂</span>
+            <div class="info-text"><strong>Incluye:</strong> Picoteo caliente y frío · Cócteles y mojitos</div>
+          </div>
+        </div>
+
+        <div class="sep"></div>
+
+        <div class="footer-info">
+          <div class="price-line">
+            <div class="price-amount">28€</div>
+            <div class="price-pp">por persona</div>
+          </div>
+          <div class="web-line">
+            Inscripciones en <span class="link">www.TuPecadoCapital.com</span> — sección eventos
+          </div>
+          <div class="contact-line">
+            <span class="handle">@TuPecadoCapital</span>
+            &nbsp;·&nbsp; WhatsApp <span class="handle">601 861 406</span>
+            <span class="note">&nbsp;(asunto: Code Night)</span>
+          </div>
+        </div>
+
+        <div class="tpc-block">
+          <img src="LabiosYletras-removebg-preview.png" alt="TPC">
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</body>
+
+</html>

@@ -11,69 +11,47 @@ import Layout from '../layouts/Layout.astro';
 			<img src="/eventos.webp" alt="Eventos Fragua47" class="foto-eventos" loading="eager" fetchpriority="high" width="700" height="1050" />
 		</div>
 
-		<!-- Evento: foto arriba, tarjeta abajo -->
+		<!-- Evento: poster style -->
 		<div class="evento-stack">
-				<img src="/Bodysushi.webp" alt="Fiesta Japan & Body Sushi" class="img-evento" loading="lazy" width="797" height="453" />
-				<div class="text-col-evento">
-					<div class="evento-header">
-						<img src="/VectLogoF47.webp" alt="Logo Fragua47" class="evento-logo" width="300" height="343" />
-						<div>
-							<p class="pre-titulo">— próxima fiesta —</p>
-							<h3>Fiesta Japan &amp; Body Sushi</h3>
+			<img src="/fetish-uniform.png" alt="Fetish Uniform Night" class="img-evento-bg" loading="lazy" width="797" height="453" />
+			<div class="evento-overlay"></div>
+			<div class="evento-content">
+				<div class="evento-top">
+					<img src="/VectLogoF47.webp" alt="Logo Fragua47" class="evento-logo" width="300" height="343" />
+					<span class="logo-metalico">FRAGUA47</span>
+				</div>
+				<div class="evento-bottom">
+					<div class="evento-info">
+						<h3>Fetish Uniform <span class="accent">Night</span></h3>
+						<div class="evento-fecha">
+							<span class="fecha-dia">2</span>
+							<span class="fecha-div"></span>
+							<div class="fecha-detalle">
+								<span class="fecha-mes">Mayo</span>
+								<span class="fecha-sub">Sábado · 21:00 h · Valladolid</span>
+							</div>
+						</div>
+						<div class="datos-evento">
+							<div class="dato-fila">
+								<svg class="dato-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+								<span class="dato-valor">Uniforme, fetish ó mínimo negro</span>
+							</div>
+							<div class="dato-fila">
+								<svg class="dato-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+								<span class="dato-valor">Se indicará al confirmar asistencia</span>
+							</div>
+							<div class="dato-fila">
+								<svg class="dato-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8"/><path d="M7 10h10"/><path d="M12 15v7"/><path d="M12 15a5 5 0 0 0 5-5V3H7v7a5 5 0 0 0 5 5z"/></svg>
+								<span class="dato-valor">Picoteo incluido</span>
+							</div>
 						</div>
 					</div>
-					<ul class="sentidos">
-						<li class="s-vista">
-							<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-							<span>Vista</span>
-						</li>
-						<li class="s-oido">
-							<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-							<span>Oído</span>
-						</li>
-						<li class="s-olfato">
-							<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
-							<span>Olfato</span>
-						</li>
-						<li class="s-gusto">
-							<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
-							<span>Gusto</span>
-						</li>
-						<li class="s-tacto">
-							<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/><path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/><path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v3"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
-							<span>Tacto</span>
-						</li>
-					</ul>
-					<p class="cuerpo">La próxima fiesta cumplirá todos los requisitos para que se disfrute con todos ellos. Te esperamos, porque si además el placer es compartido, se multiplica.</p>
-					<div class="datos-evento">
-						<div class="dato-fila">
-							<span class="dato-label">
-								<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-								Fecha
-							</span>
-							<span class="dato-valor">18 de Abril</span>
-						</div>
-						<div class="dato-fila">
-							<span class="dato-label">
-								<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-								Hora
-							</span>
-							<span class="dato-valor">21:00 h</span>
-						</div>
-						<div class="dato-fila">
-							<span class="dato-label">
-								<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-								Lugar
-							</span>
-							<span class="dato-valor dato-privado">Se indicará al confirmar asistencia</span>
-						</div>
-					</div>
-					<hr class="linea" />
 					<div class="footer-card">
 						<button class="btn-inscribete" id="btn-inscribete">Inscríbete ⚒</button>
 					</div>
 				</div>
 			</div>
+		</div>
 
 			<!-- Calendario navegable -->
 			<div class="calendario">
@@ -103,7 +81,7 @@ import Layout from '../layouts/Layout.astro';
 				<h5>Inscripción</h5>
 				<span class="doc-sello">⚒</span>
 			</div>
-			<p class="doc-sub">— Japan &amp; Body Sushi · Fragua47 · Valladolid —</p>
+			<p class="doc-sub">— Fetish Uniform Night · Fragua47 · Valladolid —</p>
 			<hr class="doc-linea" />
 			<form id="form-inscripcion">
 				<div class="fila-campos">
@@ -237,7 +215,7 @@ import Layout from '../layouts/Layout.astro';
 <style>
 	.pagina {
 		display: grid;
-		grid-template-columns: 1.4fr 1fr;
+		grid-template-columns: 1fr 1.4fr;
 		grid-template-rows: 1fr auto;
 		grid-template-areas:
 			"foto stack"
@@ -266,162 +244,180 @@ import Layout from '../layouts/Layout.astro';
 		display: block;
 	}
 
-	/* ── Evento stack (foto arriba, tarjeta abajo) ── */
+	/* ── Evento stack — poster style ── */
 
 	.evento-stack {
 		grid-area: stack;
-		display: flex;
-		flex-direction: column;
-		gap: 0;
-		flex: 1;
-		min-height: 0;
+		position: relative;
+		overflow: hidden;
 		border: 3px solid #2a1208;
 		outline: 1px solid #2a1208;
 		outline-offset: 4px;
 		box-shadow: 5px 5px 0 #2a1208;
-		overflow: hidden;
+		background: #120802;
 	}
 
-	.img-evento {
+	.img-evento-bg {
+		position: absolute;
+		inset: 0;
 		width: 100%;
-		height: 110px;
+		height: 100%;
 		object-fit: cover;
-		object-position: center 30%;
+		object-position: center 20%;
 		display: block;
-		flex-shrink: 0;
-		border-bottom: 2px solid #2a1208;
 	}
 
-	.cuerpo {
-		font-family: system-ui, -apple-system, sans-serif;
-		font-size: 0.62rem;
-		color: #2a1208;
-		line-height: 1.5;
-		margin: 0.15rem 0 0.2rem;
+	.evento-overlay {
+		position: absolute;
+		inset: 0;
+		background:
+			linear-gradient(to bottom,
+				rgba(18,8,2,0.35) 0%,
+				rgba(18,8,2,0.1) 20%,
+				rgba(18,8,2,0.5) 48%,
+				rgba(18,8,2,0.88) 68%,
+				#120802 85%
+			);
 	}
 
-	/* ── Tarjeta evento ── */
-
-	.text-col-evento {
-		background: #d4b896;
-		padding: 0.5rem 0.8rem;
+	.evento-content {
+		position: relative;
+		z-index: 10;
+		height: 100%;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
-		font-family: 'Cinzel', serif;
-		flex: 1;
-		min-height: 0;
-		overflow-y: auto;
+		justify-content: flex-start;
+		padding: 0.6rem 0.8rem 0;
 	}
 
-	.evento-header {
+	.evento-top {
 		display: flex;
 		align-items: center;
-		gap: 0.5rem;
-		margin-bottom: 0.1rem;
+		gap: 0.4rem;
+		align-self: flex-end;
 	}
 
-	.evento-logo { height: 22px; width: auto; opacity: 0.9; flex-shrink: 0; }
+	.evento-logo { height: 18px; width: auto; opacity: 0.95; flex-shrink: 0; }
 
-	.pre-titulo {
-		font-size: 0.45rem;
+	.logo-metalico {
+		font-family: 'Metamorphous', cursive;
+		font-size: 0.7rem;
 		letter-spacing: 2px;
-		text-transform: uppercase;
-		color: #5a3018;
-		margin: 0;
+		background: linear-gradient(to bottom, #ffe0b0 0%, #f0a060 15%, #e08040 40%, #d07030 65%, #a04018 85%, #6a2808 100%);
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+		filter: brightness(1.5);
+	}
+
+	.evento-bottom {
+		position: absolute;
+		bottom: 0.5rem;
+		left: 0.8rem;
+		right: 0.8rem;
+		display: flex;
+		flex-direction: row;
+		align-items: flex-end;
+		gap: 0.5rem;
+	}
+
+	.evento-info {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		gap: 0.3rem;
 	}
 
 	h3 {
 		font-family: 'Metamorphous', cursive;
-		font-size: 0.85rem;
+		font-size: 1rem;
 		letter-spacing: 2px;
 		text-transform: uppercase;
-		color: #2a1208;
+		color: #f0d898;
 		margin: 0;
 		line-height: 1.1;
-		flex: 1;
 	}
 
-	.linea {
-		border: none;
-		border-top: 1.5px solid #2a1208;
-		margin: 0.25rem 0;
+	h3 .accent { color: #e0b080; }
+
+	.evento-fecha {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
 	}
 
-	.sentidos {
-		list-style: none;
-		padding: 0;
-		margin: 0 0 0.25rem;
-		display: grid;
-		grid-template-columns: repeat(5, 1fr);
-		gap: 0.2rem;
+	.fecha-dia {
+		font-family: 'Metamorphous', cursive;
+		font-size: 1.6rem;
+		color: #f0d898;
+		line-height: 1;
 	}
 
-	.sentidos li {
+	.fecha-div {
+		width: 1px;
+		height: 1.4rem;
+		background: rgba(240,216,152,0.3);
+		flex-shrink: 0;
+	}
+
+	.fecha-detalle {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
-		justify-content: center;
 		gap: 0.1rem;
-		padding: 0.2rem 0.1rem;
-		font-family: 'Cinzel', serif;
-		font-size: 0.38rem;
-		letter-spacing: 1.5px;
-		text-transform: uppercase;
-		color: #fff;
-		font-weight: 700;
 	}
 
-	.sentidos li svg { width: 0.6rem; height: 0.6rem; stroke: currentColor; }
+	.fecha-mes {
+		font-family: 'Cinzel', serif;
+		font-size: 0.65rem;
+		font-weight: 600;
+		letter-spacing: 3px;
+		text-transform: uppercase;
+		color: #f0d898;
+	}
 
-	.s-vista  { background: #c03818; box-shadow: 2px 2px 0 rgba(0,0,0,0.3); }
-	.s-oido   { background: #7a5200; box-shadow: 2px 2px 0 rgba(0,0,0,0.3); }
-	.s-olfato { background: #7c3890; box-shadow: 2px 2px 0 rgba(0,0,0,0.3); }
-	.s-gusto  { background: #b82850; box-shadow: 2px 2px 0 rgba(0,0,0,0.3); }
-	.s-tacto  { background: #206858; box-shadow: 2px 2px 0 rgba(0,0,0,0.3); }
+	.fecha-sub {
+		font-family: 'Cinzel', serif;
+		font-size: 0.42rem;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		color: rgba(240,216,152,0.65);
+	}
 
 	.datos-evento {
-		margin: 0.15rem 0;
-		border-top: 1px solid rgba(42,18,8,0.25);
-		border-bottom: 1px solid rgba(42,18,8,0.25);
-		padding: 0.15rem 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0;
 	}
 
 	.dato-fila {
 		display: flex;
-		align-items: baseline;
-		gap: 0.5rem;
-		padding: 0.1rem 0;
-	}
-
-	.dato-fila + .dato-fila { border-top: 1px solid rgba(42,18,8,0.15); }
-
-	.dato-label {
-		font-family: 'Cinzel', serif;
-		font-size: 0.48rem;
-		letter-spacing: 2px;
-		text-transform: uppercase;
-		color: #6a2808;
-		font-weight: 700;
-		min-width: 2.8rem;
-		flex-shrink: 0;
-		display: flex;
 		align-items: center;
-		gap: 0.2rem;
+		gap: 0.35rem;
+		padding: 0.18rem 0;
 	}
 
-	.dato-label svg { width: 0.6rem; height: 0.6rem; flex-shrink: 0; }
+	.dato-icon {
+		width: 0.65rem;
+		height: 0.65rem;
+		min-width: 0.65rem;
+		stroke: rgba(240,216,152,0.6);
+		flex-shrink: 0;
+	}
 
 	.dato-valor {
 		font-family: system-ui, -apple-system, sans-serif;
-		color: #2a1208;
-		font-size: 0.65rem;
-		font-weight: 600;
+		font-size: 0.6rem;
+		color: rgba(240,216,152,0.85);
+		line-height: 1.3;
 	}
 
-	.dato-privado { font-weight: 700; }
+	.footer-card { display: flex; align-items: flex-end; flex-shrink: 0; }
 
-	.footer-card { display: flex; justify-content: center; margin-top: 0.2rem; }
+	.linea {
+		border: none;
+		border-top: 1px solid rgba(240,216,152,0.15);
+		margin: 0.2rem 0;
+	}
 
 	.btn-inscribete {
 		background: #b44814;

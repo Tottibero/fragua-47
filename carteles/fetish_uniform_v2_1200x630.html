@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Fetish Uniform Night — Fragua47</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Metamorphous&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body { width: 1200px; height: 630px; overflow: hidden; }
+
+    .flyer {
+      width: 1200px;
+      height: 630px;
+      position: relative;
+      overflow: hidden;
+      background: #1e1008;
+    }
+
+    .b1 { position: absolute; inset: 10px; border: 1px solid rgba(210,120,40,0.7); pointer-events: none; z-index: 50; }
+    .b2 { position: absolute; inset: 16px; border: 1px solid rgba(210,120,40,0.7); pointer-events: none; z-index: 50; }
+
+    .bg-wrap { position: absolute; inset: 17px; overflow: hidden; }
+    .bg-photo {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center 15%;
+      display: block;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 17px;
+      background:
+        linear-gradient(to bottom,
+          rgba(18,8,2,0.40) 0%,
+          rgba(18,8,2,0.15) 18%,
+          rgba(18,8,2,0.55) 48%,
+          rgba(18,8,2,0.88) 65%,
+          rgba(18,8,2,0.98) 80%,
+          #120802 100%
+        ),
+        linear-gradient(160deg, rgba(180,70,10,0.18) 0%, transparent 55%);
+    }
+
+    .content {
+      position: absolute;
+      inset: 17px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 22px 32px;
+      z-index: 10;
+    }
+
+    .logo-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      position: absolute;
+      top: 22px;
+      right: 32px;
+    }
+    .logo-brand .logo-img { height: 44px; width: auto; }
+    .logo-metalico {
+      font-family: 'Metamorphous', cursive;
+      font-size: 32px;
+      letter-spacing: 3px;
+      background: linear-gradient(to bottom, #ffe0b0 0%, #f0a060 15%, #e08040 40%, #d07030 65%, #a04018 85%, #6a2808 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      filter: brightness(1.6);
+      text-shadow: 1px 1px 0 #5a2006, 2px 2px 0 #3d1404, 3px 3px 8px rgba(0,0,0,0.9);
+    }
+
+    .bottom { display: flex; flex-direction: column; gap: 0; width: 100%; }
+
+    .title {
+      font-family: 'Metamorphous', cursive;
+      font-size: 38px;
+      line-height: 1.05;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #f0d898;
+    }
+    .title .accent { color: #e0b080; }
+
+    .sep {
+      height: 1px;
+      background: linear-gradient(to right, rgba(210,120,40,0.6), transparent);
+      margin: 7px 0;
+    }
+
+    .with-sep {
+      display: inline-flex;
+      flex-direction: column;
+      align-self: flex-start;
+    }
+    .with-sep .sep { width: 100%; }
+
+    .date-block { display: flex; align-items: center; gap: 12px; }
+    .date-day {
+      font-family: 'Metamorphous', cursive;
+      font-size: 38px;
+      line-height: 1;
+      color: #f0d898;
+    }
+    .date-divider { width: 1px; height: 34px; background: rgba(240,216,152,0.25); }
+    .date-details { display: flex; flex-direction: column; gap: 3px; }
+    .date-month {
+      font-family: 'Cinzel', serif;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #f0d898;
+    }
+    .date-time {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(240,216,152,0.7);
+    }
+
+    .info-block { display: flex; flex-direction: column; gap: 0; width: 100%; margin-top: 2px; }
+    .info-row {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      padding: 3px 0;
+    }
+    .info-row:last-child { border-bottom: none; }
+    .info-icon { width: 13px; height: 13px; min-width: 13px; stroke: rgba(240,216,152,0.65); flex-shrink: 0; }
+    .info-text {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 12px;
+      color: rgba(240,216,152,0.82);
+      line-height: 1.4;
+      flex: 1;
+    }
+    .info-text strong { font-weight: 700; color: #f0d898; }
+
+    .footer-info {
+      width: 100%;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-top: 7px;
+    }
+    .price-line { display: flex; align-items: baseline; gap: 7px; }
+    .price-amount {
+      font-family: 'Metamorphous', cursive;
+      font-size: 36px;
+      color: #f0d898;
+      line-height: 1;
+    }
+    .price-pp {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      color: rgba(240,216,152,0.8);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .footer-right { display: flex; flex-direction: column; align-items: flex-end; gap: 3px; }
+    .web-line {
+      font-family: 'Cinzel', serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: rgba(240,216,152,0.95);
+      letter-spacing: 0.05em;
+    }
+    .contact-line {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      color: rgba(240,216,152,0.8);
+      letter-spacing: 0.05em;
+    }
+    .contact-line .handle { color: #f0d898; font-weight: 600; }
+
+    .embers-overlay {
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200px;
+      height: 280px;
+      mix-blend-mode: screen;
+      opacity: 0.55;
+      pointer-events: none;
+      z-index: 60;
+    }
+  </style>
+</head>
+<body>
+<div class="flyer">
+  <div class="bg-wrap">
+    <img class="bg-photo" src="v2horizontal.png" alt="">
+  </div>
+  <div class="overlay"></div>
+  <div class="b1"></div>
+  <div class="b2"></div>
+
+  <div class="content">
+    <div class="logo-brand">
+      <img src="../public/VectLogoF47.png" alt="Fragua47" class="logo-img">
+      <h1 class="logo-metalico">FRAGUA47</h1>
+    </div>
+
+    <div class="bottom">
+      <div class="title">Fetish Uniform <span class="accent">Night</span></div>
+      <div class="date-block">
+        <div class="date-day">2</div>
+        <div class="date-divider"></div>
+        <div class="date-details">
+          <div class="date-month">Mayo</div>
+          <div class="date-time">Sábado · 21:00 h · Valladolid</div>
+        </div>
+      </div>
+      <div class="info-block">
+        <div class="info-row">
+          <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div class="info-text"><strong>Lugar:</strong> Se indicará al confirmar asistencia</div>
+        </div>
+        <div class="info-row">
+          <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          <div class="info-text"><strong>Dress code:</strong> Recomendable uniforme, fetish ó mínimo negro</div>
+        </div>
+        <div class="info-row">
+          <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8"/><path d="M7 10h10"/><path d="M12 15v7"/><path d="M12 15a5 5 0 0 0 5-5V3H7v7a5 5 0 0 0 5 5z"/></svg>
+          <div class="info-text">Picoteo incluido</div>
+        </div>
+      </div>
+      <div class="footer-info">
+        <div class="price-line">
+          <div class="price-amount">25€</div>
+          <div class="price-pp">por persona</div>
+        </div>
+        <div class="footer-right">
+          <div class="web-line">fragua47.org</div>
+          <div class="contact-line">FetLife <span class="handle">Fragua47</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <img class="embers-overlay" src="embers-nobg.png" alt="">
+</div>
+</body>
+</html>
