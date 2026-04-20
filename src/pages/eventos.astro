@@ -823,22 +823,23 @@ import Layout from '../layouts/Layout.astro';
 			margin: 0.6rem 0.5rem 1.5rem;
 		}
 
-		/* ── Poster evento: altura fija + imagen contenida ── */
+		/* ── Poster evento: ratio de la imagen para verla completa ── */
 		.evento-stack {
-			min-height: 380px;
+			aspect-ratio: 797 / 453;
+			min-height: unset;
 			overflow: hidden;
 		}
 
 		.img-evento-bg {
-			object-fit: cover;
-			object-position: 66% 15%;
+			object-fit: contain;
+			object-position: center center;
 		}
 
 		.evento-content {
-			height: auto;
-			min-height: 380px;
+			height: 100%;
+			min-height: unset;
 			justify-content: space-between;
-			padding-bottom: 0.8rem;
+			padding-bottom: 0.6rem;
 		}
 
 		/* Sacar .evento-bottom del flujo absoluto en móvil */
