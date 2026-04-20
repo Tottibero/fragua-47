@@ -823,16 +823,16 @@ import Layout from '../layouts/Layout.astro';
 			margin: 0.6rem 0.5rem 1.5rem;
 		}
 
-		/* ── Poster evento: ratio de la imagen para verla completa ── */
+		/* ── Poster evento: imagen completa + espacio negro para el botón ── */
 		.evento-stack {
-			aspect-ratio: 797 / 453;
+			aspect-ratio: 797 / 580;
 			min-height: unset;
 			overflow: hidden;
 		}
 
 		.img-evento-bg {
 			object-fit: contain;
-			object-position: center center;
+			object-position: center top;
 		}
 
 		.evento-content {
