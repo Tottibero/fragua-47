@@ -1,0 +1,1201 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const titulo = 'El Uniforme Como Fantasía: Lo Que los Estudios Revelan Sobre un Deseo Muy Frecuente';
+const descripcion = 'El fetiche del uniforme es uno de los más documentados en la investigación sobre sexualidad. Qué dicen los estudios, la psicología detrás del poder vestido y su lugar en la práctica BDSM.';
+const fechaISO = '2026-04-28';
+const fechaModificadaISO = '2026-04-28';
+const fechaMostrar = '28 de abril de 2026';
+const canonicalURL = 'https://fragua47.org/blog/fetiches-uniformes-estudio/';
+const ogImageURL = 'https://fragua47.org/blog/uniformes/portada.png';
+
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": titulo,
+  "description": descripcion,
+  "datePublished": fechaISO,
+  "dateModified": fechaModificadaISO,
+  "image": ogImageURL,
+  "author": { "@type": "Person", "name": "tottibero" },
+  "publisher": { "@type": "Organization", "name": "Fragua47", "url": "https://fragua47.org", "logo": { "@type": "ImageObject", "url": "https://fragua47.org/favicon-32.png" } },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalURL },
+  "inLanguage": "es-ES",
+  "keywords": ["fetiche uniforme","uniform fetishism","fetichismo","psicología sexual","BDSM","roleplay","uniformes militares","uniformes sanitarios","dominio sumisión","sexualidad","estudio fetiche","Scorolli","Journal of Sexual Medicine"]
+});
+---
+
+<Layout title={titulo} description={descripcion} ogType="article" ogImage={ogImageURL}>
+  <script type="application/ld+json" slot="head" set:html={jsonLd} />
+  <meta slot="head" property="article:published_time" content={fechaISO} />
+  <meta slot="head" property="article:modified_time" content={fechaModificadaISO} />
+  <meta slot="head" property="article:author" content="tottibero" />
+  <meta slot="head" property="article:section" content="Psicología y Sexualidad" />
+  <meta slot="head" property="article:tag" content="fetichismo" />
+  <meta slot="head" property="article:tag" content="uniformes" />
+  <meta slot="head" property="article:tag" content="BDSM" />
+  <meta slot="head" property="article:tag" content="psicología sexual" />
+
+  <nav class="breadcrumb" aria-label="Ruta de navegación">
+    <a href="/">Inicio</a><span aria-hidden="true">›</span>
+    <a href="/blog/">Blog</a><span aria-hidden="true">›</span>
+    <span aria-current="page">El Uniforme Como Fantasía</span>
+  </nav>
+
+  <article class="revista-wrap" itemscope itemtype="https://schema.org/Article">
+
+    <header class="masthead">
+      <div class="masthead-texto">
+        <div class="masthead-kicker">
+          <span class="kicker-label">Psicología</span>
+          <span class="kicker-sep" aria-hidden="true">·</span>
+          <span class="kicker-label">Sexualidad</span>
+          <span class="kicker-sep" aria-hidden="true">·</span>
+          <span class="kicker-label">Estudio</span>
+        </div>
+
+        <h1 itemprop="headline">El Uniforme<br/>Como Fantasía</h1>
+
+        <div class="masthead-acento" aria-hidden="true"></div>
+
+        <p class="masthead-subtitulo">
+          Por qué la ropa cargada de autoridad dispara el deseo
+          y qué dice la ciencia al respecto
+        </p>
+
+        <div class="masthead-meta">
+          <time itemprop="datePublished" datetime={fechaISO}>{fechaMostrar}</time>
+          <span aria-hidden="true" class="meta-punto">—</span>
+          <span itemprop="author">
+            Fragua47 · <a href="https://fetlife.com/tottibero" class="meta-autor" target="_blank" rel="noopener noreferrer">tottibero</a>
+          </span>
+          <span aria-hidden="true" class="meta-punto">—</span>
+          <span>15 min de lectura</span>
+        </div>
+      </div>
+
+      <div class="masthead-foto" aria-hidden="true">
+        <img src="/blog/uniformes/portada.png" alt="" class="masthead-img" />
+      </div>
+    </header>
+
+    <div class="cuerpo" itemprop="articleBody">
+
+      <p class="entradilla">
+        No hay que buscar mucho para encontrar el fetiche del uniforme: está en las búsquedas más frecuentes de cualquier plataforma, en las escenas y roleplay de parte de la comunidad BDSM, en la fantasía que muchas personas tienen pero pocas verbalizan. Lo que sí escasea es una mirada informada sobre por qué ocurre, qué mecanismos psicológicos dispara la ropa con autoridad, qué dice la investigación científica y qué lugar ocupa en la práctica real del juego de roles.
+      </p>
+
+      <figure class="img-lugar img-lugar--wide">
+        <div class="img-lugar-frame" style="--ar: 16/9">
+          <img src="/blog/uniformes/imagen-1.png" alt="Figura con uniforme militar o policial en iluminación dramática, fotografía editorial" class="img-real" loading="lazy" decoding="async" />
+          <div class="img-lugar-ph" aria-hidden="true">
+            <span class="img-lugar-num">01</span>
+            <span class="img-lugar-hint">Figura en uniforme · plano amplio</span>
+          </div>
+        </div>
+        <figcaption>Un uniforme habla antes de que nadie abra la boca.</figcaption>
+      </figure>
+
+      <div class="seccion-header">
+        <span class="seccion-num" aria-hidden="true">01</span>
+        <h2>Más frecuente de lo que parece</h2>
+      </div>
+
+      <p>
+        El fetiche del uniforme es más común de lo que la gente suele reconocer. Es, de hecho, uno de los fetiches más
+        documentados y prevalentes en la literatura científica sobre sexualidad. La referencia más
+        citada en este campo sigue siendo el estudio de <strong>Scorolli et al.</strong> (2007)<a href="#ref-1" class="ref-sup"><sup>1</sup></a>,
+        publicado en el <a href="https://pubmed.ncbi.nlm.nih.gov/17304204/" class="enlace-ref" target="_blank" rel="noopener noreferrer"><em>International Journal of Impotence Research</em></a>. Los investigadores
+        analizaron 381 grupos online dedicados a fetiches específicos —con más de 152.000 miembros
+        en total— y catalogaron sistemáticamente las preferencias declaradas por objetos y
+        características corporales.
+      </p>
+      <p>
+        Los uniformes y la ropa con connotación de autoridad aparecían de manera constante entre
+        las categorías más representadas, compitiendo únicamente con el calzado y la lencería en
+        términos de frecuencia. No como casos aislados, sino como comunidades grandes, activas
+        y con producción de contenido propio.
+      </p>
+
+      <div class="stat-grid">
+        <div class="stat-card">
+          <span class="stat-num">381</span>
+          <span class="stat-desc">grupos online de fetiches analizados</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">152k</span>
+          <span class="stat-desc">miembros en los grupos estudiados</span>
+        </div>
+        <div class="stat-card stat-card--accent">
+          <span class="stat-num">1 de 6</span>
+          <span class="stat-desc">adultos tiene fantasías recurrentes con uniformes<a href="#ref-2" class="ref-sup"><sup>2</sup></a></span>
+        </div>
+      </div>
+
+      <p class="stat-fuente">
+        * <a href="https://pubmed.ncbi.nlm.nih.gov/25359703/" class="enlace-ref" target="_blank" rel="noopener noreferrer">Joyal CC, Cossette A, Lapierre V. (2015). «What Exactly Is an Unusual Sexual Fantasy?»
+        <em>Journal of Sexual Medicine</em>, 12(2):328–340.</a> Muestra: 1.516 adultos de población general.
+      </p>
+
+      <figure class="img-lugar img-lugar--medium img-lugar--float-right">
+        <div class="img-lugar-frame" style="--ar: 4/5">
+          <img src="/blog/uniformes/imagen-2.png" alt="Primer plano de detalles de uniforme: galones, botones, insignias metálicas" class="img-real" loading="lazy" decoding="async" />
+          <div class="img-lugar-ph" aria-hidden="true">
+            <span class="img-lugar-num">02</span>
+            <span class="img-lugar-hint">Detalle de uniforme · primer plano</span>
+          </div>
+        </div>
+        <figcaption>Botones, galones, insignias. Ya sabes quién manda.</figcaption>
+      </figure>
+
+      <div class="seccion-header">
+        <span class="seccion-num" aria-hidden="true">02</span>
+        <h2>¿Qué entra en la categoría «uniforme»?</h2>
+      </div>
+
+      <p>
+        La categoría es más amplia de lo que suele asumirse. No se reduce al militar ni al policial.
+        La investigación agrupa bajo <em>uniform fetishism</em> un espectro extenso de prendas que
+        comparten un rasgo común: identifican a quien las lleva con un <strong>rol social codificado</strong>
+        y, casi siempre, con una posición dentro de una jerarquía.
+      </p>
+
+      <div class="tipo-grid">
+        <div class="tipo-item">
+          <span class="tipo-icono" aria-hidden="true">✦</span>
+          <span class="tipo-nombre">Militares y de combate</span>
+        </div>
+        <div class="tipo-item">
+          <span class="tipo-icono" aria-hidden="true">✦</span>
+          <span class="tipo-nombre">Cuerpos de seguridad (policía, guardia)</span>
+        </div>
+        <div class="tipo-item">
+          <span class="tipo-icono" aria-hidden="true">✦</span>
+          <span class="tipo-nombre">Sanitarios (enfermería, médico)</span>
+        </div>
+        <div class="tipo-item">
+          <span class="tipo-icono" aria-hidden="true">✦</span>
+          <span class="tipo-nombre">Uniformes escolares</span>
+        </div>
+        <div class="tipo-item">
+          <span class="tipo-icono" aria-hidden="true">✦</span>
+          <span class="tipo-nombre">Aviación (piloto, azafata)</span>
+        </div>
+        <div class="tipo-item">
+          <span class="tipo-icono" aria-hidden="true">✦</span>
+          <span class="tipo-nombre">Deporte y arbitraje</span>
+        </div>
+      </div>
+
+      <p>
+        Lo que tienen en común no es la tela sino lo que representan: autoridad, jerarquía, un rol
+        que llega antes que la persona. El uniforme ya ha hablado antes de que ella abra la boca
+        — y ahí es exactamente donde empieza la carga erótica.
+      </p>
+
+      <div class="seccion-header">
+        <span class="seccion-num" aria-hidden="true">03</span>
+        <h2>La psicología del poder vestido</h2>
+      </div>
+
+      <p>
+        Los investigadores han propuesto varios mecanismos psicológicos para explicar por qué
+        los uniformes funcionan como disparadores eróticos con tanta consistencia. No son
+        mutuamente excluyentes — en la mayoría de los casos operan varios a la vez.
+      </p>
+
+      <h3>La señal de jerarquía</h3>
+      <p>
+        El uniforme comunica posición de poder de forma inmediata, sin palabras ni negociación.
+        Para quien tiene fantasías o preferencias en torno a la dinámica dominación/sumisión,
+        esa comunicación directa resulta enormemente cargada. No es necesario construir el marco
+        de poder: viene incluido en la prenda.
+      </p>
+      <p>
+        El psicólogo Glenn Wilson, en sus trabajos sobre variaciones sexuales de los años ochenta,
+        ya señalaba que el fetiche del uniforme actúa frecuentemente como <em>símbolo condensado</em><a href="#ref-3" class="ref-sup"><sup>3</sup></a>:
+        el objeto —la prenda— carga con toda una red de significados culturales sobre autoridad,
+        obediencia y estructura social que la persona traduce al plano erótico.
+      </p>
+
+      <blockquote class="pull-quote">
+        <span class="pq-comilla" aria-hidden="true">"</span>
+        <p>Ponerse el uniforme es, en cierto modo, convertirse en otro. Y eso, para muchas personas, es exactamente el punto.</p>
+      </blockquote>
+
+      <figure class="img-lugar img-lugar--wide">
+        <div class="img-lugar-frame" style="--ar: 3/2">
+          <img src="/blog/uniformes/imagen-3.png" alt="Dos figuras: una en uniforme de autoridad en pie, otra en posición de sumisión, composición en blanco y negro" class="img-real" loading="lazy" decoding="async" />
+          <div class="img-lugar-ph" aria-hidden="true">
+            <span class="img-lugar-num">03</span>
+            <span class="img-lugar-hint">Dinámica de poder · dos figuras</span>
+          </div>
+        </div>
+        <figcaption>La jerarquía inscrita en la ropa: no hace falta decir una palabra para que el marco esté puesto.</figcaption>
+      </figure>
+
+      <h3>El efecto de separación entre persona y rol</h3>
+      <p>
+        El uniforme crea un personaje. Quien lo viste no es solo «esa persona»; es «la enfermera»,
+        «el oficial», «el árbitro». Esa distancia entre identidad real y rol permite una exploración
+        más libre del deseo, tanto para quien lo lleva como para quien lo observa. La ficción
+        del rol funciona como marco de seguridad psicológica: lo que ocurre le ocurre al personaje,
+        y el personaje tiene reglas propias.
+      </p>
+      <p>
+        Este mecanismo conecta directamente con la investigación sobre juego de roles y disociación
+        temporal: varios estudios con practicantes de BDSM
+        muestran que crear un contexto simbólico diferenciado, en el que el disfraz o el
+        uniforme juega un papel central, facilita la entrada en estados alterados de conciencia
+        con mayor intensidad emocional y menor autocensura.
+      </p>
+
+      <h3>La transferencia implícita de control</h3>
+      <p>
+        En el caso de ciertos uniformes (policial, militar, médico), hay una cesión de control
+        implícita ya codificada culturalmente. La relación enfermero/paciente, oficial/detenido,
+        instructor/recluta tiene una estructura de poder reconocible que hace la fantasía más
+        accesible de articular, o precisamente más intensa por no necesitar articulación.
+        El guión ya existe; solo hay que habitarlo.
+      </p>
+
+      <div class="seccion-header">
+        <span class="seccion-num" aria-hidden="true">04</span>
+        <h2>¿Qué uniformes y por qué cada uno?</h2>
+      </div>
+
+      <p>
+        No todos los uniformes generan el mismo tipo de atracción ni responden al mismo mecanismo.
+        Según los estudios y lo que se observa en comunidades online, cada categoría tiene su propia lógica.
+      </p>
+
+      <div class="tipo-detalle">
+        <div class="td-item">
+          <span class="td-titulo">Militares y policiales</span>
+          <p class="td-texto">Concentran la mayor parte del material publicado y de las comunidades online dedicadas al fetiche de uniformes. La combinación de autoridad física, estructura jerárquica rígida y connotación de violencia controlada produce la variante más intensa del mecanismo de transferencia de control. Son también los que tienen mayor tradición dentro de las subculturas leather y bears de la comunidad LGBTQ+.</p>
+        </div>
+        <div class="td-item">
+          <span class="td-titulo">Sanitarios (enfermería, médico)</span>
+          <p class="td-texto">Activan una variante diferente: la asimetría del cuidado. La persona en uniforme sanitario tiene acceso al cuerpo del otro, ejerce una forma de poder íntimo pero legítimo, y opera en un contexto donde la vulnerabilidad está normalizada. Esta combinación — acceso al cuerpo + permiso cultural — tiene una lógica propia dentro del fetiche.</p>
+        </div>
+        <div class="td-item">
+          <span class="td-titulo">Escolares</span>
+          <p class="td-texto">Uno de los más prevalentes en estadísticas globales pero también uno de los más malinterpretados. El fetiche del uniforme escolar en adultos no implica atracción a menores — los estudios son claros en esto. El mecanismo es distinto: el uniforme escolar evoca inocencia, inicio, una etapa previa a la definición del deseo, que se resignifica en el presente adulto. La carga es la de lo que «debería» estar prohibido, no de la edad.</p>
+        </div>
+        <div class="td-item">
+          <span class="td-titulo">Aviación y servicios</span>
+          <p class="td-texto">Menos estudiados cuantitativamente pero con comunidades activas. La atracción se orienta más hacia el glamour y la competencia técnica que hacia la jerarquía de poder directo. El piloto o la azafata representan un tipo diferente de autoridad: la del experto, la de quien domina un entorno hostil. El deseo aquí tiene más que ver con la proyección de capacidad que con la estructura de mando.</p>
+        </div>
+      </div>
+
+      <figure class="img-lugar img-lugar--wide">
+        <div class="img-lugar-frame" style="--ar: 16/7">
+          <img src="/blog/uniformes/imagen-4.png" alt="Collage horizontal con cuatro uniformes icónicos: militar, sanitario, policial y escolar, estilo editorial" class="img-real" loading="lazy" decoding="async" />
+          <div class="img-lugar-ph" aria-hidden="true">
+            <span class="img-lugar-num">04</span>
+            <span class="img-lugar-hint">Collage de tipos de uniforme · panorámico</span>
+          </div>
+        </div>
+        <figcaption>Cuatro uniformes, cuatro fantasías distintas: la autoridad del mando, del cuidado, de la ley y del aprendizaje.</figcaption>
+      </figure>
+
+      <div class="seccion-header">
+        <span class="seccion-num" aria-hidden="true">05</span>
+        <h2>Género, orientación y diferencias</h2>
+      </div>
+
+      <p>
+        Los estudios de Gosselin y Wilson (1980)<a href="#ref-3" class="ref-sup"><sup>3</sup></a> y los meta-análisis posteriores sobre fetichismo
+        en general sugieren que el fenómeno es más declarado entre hombres heterosexuales — aunque
+        esta diferencia se reduce significativamente cuando se controlan los sesgos de auto-declaración.
+        Las mujeres y las personas LGBTQ+ tienen menor tendencia a identificarse como «fetichistas»
+        aunque informen de patrones de atracción similares.
+      </p>
+
+      <blockquote class="pull-quote">
+        <span class="pq-comilla" aria-hidden="true">"</span>
+        <p>Los hombres tienden más a identificarse como fetichistas y a buscar comunidades alrededor de eso. Las mujeres suelen tener las mismas fantasías pero raramente les ponen ese nombre. La diferencia está en la etiqueta, no en el deseo.</p>
+      </blockquote>
+
+      <p>
+        Con respecto al tipo de uniforme preferido, la investigación cualitativa recoge diferencias
+        claras por género e identidad:
+      </p>
+      <ul class="lista-articulo">
+        <li><strong>Hombres heterosexuales:</strong> uniformes de autoridad femenina (enfermera, policía, azafata)</li>
+        <li><strong>Mujeres heterosexuales:</strong> uniformes militares/policiales masculinos; también uniformes deportivos</li>
+        <li><strong>Comunidad gay y lésbica:</strong> mayor diversidad; fuerte presencia de la estética de uniforme policial/leather dentro de la cultura gay masculina, con historia documentada desde los años cincuenta en Estados Unidos</li>
+        <li><strong>Personas bisexuales y no binarias:</strong> los estudios disponibles son escasos; el perfil tiende a ser más amplio y menos predecible por género del portador del uniforme</li>
+      </ul>
+
+      <div class="seccion-header">
+        <span class="seccion-num" aria-hidden="true">06</span>
+        <h2>El uniforme en la práctica BDSM</h2>
+      </div>
+
+      <p>
+        Para quien practica BDSM, el fetiche del uniforme no es solo una atracción estética:
+        es una herramienta funcional. La ropa actúa como disparador rápido y eficaz para establecer
+        dinámicas de poder dentro de una escena, reduciendo la fricción en la negociación implícita
+        de roles.
+      </p>
+
+      <div class="ventajas-grid">
+        <div class="ventaja-item">
+          <span class="ventaja-num" aria-hidden="true">↗</span>
+          <div>
+            <span class="ventaja-titulo">Velocidad de entrada en rol</span>
+            <p>Ponerse el uniforme reduce el tiempo de negociación de quién ocupa qué posición en la escena. El contexto está establecido antes de que empiece el juego.</p>
+          </div>
+        </div>
+        <div class="ventaja-item">
+          <span class="ventaja-num" aria-hidden="true">↗</span>
+          <div>
+            <span class="ventaja-titulo">Ritual de salida del rol</span>
+            <p>El uniforme termina cuando se quita. Hay un marcador físico claro de «fin de escena» que facilita la vuelta al espacio cotidiano. El aftercare se ancla a ese momento.</p>
+          </div>
+        </div>
+        <div class="ventaja-item">
+          <span class="ventaja-num" aria-hidden="true">↗</span>
+          <div>
+            <span class="ventaja-titulo">Dimensión visual como parte del placer</span>
+            <p>La estética del uniforme tiene un peso propio. El acto de ver al otro en uniforme, antes de cualquier interacción, forma parte del placer. El voyeurismo está integrado en el objeto.</p>
+          </div>
+        </div>
+        <div class="ventaja-item">
+          <span class="ventaja-num" aria-hidden="true">↗</span>
+          <div>
+            <span class="ventaja-titulo">Marco para la improvisación</span>
+            <p>El guión del rol (el oficial que interroga, la enfermera que examina) ofrece una estructura dentro de la cual improvisar. No es un guión rígido; es un suelo desde el que moverse.</p>
+          </div>
+        </div>
+      </div>
+
+      <figure class="img-lugar img-lugar--wide">
+        <div class="img-lugar-frame" style="--ar: 3/2">
+          <img src="/blog/uniformes/imagen-5.png" alt="Escena de roleplay con uniformes en ambiente BDSM, fotografía artística en tonos oscuros" class="img-real" loading="lazy" decoding="async" />
+          <div class="img-lugar-ph" aria-hidden="true">
+            <span class="img-lugar-num">05</span>
+            <span class="img-lugar-hint">Escena de roleplay con uniforme · ambiente oscuro</span>
+          </div>
+        </div>
+        <figcaption>El uniforme en el juego BDSM: tecnología de rol, no decoración.</figcaption>
+      </figure>
+
+      <p>
+        La investigación sobre el BDSM (Newmahr, 2011<a href="#ref-4" class="ref-sup"><sup>4</sup></a>; Weiss, 2011<a href="#ref-5" class="ref-sup"><sup>5</sup></a>) 
+        deja algo muy claro: ponerse un uniforme para jugar no es un disfraz vacío. Su uso desata estados 
+        físicos y mentales medibles —alteraciones en el ritmo cardíaco, cambios en el cortisol o esa sensación 
+        de que el mundo exterior desaparece— idénticos a los que se logran en dinámicas de poder mucho más 
+        severas. Aquí, el uniforme no es simple atrezzo; es el motor mismo de la fantasía.
+       </p>
+
+      <blockquote class="pull-quote">
+        <span class="pq-comilla" aria-hidden="true">"</span>
+        <p>Las jerarquías y la autoridad ya están cosidas en esas prendas. El roleplay solo consiste en adueñarnos de ellas y reescribir las reglas.</p>      
+      </blockquote>
+
+      <div class="seccion-header">
+        <span class="seccion-num" aria-hidden="true">07</span>
+        <h2>Lo que los estudios no dicen (y debería decirse)</h2>
+      </div>
+
+      <p>
+        Un apunte crítico antes de cerrar: la mayor parte de los estudios disponibles sobre
+        fetichismo en general y fetiches de uniforme en particular tienen limitaciones metodológicas
+        importantes que conviene tener en cuenta.
+      </p>
+      <ul class="lista-articulo lista-critica">
+        <li>La mayoría usan muestras de voluntarios online o de clínicas, no de población general representativa.</li>
+        <li>Hay una sobrerrepresentación de hombres blancos occidentales en las muestras.</li>
+        <li>Las categorías usadas para clasificar «uniformes» varían entre estudios, lo que dificulta las comparaciones.</li>
+        <li>El estigma social hace que la auto-declaración sea inconsistente: quien siente vergüenza no responde cuestionarios sobre fetiches.</li>
+      </ul>
+      <p>
+        Lo que sí es consistente en toda la literatura disponible: <strong>el fetiche del uniforme
+        no está asociado a psicopatología</strong>, no implica preferencia por situaciones no
+        consensuadas y es perfectamente integrable —y frecuentemente integrado— en una vida
+        sexual y afectiva satisfactoria. Lo que a veces genera malestar no es el fetiche en sí,
+        sino la dificultad para comunicarlo a una pareja o para encontrar un contexto donde
+        explorarlo sin juicio.
+      </p>
+      <p>
+        Eso tiene solución.
+      </p>
+
+<div class="cta-box">
+        <p class="cta-titulo">Fetish Uniform Night en Fragua47</p>
+        <p class="cta-texto">
+          La teoría está muy bien, pero la verdadera sensación se entiende en la práctica. Por eso hemos preparado el escenario perfecto: únete a nuestra próxima fiesta temática en Valladolid y pasa de la fantasía a la acción en un entorno seguro. Ya vengas a imponer autoridad o a acatar las normas.
+        </p>
+        <a href="/eventos/" class="cta-enlace">Descubre nuestra próxima fiesta →</a>
+      </div>
+
+    </div><footer class="articulo-footer">
+      <div class="footer-refs">
+        <span class="refs-titulo">Referencias</span>
+        <ul class="refs-lista">
+          <li id="ref-1"><sup>1</sup> Scorolli C, et al. (2007). «Relative prevalence of different fetishes». <em>International Journal of Impotence Research</em>, 19(4):432–437.</li>
+          <li id="ref-2"><sup>2</sup> Joyal CC, Cossette A, Lapierre V. (2015). «What Exactly Is an Unusual Sexual Fantasy?» <em>Journal of Sexual Medicine</em>, 12(2):328–340.</li>
+          <li id="ref-3"><sup>3</sup> Gosselin C, Wilson G. (1980). <em>Sexual Variations</em>. London: Faber & Faber.</li>
+          <li id="ref-4"><sup>4</sup> Newmahr S. (2011). <em>Playing on the Edge: Sadomasochism, Risk, and Intimacy</em>. Indiana University Press.</li>
+          <li id="ref-5"><sup>5</sup> Weiss M. (2011). <em>Techniques of Pleasure: BDSM and the Circuits of Sexuality</em>. Duke University Press.</li>
+        </ul>
+      </div>
+      <div class="footer-meta">
+        <p class="footer-tags">
+          <span class="tag-label">Temas</span>
+          <a href="/blog/" class="tag">Psicología sexual</a>
+          <a href="/blog/" class="tag">Fetichismo</a>
+          <a href="/blog/" class="tag">Uniformes</a>
+          <a href="/blog/" class="tag">BDSM</a>
+          <a href="/blog/" class="tag">Estudios</a>
+        </p>
+        <a href="/blog/" class="volver-blog">← Volver al blog</a>
+      </div>
+    </footer>
+
+  </article>
+
+</Layout>
+
+<style is:global>
+  /* ── Masthead: fondo, texto y hover ── */
+  .masthead {
+    display: grid;
+    grid-template-columns: 1fr 42%;
+    min-height: 400px;
+    overflow: hidden;
+  }
+  .masthead-texto {
+    background: #0d0a07 !important;
+    padding: 2.8rem 2.8rem 2.8rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    min-height: 400px;
+    color: rgba(245,237,224,0.55);
+  }
+  .masthead-foto {
+    position: relative;
+    overflow: hidden;
+  }
+  .masthead-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    display: block;
+  }
+  .masthead-texto h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.5rem, 3.2vw, 2rem);
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #f5ede0 !important;
+    line-height: 1.2;
+    margin: 0;
+  }
+  .masthead-texto a,
+  .masthead-texto a:visited {
+    color: rgba(245,237,224,0.72) !important;
+    text-decoration: none !important;
+  }
+  .masthead-texto a:hover,
+  .masthead-texto a:focus,
+  .masthead-texto a:active {
+    color: #ffffff !important;
+    text-decoration: none !important;
+  }
+  .breadcrumb a:hover,
+  .breadcrumb a:active {
+    color: #b44814 !important;
+  }
+  @media (max-width: 600px) {
+    .masthead { grid-template-columns: 1fr; grid-template-rows: 220px auto; }
+    .masthead-foto { order: -1; }
+    .masthead-texto { padding: 1.8rem 1.5rem; min-height: unset; }
+  }
+  @media (max-width: 768px) {
+    .masthead-texto { padding: 2rem 2rem 2rem 1.8rem; }
+  }
+</style>
+
+<style>
+  /* ── Breadcrumb ── */
+  .breadcrumb {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.67rem;
+    color: #6a3010;
+    margin-bottom: 0.9rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    align-items: center;
+  }
+  .breadcrumb a { color: #6a3010; text-decoration: none; transition: color 0.2s; }
+  .breadcrumb span[aria-current] { color: #3d2010; font-style: italic; }
+
+  /* ════════════════════════════════════
+     REVISTA WRAP
+  ════════════════════════════════════ */
+  .revista-wrap {
+    max-width: 720px;
+    margin: 0 auto 3rem;
+    background: #faf7f2;
+    box-shadow:
+      0 2px 8px rgba(20,10,4,0.12),
+      0 16px 48px rgba(20,10,4,0.14);
+  }
+
+  /* ════════════════════════════════════
+     MASTHEAD
+  ════════════════════════════════════ */
+  .masthead {
+    display: grid;
+    grid-template-columns: 1fr 42%;
+    min-height: 400px;
+    overflow: hidden;
+  }
+
+  /* Columna izquierda: texto sobre fondo oscuro */
+  .masthead-texto {
+    background: #0d0a07;
+    padding: 2.8rem 2.8rem 2.8rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    min-height: 420px;
+    /* Forzar color claro en todos los descendientes para evitar herencia del body */
+    color: rgba(245,237,224,0.55);
+  }
+  /* hover gestionado por el bloque is:global de arriba */
+  /* Borde sutil que separa las dos columnas */
+  .masthead-texto::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 10%;
+    height: 80%;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, rgba(200,150,10,0.5), transparent);
+    pointer-events: none;
+  }
+
+  /* Columna derecha: la foto ocupa todo el espacio */
+  .masthead-foto {
+    position: relative;
+    overflow: hidden;
+  }
+  .masthead-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    display: block;
+  }
+
+  .masthead-kicker {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .kicker-label {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #B5121B !important;
+  }
+  .kicker-sep {
+    color: rgba(245,237,224,0.25) !important;
+    font-size: 0.55rem;
+  }
+
+  h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.5rem, 3.2vw, 2rem);
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #f5ede0 !important;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  .masthead-acento {
+    width: 40px;
+    height: 1.5px;
+    background: linear-gradient(to right, #c8960a, #e8c050, #c8960a);
+    opacity: 0.75;
+    flex-shrink: 0;
+  }
+
+  .masthead-subtitulo {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.72;
+    color: rgba(245,237,224,0.65) !important;
+    margin: 0;
+    font-style: italic;
+  }
+
+  .masthead-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    flex-wrap: wrap;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.61rem;
+    color: rgba(245,237,224,0.42) !important;
+    letter-spacing: 0.5px;
+    padding-top: 1.4rem;
+    border-top: 1px solid rgba(245,237,224,0.08);
+  }
+  .masthead-meta time,
+  .masthead-meta span { color: rgba(245,237,224,0.42) !important; }
+  .meta-punto { opacity: 0.35; }
+  .meta-autor {
+    color: rgba(245,237,224,0.7) !important;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(181,18,27,0.55);
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .meta-autor:hover {
+    color: #fff !important;
+    border-color: #B5121B;
+  }
+
+  /* ════════════════════════════════════
+     CUERPO
+  ════════════════════════════════════ */
+  .cuerpo {
+    padding: 2.4rem 3rem 2rem;
+  }
+
+  /* Entradilla / lead */
+  .entradilla {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 1.02rem;
+    line-height: 1.82;
+    color: #1a1208;
+    margin-bottom: 2.2rem;
+    padding-left: 1.4rem;
+    border-left: 3px solid #B5121B;
+  }
+  .entradilla em {
+    font-style: italic;
+    color: #B5121B;
+  }
+
+  /* Section header */
+  .seccion-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin: 2.4rem 0 0.8rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1.5px solid #1a1208;
+  }
+  .seccion-num {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: rgba(181,18,27,0.22);
+    line-height: 1;
+    flex-shrink: 0;
+    letter-spacing: 0;
+  }
+
+  h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #1a1208;
+    margin: 0;
+  }
+
+  h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: #B5121B;
+    margin: 1.6rem 0 0.5rem;
+  }
+
+  .cuerpo p {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.87rem;
+    line-height: 1.84;
+    color: #1a1208;
+    margin-bottom: 0.9rem;
+  }
+
+  .cuerpo strong { font-weight: 700; color: #0d0d0d; }
+
+  .ref-sup {
+    color: #B5121B;
+    text-decoration: none;
+    font-size: 0.7em;
+    vertical-align: super;
+    line-height: 0;
+    margin-left: 1px;
+    transition: opacity 0.2s;
+  }
+  .ref-sup:hover { opacity: 0.7; }
+
+  .enlace-ref {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: rgba(181,18,27,0.4);
+    text-underline-offset: 2px;
+    transition: text-decoration-color 0.2s;
+  }
+  .enlace-ref:hover { text-decoration-color: #B5121B; }
+  .cuerpo em { color: #B5121B; font-style: italic; }
+
+  /* ── Stats ── */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+    margin: 1.6rem 0 0.6rem;
+  }
+  .stat-card {
+    border: 1.5px solid rgba(181,18,27,0.3);
+    padding: 1.1rem 0.9rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    background: #fff;
+  }
+  .stat-card--accent {
+    border-color: #B5121B;
+    background: rgba(181,18,27,0.04);
+  }
+  .stat-num {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #B5121B;
+    line-height: 1;
+  }
+  .stat-desc {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.62rem;
+    color: #5a3018;
+    line-height: 1.4;
+    letter-spacing: 0.3px;
+  }
+  .stat-fuente {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.63rem;
+    color: #8a6530;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+  }
+
+  /* ── Tipo grid ── */
+  .tipo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.4rem 1.2rem;
+    margin: 1.2rem 0 1rem;
+  }
+  .tipo-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.82rem;
+    color: #1a1208;
+    padding: 0.45rem 0;
+    border-bottom: 1px solid rgba(26,18,8,0.1);
+  }
+  .tipo-icono {
+    color: #B5121B;
+    font-size: 0.55rem;
+    flex-shrink: 0;
+  }
+
+  /* ── Pull quote ── */
+  .pull-quote {
+    position: relative;
+    margin: 1.8rem 0 1.8rem 1rem;
+    padding: 0.8rem 1.5rem 0.8rem 2.2rem;
+    border-left: 3px solid #1a1208;
+  }
+  .pq-comilla {
+    position: absolute;
+    top: -0.3rem;
+    left: 0.3rem;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 4rem;
+    color: rgba(181,18,27,0.18);
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+  }
+  .pull-quote p {
+    font-family: 'Cinzel', serif !important;
+    font-size: 0.88rem !important;
+    line-height: 1.65 !important;
+    font-style: italic;
+    color: #1a1208 !important;
+    font-weight: 400;
+    margin: 0 !important;
+    letter-spacing: 0.3px;
+  }
+
+  /* ── Tipo detalle ── */
+  .tipo-detalle {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 1.4rem 0 1rem;
+    border: 1.5px solid rgba(26,18,8,0.15);
+  }
+  .td-item {
+    padding: 1.1rem 1.4rem;
+    border-bottom: 1px solid rgba(26,18,8,0.1);
+  }
+  .td-item:last-child { border-bottom: none; }
+  .td-titulo {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #B5121B;
+    margin-bottom: 0.45rem;
+  }
+  .td-texto {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.82rem;
+    line-height: 1.72;
+    color: #2a1a0a;
+    margin: 0;
+  }
+
+  /* ── Listas ── */
+  .lista-articulo {
+    margin: 0.6rem 0 1rem 1rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+  .lista-articulo li {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.86rem;
+    line-height: 1.65;
+    color: #1a1208;
+    padding-left: 0.3rem;
+  }
+  .lista-critica li {
+    padding: 0.5rem 0.8rem;
+    border-left: 2px solid rgba(181,18,27,0.35);
+    background: rgba(181,18,27,0.03);
+  }
+
+  /* ── Ventajas grid ── */
+  .ventajas-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: rgba(26,18,8,0.15);
+    border: 1.5px solid rgba(26,18,8,0.15);
+    margin: 1.4rem 0 1.2rem;
+  }
+  .ventaja-item {
+    background: #faf7f2;
+    padding: 1.1rem 1.2rem;
+    display: flex;
+    gap: 0.9rem;
+    align-items: flex-start;
+  }
+  .ventaja-num {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    color: #B5121B;
+    flex-shrink: 0;
+    line-height: 1.2;
+  }
+  .ventaja-titulo {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.67rem;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: #1a1208;
+    margin-bottom: 0.35rem;
+  }
+  .ventaja-item p {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.78rem !important;
+    line-height: 1.62 !important;
+    color: #3a2010 !important;
+    margin: 0 !important;
+  }
+
+  /* ── CTA ── */
+  .cta-box {
+    margin: 2.4rem 0 0.5rem;
+    padding: 1.8rem 2rem;
+    background: #111111;
+    color: #f5ede0;
+  }
+  .cta-titulo {
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #f5ede0 !important;
+    margin-bottom: 0.6rem !important;
+  }
+  .cta-texto {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.84rem;
+    line-height: 1.72;
+    color: rgba(245,237,224,0.75) !important;
+    margin-bottom: 1.2rem !important;
+  }
+  .cta-enlace {
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #f5ede0;
+    text-decoration: none;
+    border-bottom: 1.5px solid #B5121B;
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .cta-enlace:hover { color: #B5121B; }
+
+  /* ── Footer ── */
+  .articulo-footer {
+    padding: 0 3rem 2rem;
+  }
+  .footer-refs {
+    border-top: 1.5px solid rgba(26,18,8,0.18);
+    padding-top: 1.2rem;
+    margin-bottom: 1.4rem;
+  }
+  .refs-titulo {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.56rem;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #8a6530;
+    margin-bottom: 0.6rem;
+  }
+  .refs-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  .refs-lista li {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.63rem;
+    line-height: 1.55;
+    color: #6a4820;
+    padding-left: 0.8rem;
+    border-left: 1px solid rgba(181,18,27,0.3);
+  }
+  .refs-lista em { font-style: italic; }
+
+  .footer-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(26,18,8,0.1);
+  }
+
+  .footer-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.38rem;
+    align-items: center;
+    margin: 0;
+  }
+  .tag-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #8a6530;
+    margin-right: 0.18rem;
+  }
+  .tag {
+    background: transparent;
+    color: #B5121B;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.61rem;
+    padding: 0.1rem 0.52rem;
+    border: 1px solid rgba(181,18,27,0.5);
+    transition: background 0.18s, color 0.18s;
+    letter-spacing: 0.4px;
+  }
+  .tag:hover { background: #B5121B; color: #faf7f2; }
+
+  .volver-blog {
+    font-family: 'Cinzel', serif;
+    font-size: 0.57rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #8a6530;
+    text-decoration: none;
+    transition: color 0.18s;
+    white-space: nowrap;
+  }
+  .volver-blog:hover { color: #B5121B; }
+
+  ::selection { background: rgba(181,18,27,0.15); color: #0d0d0d; }
+
+  /* ════════════════════════════════════
+     IMÁGENES — placeholder + real
+  ════════════════════════════════════ */
+  .img-lugar {
+    margin: 1.6rem 0 0.6rem;
+    position: relative;
+  }
+  .img-lugar--wide {
+    width: 100%;
+  }
+  .img-lugar--medium {
+    max-width: 260px;
+  }
+  .img-lugar--float-right {
+    float: right;
+    margin: 0.2rem 0 1rem 1.6rem;
+    clear: right;
+  }
+
+  .img-lugar-frame {
+    position: relative;
+    aspect-ratio: var(--ar, 16/9);
+    overflow: hidden;
+    background: #111;
+  }
+
+  /* La imagen real — cubre el frame si existe */
+  .img-real {
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+  }
+  /* Si la imagen falla o no existe, el placeholder queda visible */
+  .img-real[src=""], .img-real:not([src]) {
+    display: none;
+  }
+
+  /* Placeholder visual (siempre renderizado, queda debajo de la imagen) */
+  .img-lugar-ph {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background:
+      repeating-linear-gradient(
+        45deg,
+        transparent 0px, transparent 12px,
+        rgba(181,18,27,0.06) 12px, rgba(181,18,27,0.06) 13px
+      ),
+      #0d0d0d;
+    border: 1px solid rgba(181,18,27,0.25);
+  }
+  .img-lugar-num {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: rgba(181,18,27,0.22);
+    line-height: 1;
+    letter-spacing: 2px;
+  }
+  .img-lugar-hint {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(245,237,224,0.28);
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .img-lugar figcaption {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.63rem;
+    color: #6a4820;
+    font-style: italic;
+    margin-top: 0.4rem;
+    line-height: 1.5;
+    text-align: center;
+    padding: 0 0.3rem;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 600px) {
+    .masthead {
+      grid-template-columns: 1fr;
+      grid-template-rows: 220px auto;
+    }
+    .masthead-foto { order: -1; }
+    .masthead-texto {
+      padding: 1.8rem 1.5rem;
+    }
+    .masthead-texto::after { display: none; }
+  }
+
+  @media (max-width: 768px) {
+    .masthead-texto { padding: 2rem 2rem 2rem 1.8rem; }
+    .cuerpo { padding: 1.6rem 1.5rem 1.4rem; }
+    .articulo-footer { padding: 0 1.5rem 1.6rem; }
+    .stat-grid { grid-template-columns: repeat(2, 1fr); }
+    .stat-grid .stat-card:last-child { grid-column: span 2; }
+    .tipo-grid { grid-template-columns: 1fr; }
+    .ventajas-grid { grid-template-columns: 1fr; }
+    .td-item { padding: 0.9rem 1rem; }
+    h1 { font-size: 1.5rem; letter-spacing: 2px; }
+    .footer-meta { flex-direction: column; align-items: flex-start; }
+    .pull-quote { margin-left: 0; }
+    .img-lugar--float-right { float: none; max-width: 100%; margin: 1.2rem 0 0.6rem; }
+  }
+
+  @media (max-width: 500px) {
+    .stat-grid { grid-template-columns: 1fr; }
+    .stat-grid .stat-card:last-child { grid-column: span 1; }
+    .masthead { min-height: 260px; }
+  }
+</style>
