@@ -17,7 +17,12 @@ import Layout from '../layouts/Layout.astro';
 
 		<!-- Evento: poster style -->
 		<div class="evento-stack">
-			<img src="/fetish-uniform.png" alt="Fetish Uniform Night" class="img-evento-bg" loading="lazy" width="797" height="453" />
+			<div class="collage-evento-bg">
+				<div class="collage-celda"><img src="/primal-water.jpg" alt="" loading="lazy" /></div>
+				<div class="collage-celda"><img src="/primal-fire.jpg" alt="" loading="lazy" /></div>
+				<div class="collage-celda"><img src="/primal-wind.jpg" alt="" loading="lazy" /></div>
+				<div class="collage-celda"><img src="/primal-land.jpg" alt="" loading="lazy" /></div>
+			</div>
 			<div class="evento-overlay"></div>
 			<div class="evento-content">
 				<div class="evento-top">
@@ -26,27 +31,27 @@ import Layout from '../layouts/Layout.astro';
 				</div>
 				<div class="evento-bottom">
 					<div class="evento-info">
-						<h3>Fetish Uniform <span class="accent">Night</span></h3>
+						<h3>Primal <span class="accent">Sensations</span></h3>
 						<div class="evento-fecha">
-							<span class="fecha-dia">2</span>
+							<span class="fecha-dia">6</span>
 							<span class="fecha-div"></span>
 							<div class="fecha-detalle">
-								<span class="fecha-mes">Mayo</span>
-								<span class="fecha-sub">Sábado · 21:00 h · Valladolid</span>
+								<span class="fecha-mes">Junio</span>
+								<span class="fecha-sub">Viernes · 21:00 h · Valladolid</span>
 							</div>
 						</div>
 						<div class="datos-evento">
 							<div class="dato-fila">
 								<svg class="dato-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-								<span class="dato-valor">Uniforme, fetish ó mínimo negro</span>
+								<span class="dato-valor">Fetish, cuero, látex o ropa negra</span>
 							</div>
 							<div class="dato-fila">
 								<svg class="dato-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
 								<span class="dato-valor">Se indicará al confirmar asistencia</span>
 							</div>
 							<div class="dato-fila">
-								<svg class="dato-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8"/><path d="M7 10h10"/><path d="M12 15v7"/><path d="M12 15a5 5 0 0 0 5-5V3H7v7a5 5 0 0 0 5 5z"/></svg>
-								<span class="dato-valor">Picoteo incluido</span>
+								<svg class="dato-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 9h.01"/><path d="M3 3h18v18H3z"/><path d="M9 3v18"/><path d="M3 9h6"/><path d="M3 15h6"/></svg>
+								<span class="dato-valor">Botellas de barra · 25€</span>
 							</div>
 						</div>
 					</div>
@@ -85,7 +90,7 @@ import Layout from '../layouts/Layout.astro';
 				<h5>Inscripción</h5>
 				<span class="doc-sello">⚒</span>
 			</div>
-			<p class="doc-sub">— Fetish Uniform Night · Fragua47 · Valladolid —</p>
+			<p class="doc-sub">— Primal Sensations · Fragua47 · Valladolid —</p>
 			<hr class="doc-linea" />
 			<form id="form-inscripcion">
 				<div class="fila-campos">
@@ -155,7 +160,7 @@ import Layout from '../layouts/Layout.astro';
 		{ year: 2026, month: 2,  day: 14, nombre: 'D&B: Dungeons & Bondage' },
 		{ year: 2026, month: 3,  day: 18, nombre: 'Fiesta Japan & Body Sushi' },
 		{ year: 2026, month: 4,  day:  2, nombre: 'Fetish Uniform Night' },
-		{ year: 2026, month: 5,  day:  6, nombre: 'Noche de Velas' },
+		{ year: 2026, month: 5,  day:  6, nombre: 'Primal Sensations' },
 		{ year: 2026, month: 6,  day:  4, nombre: 'Desfile Fetish Queer' },
 		{ year: 2026, month: 7,  day:  1, nombre: 'Barbacoa & Escape Room' },
 	];
@@ -342,13 +347,23 @@ import Layout from '../layouts/Layout.astro';
 		background: #120802;
 	}
 
-	.img-evento-bg {
+	.collage-evento-bg {
 		position: absolute;
 		inset: 0;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		gap: 2px;
+	}
+
+	.collage-celda {
+		overflow: hidden;
+	}
+
+	.collage-celda img {
 		width: 100%;
 		height: 100%;
-		object-fit: contain;
-		object-position: 66% 20%;
+		object-fit: cover;
 		display: block;
 	}
 
@@ -830,9 +845,8 @@ import Layout from '../layouts/Layout.astro';
 			overflow: hidden;
 		}
 
-		.img-evento-bg {
-			object-fit: contain;
-			object-position: center top;
+		.collage-evento-bg {
+			gap: 1px;
 		}
 
 		.evento-content {
