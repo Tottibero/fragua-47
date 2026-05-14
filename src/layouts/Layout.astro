@@ -47,6 +47,7 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://fragua47.org').href;
 				</div>
 				<nav id="main-nav">
 					<a href="/eventos/"        class={path === '/eventos'        ? 'active' : ''}>Eventos</a>
+					<a href="/local/"          class={path === '/local'           ? 'active' : ''}>Local</a>
 					<a href="/hazte-socio/"    class={path === '/hazte-socio'     ? 'active' : ''}>Hazte socio</a>
 					<a href="/blog/"           class={path === '/blog' || path.startsWith('/blog/') ? 'active' : ''}>Blog</a>
 					<a href="/contacto/"       class={path === '/contacto'        ? 'active' : ''}>Contacto</a>
