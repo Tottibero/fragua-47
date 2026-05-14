@@ -33,6 +33,39 @@ import Layout from '../layouts/Layout.astro';
 
 	</div>
 
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada">
+	<button class="lightbox-cerrar" id="lightbox-cerrar" aria-label="Cerrar">✕</button>
+	<img class="lightbox-img" id="lightbox-img" src="" alt="" />
+</div>
+
+<script is:inline>
+	const lightbox  = document.getElementById('lightbox');
+	const lbImg     = document.getElementById('lightbox-img');
+	const lbCerrar  = document.getElementById('lightbox-cerrar');
+
+	function abrir(src, alt) {
+		lbImg.src = src;
+		lbImg.alt = alt;
+		lightbox.classList.add('abierto');
+		document.body.style.overflow = 'hidden';
+	}
+
+	function cerrar() {
+		lightbox.classList.remove('abierto');
+		document.body.style.overflow = '';
+		lbImg.src = '';
+	}
+
+	document.querySelectorAll('.masonry-item img').forEach(img => {
+		img.addEventListener('click', () => abrir(img.src, img.alt));
+	});
+
+	lbCerrar.addEventListener('click', cerrar);
+	lightbox.addEventListener('click', e => { if (e.target === lightbox) cerrar(); });
+	document.addEventListener('keydown', e => { if (e.key === 'Escape') cerrar(); });
+</script>
+
 </Layout>
 
 <style>
@@ -147,6 +180,59 @@ import Layout from '../layouts/Layout.astro';
 			columns: 1;
 		}
 	}
+
+	.masonry-item {
+		cursor: pointer;
+	}
+
+	/* ── Lightbox ── */
+
+	.lightbox {
+		display: none;
+		position: fixed;
+		inset: 0;
+		background: rgba(12, 5, 2, 0.92);
+		z-index: 1000;
+		align-items: center;
+		justify-content: center;
+		padding: 1.5rem;
+	}
+
+	.lightbox.abierto {
+		display: flex;
+	}
+
+	.lightbox-img {
+		max-width: 100%;
+		max-height: 90vh;
+		object-fit: contain;
+		border: 3px solid #2a1208;
+		outline: 1px solid rgba(210,120,40,0.5);
+		outline-offset: 4px;
+		box-shadow: 8px 8px 0 #2a1208;
+		display: block;
+	}
+
+	.lightbox-cerrar {
+		position: fixed;
+		top: 1rem;
+		right: 1.2rem;
+		background: #2a1208;
+		border: none;
+		color: #f5e6d0;
+		font-size: 1.2rem;
+		width: 36px;
+		height: 36px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		box-shadow: 3px 3px 0 #6a2808;
+		transition: background 0.2s;
+		line-height: 1;
+	}
+
+	.lightbox-cerrar:hover { background: #b44814; }
 
 	::selection {
 		background: rgba(180, 80, 20, 0.35);
