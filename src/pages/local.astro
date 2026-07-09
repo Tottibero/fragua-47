@@ -6,7 +6,7 @@ import Layout from '../layouts/Layout.astro';
 
 	<div class="pagina">
 
-		<div class="texto-wrap">
+		<div class="texto-wrap panel-forja panel-forja--riveted">
 			<div class="texto-header">
 				<img src="/VectLogoF47.webp" alt="Logo Fragua47" class="texto-logo" width="300" height="343" />
 				<h2>El Local</h2>
@@ -18,17 +18,17 @@ import Layout from '../layouts/Layout.astro';
 		</div>
 
 		<div class="masonry">
-			<div class="masonry-item"><img src="/fragua0.jpg"  alt="Fragua47 — espacio 1"  loading="lazy" /></div>
-			<div class="masonry-item"><img src="/fragua1.jpg"  alt="Fragua47 — espacio 2"  loading="lazy" /></div>
-			<div class="masonry-item"><img src="/fragua2.jpg"  alt="Fragua47 — espacio 3"  loading="lazy" /></div>
-			<div class="masonry-item"><img src="/fragua3.jpg"  alt="Fragua47 — espacio 4"  loading="lazy" /></div>
-			<div class="masonry-item"><img src="/fragua4.jpg"  alt="Fragua47 — espacio 5"  loading="lazy" /></div>
-			<div class="masonry-item"><img src="/fragua5.jpg"  alt="Fragua47 — espacio 6"  loading="lazy" /></div>
-			<div class="masonry-item"><img src="/fragua6.jpg"  alt="Fragua47 — espacio 7"  loading="lazy" /></div>
-			<div class="masonry-item"><img src="/fragua7.jpg"  alt="Fragua47 — espacio 8"  loading="lazy" /></div>
-			<div class="masonry-item"><img src="/fragua8.jpg"  alt="Fragua47 — espacio 9"  loading="lazy" /></div>
-			<div class="masonry-item"><img src="/fragua9.jpg"  alt="Fragua47 — espacio 10" loading="lazy" /></div>
-			<div class="masonry-item"><img src="/fragua10.jpg" alt="Fragua47 — espacio 11" loading="lazy" /></div>
+			<div class="masonry-item frame-forja"><img src="/fragua0.jpg"  alt="Fragua47 — espacio 1"  loading="lazy" /></div>
+			<div class="masonry-item frame-forja"><img src="/fragua1.jpg"  alt="Fragua47 — espacio 2"  loading="lazy" /></div>
+			<div class="masonry-item frame-forja"><img src="/fragua2.jpg"  alt="Fragua47 — espacio 3"  loading="lazy" /></div>
+			<div class="masonry-item frame-forja"><img src="/fragua3.jpg"  alt="Fragua47 — espacio 4"  loading="lazy" /></div>
+			<div class="masonry-item frame-forja"><img src="/fragua4.jpg"  alt="Fragua47 — espacio 5"  loading="lazy" /></div>
+			<div class="masonry-item frame-forja"><img src="/fragua5.jpg"  alt="Fragua47 — espacio 6"  loading="lazy" /></div>
+			<div class="masonry-item frame-forja"><img src="/fragua6.jpg"  alt="Fragua47 — espacio 7"  loading="lazy" /></div>
+			<div class="masonry-item frame-forja"><img src="/fragua7.jpg"  alt="Fragua47 — espacio 8"  loading="lazy" /></div>
+			<div class="masonry-item frame-forja"><img src="/fragua8.jpg"  alt="Fragua47 — espacio 9"  loading="lazy" /></div>
+			<div class="masonry-item frame-forja"><img src="/fragua9.jpg"  alt="Fragua47 — espacio 10" loading="lazy" /></div>
+			<div class="masonry-item frame-forja"><img src="/fragua10.jpg" alt="Fragua47 — espacio 11" loading="lazy" /></div>
 		</div>
 
 	</div>
@@ -36,7 +36,7 @@ import Layout from '../layouts/Layout.astro';
 <!-- Lightbox -->
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada">
 	<button class="lightbox-cerrar" id="lightbox-cerrar" aria-label="Cerrar">✕</button>
-	<img class="lightbox-img" id="lightbox-img" src="" alt="" />
+	<img class="lightbox-img frame-forja" id="lightbox-img" src="" alt="" />
 </div>
 
 <script is:inline>
@@ -79,11 +79,6 @@ import Layout from '../layouts/Layout.astro';
 	/* ── Panel de texto ── */
 
 	.texto-wrap {
-		background: #d4b896;
-		border: 3px solid #2a1208;
-		outline: 1px solid #2a1208;
-		outline-offset: 4px;
-		box-shadow: 5px 5px 0 #2a1208;
 		padding: 1rem 1.1rem;
 		font-family: 'Cinzel', serif;
 	}
@@ -107,11 +102,7 @@ import Layout from '../layouts/Layout.astro';
 		font-size: 1.1rem;
 		letter-spacing: 3px;
 		text-transform: uppercase;
-		background: linear-gradient(to bottom, #ffe0b0 0%, #f0a060 30%, #d07030 70%, #a04018 100%);
-		-webkit-background-clip: text;
-		background-clip: text;
-		color: transparent;
-		filter: brightness(0.85);
+		color: #2a1208;
 		margin: 0;
 		text-align: center;
 	}
@@ -142,10 +133,6 @@ import Layout from '../layouts/Layout.astro';
 	.masonry-item {
 		break-inside: avoid;
 		margin-bottom: 0.6rem;
-		border: 3px solid #2a1208;
-		outline: 1px solid #2a1208;
-		outline-offset: 3px;
-		box-shadow: 4px 4px 0 #2a1208;
 		overflow: hidden;
 		background: #120802;
 	}
@@ -203,13 +190,11 @@ import Layout from '../layouts/Layout.astro';
 	}
 
 	.lightbox-img {
+		--stamp: 8px;
 		max-width: 100%;
 		max-height: 90vh;
 		object-fit: contain;
-		border: 3px solid #2a1208;
 		outline: 1px solid rgba(210,120,40,0.5);
-		outline-offset: 4px;
-		box-shadow: 8px 8px 0 #2a1208;
 		display: block;
 	}
 

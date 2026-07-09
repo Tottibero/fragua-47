@@ -7,8 +7,8 @@ import Layout from '../layouts/Layout.astro';
 	<div class="pagina">
 
 		<div class="col-izquierda">
-			<img src="/forjaSocios.webp" alt="Hazte fragüero" class="portada" loading="eager" width="1200" height="655" />
-			<div class="text-col">
+			<img src="/forjaSocios.webp" alt="Hazte fragüero" class="portada frame-forja" loading="eager" width="1200" height="655" />
+			<div class="text-col panel-forja panel-forja--riveted">
 				<p class="pre-titulo">— únete —</p>
 				<h2>Hazte Socio</h2>
 				<hr class="titulo-linea" />
@@ -33,7 +33,7 @@ import Layout from '../layouts/Layout.astro';
 			</div>
 		</div>
 
-		<div class="documento">
+		<div class="documento panel-forja panel-forja--doc">
 			<div class="doc-header">
 				<img src="/VectLogoF47.webp" alt="Logo Fragua47" class="doc-logo" width="300" height="343" />
 				<h3>Solicitud de membresía</h3>
@@ -81,7 +81,7 @@ import Layout from '../layouts/Layout.astro';
 				<p class="privacidad-nota">Al enviar aceptas nuestra <a href="/privacidad/">política de privacidad</a>.</p>
 				<div class="doc-footer">
 					<p class="form-msg" id="form-msg"></p>
-					<button type="submit" id="form-btn">Quiero ser fragüero ⚒</button>
+					<button type="submit" id="form-btn" class="btn-forja">Quiero ser fragüero ⚒</button>
 				</div>
 			</form>
 		</div>
@@ -113,18 +113,9 @@ import Layout from '../layouts/Layout.astro';
 		min-height: 0;
 		object-fit: cover;
 		display: block;
-		border: 3px solid #2a1208;
-		outline: 1px solid #2a1208;
-		outline-offset: 4px;
-		box-shadow: 5px 5px 0 #2a1208;
 	}
 
 	.text-col {
-		background: #d4b896;
-		border: 3px solid #2a1208;
-		outline: 1px solid #2a1208;
-		outline-offset: 4px;
-		box-shadow: 5px 5px 0 #2a1208;
 		padding: 1.2rem 1.4rem;
 	}
 
@@ -192,11 +183,6 @@ import Layout from '../layouts/Layout.astro';
 	/* ── Documento ── */
 
 	.documento {
-		background: #d4b896;
-		border: 3px solid #2a1208;
-		outline: 1px solid #2a1208;
-		outline-offset: 5px;
-		box-shadow: 6px 6px 0 #2a1208;
 		padding: 1.6rem 1.8rem;
 		font-family: 'Cinzel', serif;
 	}
@@ -367,26 +353,6 @@ import Layout from '../layouts/Layout.astro';
 	.doc-footer {
 		display: flex;
 		justify-content: flex-end;
-	}
-
-	button {
-		background: #b44814;
-		color: #fff7ee;
-		border: none;
-		padding: 0.75rem 1.6rem;
-		font-family: 'Cinzel', serif;
-		font-size: 0.75rem;
-		letter-spacing: 2px;
-		text-transform: uppercase;
-		cursor: pointer;
-		transition: background 0.2s, box-shadow 0.2s;
-		white-space: nowrap;
-		box-shadow: 3px 3px 0 #6a2808;
-	}
-
-	button:hover {
-		background: #d45a18;
-		box-shadow: 4px 4px 0 #6a2808;
 	}
 
 	@media (max-width: 768px) {

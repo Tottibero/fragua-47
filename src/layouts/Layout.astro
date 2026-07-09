@@ -352,6 +352,16 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://fragua47.org').href;
 	*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 	html { background: #e8dcc8; color: #1c0f06; }
+	html::before {
+		content: '';
+		position: fixed;
+		inset: 0;
+		pointer-events: none;
+		z-index: 0;
+		background-image: var(--texture-grain);
+		background-size: 140px 140px;
+		opacity: 0.5;
+	}
 	body {
 		font-family: 'Cinzel', serif;
 		min-height: 100vh;
@@ -402,10 +412,24 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://fragua47.org').href;
 		top: 0;
 		z-index: 50;
 		width: 100%;
-		background: #b89a6a;
+		background: linear-gradient(to bottom, #c4a878 0%, #b89a6a 55%, #a88a5a 100%);
+		background-image: linear-gradient(to bottom, #c4a878 0%, #b89a6a 55%, #a88a5a 100%), var(--texture-grain);
+		background-size: auto, 140px 140px;
 		border-bottom: 2px solid #6a3e14;
+		box-shadow: 0 4px 14px rgba(30, 12, 2, 0.28);
 		display: flex;
 		justify-content: center;
+	}
+	.header-wrap::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: -3px;
+		height: 3px;
+		background: linear-gradient(to right, transparent, #ffaa00 20%, #ff8c00 50%, #ffaa00 80%, transparent);
+		opacity: 0.55;
+		pointer-events: none;
 	}
 
 	header {

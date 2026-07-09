@@ -6,7 +6,7 @@ import Layout from '../layouts/Layout.astro';
 
 	<section class="pagina">
 
-		<div class="tarjeta-texto">
+		<div class="tarjeta-texto panel-forja panel-forja--riveted">
 			<img src="/VectLogoF47.webp" alt="Logo Fragua47" class="logo" width="300" height="343" />
 			<h2>Fragua47</h2>
 			<hr class="linea" />
@@ -15,7 +15,7 @@ import Layout from '../layouts/Layout.astro';
 			<p>Si tienes cualquier duda sobre cómo tratamos tus datos, escríbenos a <strong>contacto@fragua47.org</strong>.</p>
 		</div>
 
-		<div class="documento">
+		<div class="documento panel-forja panel-forja--doc">
 			<div class="doc-header">
 				<img src="/VectLogoF47.webp" alt="Logo Fragua47" class="doc-logo" width="300" height="343" />
 				<h3>Política de Privacidad</h3>
@@ -79,11 +79,6 @@ import Layout from '../layouts/Layout.astro';
 	}
 
 	.tarjeta-texto {
-		background: #d4b896;
-		border: 3px solid #2a1208;
-		outline: 1px solid #2a1208;
-		outline-offset: 4px;
-		box-shadow: 5px 5px 0 #2a1208;
 		padding: 1.2rem 1.4rem;
 		display: flex;
 		flex-direction: column;
@@ -128,11 +123,6 @@ import Layout from '../layouts/Layout.astro';
 	.tarjeta-texto p:last-child { margin-bottom: 0; }
 
 	.documento {
-		background: #d4b896;
-		border: 3px solid #2a1208;
-		outline: 1px solid #2a1208;
-		outline-offset: 5px;
-		box-shadow: 6px 6px 0 #2a1208;
 		padding: 1.6rem 1.8rem;
 	}
 

@@ -5,7 +5,7 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Contacto" description="Contacta con Fragua47. Escríbenos para cualquier consulta o para conocer la comunidad.">
 	<section class="pagina">
 
-		<div class="tarjeta-texto">
+		<div class="tarjeta-texto panel-forja panel-forja--riveted">
 			<img src="/VectLogoF47.webp" alt="Logo Fragua47" class="logo" width="300" height="343" />
 			<h2>FRAGUA47</h2>
 			<hr class="linea" />
@@ -14,7 +14,7 @@ import Layout from '../layouts/Layout.astro';
 			<p>También puedes escribirnos si quieres colaborar, proponer una charla o taller, o simplemente asomarte a ver qué hacemos por aquí.</p>
 		</div>
 
-		<div class="documento">
+		<div class="documento panel-forja panel-forja--doc">
 			<div class="doc-header">
 				<img src="/VectLogoF47.webp" alt="Logo Fragua47" class="doc-logo" width="300" height="343" />
 				<h3>Escríbenos</h3>
@@ -56,7 +56,7 @@ import Layout from '../layouts/Layout.astro';
 				<p class="privacidad-nota">Al enviar aceptas nuestra <a href="/privacidad/">política de privacidad</a>.</p>
 				<div class="doc-footer">
 					<p class="form-msg" id="form-msg"></p>
-					<button type="submit" id="form-btn">Enviar mensaje ⚒</button>
+					<button type="submit" id="form-btn" class="btn-forja">Enviar mensaje ⚒</button>
 				</div>
 			</form>
 		</div>
@@ -77,11 +77,6 @@ import Layout from '../layouts/Layout.astro';
 	/* ── Tarjeta texto ── */
 
 	.tarjeta-texto {
-		background: #d4b896;
-		border: 3px solid #2a1208;
-		outline: 1px solid #2a1208;
-		outline-offset: 4px;
-		box-shadow: 5px 5px 0 #2a1208;
 		padding: 1.2rem 1.4rem;
 		display: flex;
 		flex-direction: column;
@@ -130,11 +125,6 @@ import Layout from '../layouts/Layout.astro';
 	/* ── Documento formulario ── */
 
 	.documento {
-		background: #d4b896;
-		border: 3px solid #2a1208;
-		outline: 1px solid #2a1208;
-		outline-offset: 5px;
-		box-shadow: 6px 6px 0 #2a1208;
 		padding: 1.6rem 1.8rem;
 	}
 
@@ -248,26 +238,6 @@ import Layout from '../layouts/Layout.astro';
 	.doc-footer {
 		display: flex;
 		justify-content: flex-end;
-	}
-
-	button {
-		background: #b44814;
-		color: #fff7ee;
-		border: none;
-		padding: 0.75rem 1.6rem;
-		font-family: 'Cinzel', serif;
-		font-size: 0.75rem;
-		letter-spacing: 2px;
-		text-transform: uppercase;
-		cursor: pointer;
-		transition: background 0.2s, box-shadow 0.2s;
-		white-space: nowrap;
-		box-shadow: 3px 3px 0 #6a2808;
-	}
-
-	button:hover {
-		background: #d45a18;
-		box-shadow: 4px 4px 0 #6a2808;
 	}
 
 	@media (max-width: 768px) {

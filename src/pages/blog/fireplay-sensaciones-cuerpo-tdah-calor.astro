@@ -1,0 +1,1171 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const titulo = 'Fuego Sobre la Piel: Fireplay, las Sensaciones del Cuerpo y el TDAH';
+const descripcion = 'El fireplay activa el sistema nervioso de formas que pocas prácticas igualan. Qué ocurre en el cuerpo cuando el fuego roza la piel, por qué el calor y el riesgo controlado pueden ser especialmente poderosos para personas con TDAH, y cómo practicarlo con seguridad.';
+const fechaISO = '2026-05-18';
+const fechaModificadaISO = '2026-05-18';
+const fechaMostrar = '18 de mayo de 2026';
+const canonicalURL = 'https://fragua47.org/blog/fireplay-sensaciones-cuerpo-tdah-calor/';
+const ogImageURL = 'https://fragua47.org/favicon-32.png';
+
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": titulo,
+  "description": descripcion,
+  "datePublished": fechaISO,
+  "dateModified": fechaModificadaISO,
+  "image": ogImageURL,
+  "author": { "@type": "Person", "name": "tottibero" },
+  "publisher": { "@type": "Organization", "name": "Fragua47", "url": "https://fragua47.org", "logo": { "@type": "ImageObject", "url": "https://fragua47.org/favicon-32.png" } },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalURL },
+  "inLanguage": "es-ES",
+  "keywords": ["fireplay","juego de fuego","BDSM","TDAH y BDSM","sensaciones corporales","neurokinky","fire cupping","fuego y piel","práctica BDSM","neurodiversidad","intensidad sensorial","kinky","presente","embodiment"]
+});
+---
+
+<Layout title={titulo} description={descripcion} ogType="article" ogImage={ogImageURL}>
+  <script type="application/ld+json" slot="head" set:html={jsonLd} />
+  <meta slot="head" property="article:published_time" content={fechaISO} />
+  <meta slot="head" property="article:modified_time" content={fechaModificadaISO} />
+  <meta slot="head" property="article:author" content="tottibero" />
+  <meta slot="head" property="article:section" content="Práctica y Cuerpo" />
+  <meta slot="head" property="article:tag" content="fireplay" />
+  <meta slot="head" property="article:tag" content="TDAH" />
+  <meta slot="head" property="article:tag" content="BDSM" />
+  <meta slot="head" property="article:tag" content="sensaciones" />
+  <meta slot="head" property="article:tag" content="neurodiversidad" />
+
+  <!-- Hidden SVG flame filter -->
+  <svg width="0" height="0" style="position:absolute;overflow:hidden" aria-hidden="true">
+    <defs>
+      <filter id="ember-glow" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="2.5" result="blur"/>
+        <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+      </filter>
+      <filter id="heat-distort" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="turbulence" baseFrequency="0.015 0.08" numOctaves="2" seed="3" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.2" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+    </defs>
+  </svg>
+
+  <nav class="breadcrumb" aria-label="Ruta de navegación">
+    <a href="/">Inicio</a><span aria-hidden="true">›</span>
+    <a href="/blog/">Blog</a><span aria-hidden="true">›</span>
+    <span aria-current="page">Fireplay, Sensaciones y TDAH</span>
+  </nav>
+
+  <article class="fuego-wrap" itemscope itemtype="https://schema.org/Article">
+
+    <!-- ░░ MASTHEAD ░░ -->
+    <header class="masthead">
+
+      <!-- Flame SVG border top -->
+      <div class="llamas-top" aria-hidden="true">
+        <svg viewBox="0 0 800 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,60 L0,38 C20,28 30,10 50,22 C65,30 72,8 90,15 C108,22 112,5 130,12 C148,19 152,2 170,10 C185,17 192,35 210,28 C228,21 232,4 250,12 C268,20 272,38 290,30 C308,22 312,5 330,14 C348,23 352,40 370,32 C388,24 392,7 410,16 C428,25 432,42 450,34 C468,26 472,9 490,18 C508,27 512,44 530,36 C548,28 552,11 570,20 C585,28 592,45 610,37 C628,29 632,12 650,21 C668,30 672,47 690,39 C708,31 715,14 730,24 C745,33 755,50 770,42 C785,34 795,22 800,28 L800,60 Z" fill="#0d0501"/>
+          <path d="M0,60 L0,45 C25,35 35,18 55,28 C72,36 78,15 98,22 C118,29 122,12 142,20 C162,28 165,8 185,16 C205,24 208,42 228,34 C248,26 252,10 272,19 C292,28 296,46 316,38 C336,30 340,13 360,22 C378,30 382,48 402,40 C422,32 425,15 445,24 C465,33 468,50 488,42 C505,35 512,18 532,27 C552,36 555,53 575,45 C595,37 598,20 618,29 C638,38 642,55 662,47 C682,39 685,22 705,31 C725,40 730,57 750,49 C770,41 785,28 800,35 L800,60 Z" fill="url(#grad-llama-top)" opacity="0.85"/>
+          <defs>
+            <linearGradient id="grad-llama-top" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#FF6B00" stop-opacity="0.9"/>
+              <stop offset="100%" stop-color="#CC2200" stop-opacity="0.6"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <div class="masthead-interior">
+        <div class="masthead-texto">
+          <div class="masthead-kicker">
+            <span class="kicker-label">Práctica</span>
+            <span class="kicker-sep" aria-hidden="true">·</span>
+            <span class="kicker-label">Cuerpo</span>
+            <span class="kicker-sep" aria-hidden="true">·</span>
+            <span class="kicker-label">Neurología</span>
+          </div>
+
+          <!-- Ember stamp -->
+          <div class="brasa-stamp" aria-hidden="true" style="filter:url(#ember-glow)">
+            <svg viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="35" cy="35" r="32" fill="#1a0500" stroke="#E05010" stroke-width="1.5" opacity="0.9"/>
+              <circle cx="35" cy="35" r="28" fill="none" stroke="#FF8C00" stroke-width="0.6" opacity="0.5"/>
+              <text x="35" y="32" text-anchor="middle" dominant-baseline="middle" font-family="Georgia, serif" font-size="22" fill="#FF6B00" opacity="0.95">🔥</text>
+              <text x="35" y="52" text-anchor="middle" dominant-baseline="middle" font-family="'Cinzel', serif" font-size="6" fill="#FF8C00" letter-spacing="1.5" opacity="0.8">FUEGO</text>
+            </svg>
+          </div>
+
+          <h1 itemprop="headline">Fuego<br/>Sobre la Piel</h1>
+
+          <div class="masthead-acento" aria-hidden="true"></div>
+
+          <p class="masthead-subtitulo">
+            Lo que le pasa al cuerpo cuando el calor y el riesgo controlado se convierten en práctica. Y por qué el fuego puede ser, para cerebros que buscan intensidad, exactamente lo que faltaba.
+          </p>
+
+          <div class="masthead-meta">
+            <time itemprop="datePublished" datetime={fechaISO}>{fechaMostrar}</time>
+            <span aria-hidden="true" class="meta-punto">—</span>
+            <span itemprop="author">
+              Fragua47 · <a href="https://fetlife.com/tottibero" class="meta-autor" target="_blank" rel="noopener noreferrer">tottibero</a>
+            </span>
+            <span aria-hidden="true" class="meta-punto">—</span>
+            <span>12 min de lectura</span>
+          </div>
+        </div>
+
+        <!-- Flame image panel -->
+        <div class="masthead-llama" aria-hidden="true">
+          <img src="/blog/fireplay/llama.jpg" alt="" class="llama-img" />
+        </div>
+      </div>
+    </header>
+
+    <!-- ░░ CUERPO ░░ -->
+    <div class="cuerpo" itemprop="articleBody">
+
+      <p class="entradilla">
+        Hay un momento justo antes de que la llama roza la piel en el que el cerebro toma una decisión: confiar. No huir. Quedarse. Para muchos practicantes, ese momento concentra todo lo que buscan en una práctica BDSM — presencia total, confianza absoluta, sensación que no da lugar a pensar en otra cosa. Y para quienes conviven con un TDAH, ese instante de fuego tiene algo adicional: por fin, el ruido para.
+      </p>
+
+      <!-- SECTION 01 -->
+      <div class="seccion-header">
+        <div class="brasa-num" aria-hidden="true">01</div>
+        <h2>Qué es el fireplay</h2>
+      </div>
+
+      <p>
+        El <strong>fireplay</strong> —juego de fuego— es el conjunto de prácticas BDSM que usan el calor y la llama como herramientas de sensación, ritual y conexión. No es una sola técnica: es una familia de prácticas que comparten el elemento fuego pero difieren enormemente en intensidad, técnica y tipo de sensación producida.
+      </p>
+
+      <div class="tipo-fuego-grid">
+        <div class="tf-item">
+          <span class="tf-icono" aria-hidden="true">◈</span>
+          <div>
+            <span class="tf-titulo">Fire wand / varita de fuego</span>
+            <p class="tf-texto">Una bola de algodón empapada en alcohol montada en un palo. Se enciende y se pasa por la piel a velocidad controlada. La llama roza pero no quema si el movimiento es correcto.</p>
+          </div>
+        </div>
+        <div class="tf-item">
+          <span class="tf-icono" aria-hidden="true">◈</span>
+          <div>
+            <span class="tf-titulo">Fire cupping (ventosas de fuego)</span>
+            <p class="tf-texto">Copas de vidrio en las que se crea vacío mediante una llama. Se aplican sobre la piel produciendo succión. Combina la sensación de presión con el calor residual del vidrio.</p>
+          </div>
+        </div>
+        <div class="tf-item">
+          <span class="tf-icono" aria-hidden="true">◈</span>
+          <div>
+            <span class="tf-titulo">Fire massage (masaje de fuego)</span>
+            <p class="tf-texto">Alcohol distribuido sobre la piel se enciende brevemente y se apaga con las manos. La ola de calor dura fracciones de segundo pero la sensación térmica persiste varios minutos.</p>
+          </div>
+        </div>
+        <div class="tf-item">
+          <span class="tf-icono" aria-hidden="true">◈</span>
+          <div>
+            <span class="tf-titulo">Cera y llama</span>
+            <p class="tf-texto">Cera de vela sobre la piel: la temperatura de goteo varía según el tipo de vela. El impacto puntual, la solidificación y el desprendimiento posterior crean una secuencia de sensaciones muy diferente a las anteriores.</p>
+          </div>
+        </div>
+        <div class="tf-item">
+          <span class="tf-icono" aria-hidden="true">◈</span>
+          <div>
+            <span class="tf-titulo">Branding / cauterización artística</span>
+            <p class="tf-texto">El extremo avanzado del espectro. Metal calentado aplicado sobre la piel para dejar una marca permanente. Requiere formación especializada, contexto clínico de seguridad y consentimiento profundamente informado.</p>
+          </div>
+        </div>
+        <div class="tf-item">
+          <span class="tf-icono" aria-hidden="true">◈</span>
+          <div>
+            <span class="tf-titulo">Juego de calor ambiental</span>
+            <p class="tf-texto">Salas con temperatura controlada, lámparas de infrarrojos, o el calor del cuerpo de quien practica como herramienta. El calor sin llama visible como sensación protagonista.</p>
+          </div>
+        </div>
+      </div>
+
+      <blockquote class="pull-quote">
+        <span class="pq-llama" aria-hidden="true">🔥</span>
+        <p>El fuego no admite distracción. Ni la tuya ni la de quien lo maneja. Esa exigencia mutua de presencia es parte de lo que lo hace tan intenso.</p>
+      </blockquote>
+
+      <!-- SECTION 02 -->
+      <div class="seccion-header">
+        <div class="brasa-num" aria-hidden="true">02</div>
+        <h2>Lo que le pasa al cuerpo</h2>
+      </div>
+
+      <p>
+        La respuesta del cuerpo al calor controlado es una cascada fisiológica que empieza antes de que la llama toque la piel. El sistema nervioso no distingue bien entre peligro real y peligro controlado — y eso es exactamente lo que el fireplay usa a su favor.
+      </p>
+
+      <h3>El sistema nervioso en estado de alerta calibrada</h3>
+      <p>
+        Cuando el cerebro percibe calor aproximándose, activa el sistema nervioso simpático: adrenalina, noradrenalina, aumento del ritmo cardíaco, dilatación de pupilas. Es la respuesta de defensa básica. Pero en un contexto de práctica con consentimiento, ese estado de alerta no dispara la huida — se queda suspendido, transformado en hipervigilancia sensorial. La persona está completamente presente en el cuerpo porque el cuerpo ha activado todos sus sistemas de monitoreo.
+      </p>
+
+      <div class="cuerpo-map">
+        <div class="cuerpo-map-titulo">Respuesta fisiológica durante fireplay</div>
+        <div class="cuerpo-map-grid">
+          <div class="cm-item cm-item--activo">
+            <span class="cm-icono">↑</span>
+            <span class="cm-titulo">Adrenalina</span>
+            <span class="cm-desc">Alerta máxima, anticipación intensa</span>
+          </div>
+          <div class="cm-item cm-item--activo">
+            <span class="cm-icono">↑</span>
+            <span class="cm-titulo">Endorfinas</span>
+            <span class="cm-desc">Analgesia natural, euforia post-estímulo</span>
+          </div>
+          <div class="cm-item cm-item--activo">
+            <span class="cm-icono">↑</span>
+            <span class="cm-titulo">Oxitocina</span>
+            <span class="cm-desc">Confianza y vínculo con quien maneja el fuego</span>
+          </div>
+          <div class="cm-item">
+            <span class="cm-icono">↓</span>
+            <span class="cm-titulo">Cortisol crónico</span>
+            <span class="cm-desc">El estrés sostenido se interrumpe por el foco agudo</span>
+          </div>
+          <div class="cm-item">
+            <span class="cm-icono">→</span>
+            <span class="cm-titulo">Flujo sanguíneo</span>
+            <span class="cm-desc">Vasodilatación local, enrojecimiento, calor en la zona tratada</span>
+          </div>
+          <div class="cm-item">
+            <span class="cm-icono">→</span>
+            <span class="cm-titulo">Receptores TRPV1</span>
+            <span class="cm-desc">Los mismos que la capsaicina activa: dolor-placer en la piel</span>
+          </div>
+        </div>
+      </div>
+
+      <h3>Los nociceptores térmicos y el umbral del dolor</h3>
+      <p>
+        La piel humana tiene termorreceptores que activan señales de dolor a partir de los 43–45 °C — el umbral del daño tisular. Por debajo de ese umbral, el calor produce una sensación que el cerebro procesa en el mismo circuito que el dolor, pero con una valencia diferente: cuando la intensidad está controlada y no hay daño, el sistema límbico puede interpretar esa señal como excitación, no como amenaza.
+      </p>
+      <p>
+        Esto es lo que hace posible el placer en el fireplay. No es tolerancia al dolor: es que el cerebro aprende a categorizar ese estímulo de manera diferente cuando el contexto es seguro y la confianza está establecida. El mismo calor puede ser agónico o delicioso dependiendo de con quién, de cómo, y de en qué estado mental se llega a la práctica.
+      </p>
+
+      <h3>El estado alterado: subspace y calor</h3>
+      <p>
+        Varios practicantes describen el fireplay como uno de los caminos más rápidos al <em>subspace</em> — ese estado alterado de conciencia que combina euforia, flotación y disociación temporal del pensamiento crítico. El mecanismo probable: la combinación de adrenalina elevada con la liberación sostenida de endorfinas y el efecto hipnótico de la llama visible produce un estado de conciencia modificado que comparte características con la meditación intensa o el flujo.
+      </p>
+
+      <blockquote class="pull-quote">
+        <span class="pq-llama" aria-hidden="true">🔥</span>
+        <p>El fuego no te deja estar en ningún otro sitio que no sea ahí. En tu cuerpo, en ese momento, en esa mano que lo maneja. No hay pasado ni futuro cuando la llama está cerca.</p>
+      </blockquote>
+
+      <!-- SECTION 03 -->
+      <div class="seccion-header">
+        <div class="brasa-num" aria-hidden="true">03</div>
+        <h2>TDAH y el fuego</h2>
+      </div>
+
+      <p>
+        El TDAH no es solo dificultad para concentrarse en cosas aburridas. Es un sistema nervioso con un umbral de activación diferente, con dificultad para regular la intensidad del input sensorial, con un acceso al presente que depende de condiciones muy específicas. Y el fireplay cumple esas condiciones de manera casi perfecta.
+      </p>
+
+      <h3>El problema del ruido de fondo</h3>
+      <p>
+        Uno de los patrones más comunes en personas con TDAH es la dificultad para silenciar el pensamiento constante — lo que algunos describen como «el canal de fondo que nunca se apaga». No es exactamente ansiedad, aunque puede parecerse: es un flujo continuo de asociaciones, ideas, planes incompletos, conversaciones imaginadas. Estar presente en el cuerpo, simplemente, es costoso.
+      </p>
+      <p>
+        El fuego interrumpe ese flujo. No porque sea agradable — aunque puede serlo — sino porque <strong>exige atención total</strong>. El sistema nervioso simpático activado por el calor y el riesgo controlado produce un foco que el TDAH busca constantemente: el presente obliterando todo lo demás. La llama no compite con los pensamientos; los desplaza completamente.
+      </p>
+
+      <h3>Dopamina, intensidad y regulación</h3>
+      <p>
+        El TDAH está relacionado con diferencias en los sistemas dopaminérgicos, especialmente en los circuitos de recompensa y de regulación del foco atencional. El cerebro TDAH tiende a buscar estímulos de alta intensidad no por placer hedonista sino porque esos estímulos generan el nivel de activación dopaminérgica necesario para funcionar.
+      </p>
+      <p>
+        El fireplay — como otras prácticas de alta intensidad sensorial — produce una respuesta de activación que, para un cerebro neurotípico, puede resultar abrumadora, pero que para un cerebro TDAH puede ser exactamente el nivel de input necesario para alcanzar un estado de calma y presencia. No es paradójico: es cómo funciona el sistema nervioso con ese patrón de regulación.
+      </p>
+
+      <div class="tdah-panel">
+        <div class="tdah-panel-titulo">Qué hace el fireplay en el cerebro TDAH</div>
+        <div class="tdah-grid">
+          <div class="tdah-item">
+            <span class="tdah-check">◆</span>
+            <div>
+              <strong>Silencia el ruido de fondo</strong>
+              <p>La intensidad del estímulo térmico interrumpe el flujo continuo de pensamientos que caracteriza el TDAH. No hay espacio mental para otra cosa que no sea el presente.</p>
+            </div>
+          </div>
+          <div class="tdah-item">
+            <span class="tdah-check">◆</span>
+            <div>
+              <strong>Provoca hiperfoco positivo</strong>
+              <p>El hiperfoco del TDAH — esa capacidad de absorción total en algo que lo activa — se canaliza hacia la sensación corporal, produciendo un estado de presencia inusualmente sostenido.</p>
+            </div>
+          </div>
+          <div class="tdah-item">
+            <span class="tdah-check">◆</span>
+            <div>
+              <strong>Activa el cuerpo desde dentro</strong>
+              <p>El TDAH puede desconectar de las señales internas del cuerpo (hunger, fatigue, sensory needs). El calor reconnecta con el cuerpo de forma que es difícil ignorar.</p>
+            </div>
+          </div>
+          <div class="tdah-item">
+            <span class="tdah-check">◆</span>
+            <div>
+              <strong>El ritual como estructura</strong>
+              <p>El fireplay tiene protocolos: preparación del espacio, materiales, comprobaciones de seguridad. Para el TDAH, ese ritual no es burocracia — es el andamiaje que hace posible la entrada en el estado.</p>
+            </div>
+          </div>
+          <div class="tdah-item">
+            <span class="tdah-check">◆</span>
+            <div>
+              <strong>Regulación emocional post-práctica</strong>
+              <p>El estado de calma que sigue a la práctica intensa — el <em>aftercare</em> — puede durar horas. Muchas personas con TDAH describen las horas posteriores al fireplay como las de mayor claridad mental de la semana.</p>
+            </div>
+          </div>
+          <div class="tdah-item">
+            <span class="tdah-check">◆</span>
+            <div>
+              <strong>La confianza como ancla</strong>
+              <p>Confiar en quien maneja el fuego es un acto de presencia radical. Esa confianza activa, no pasiva, puede ser uno de los estados de regulación emocional más estables para el sistema TDAH.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3>La perspectiva del toper: manejar el fuego con TDAH</h3>
+      <p>
+        El TDAH del <em>top</em> — quien maneja el fuego — tiene una dimensión diferente. El fireplay requiere atención sostenida, monitoreo constante de la respuesta de la otra persona, y capacidad de detener la práctica en fracciones de segundo si es necesario. Esas exigencias, lejos de ser incompatibles con el TDAH, pueden activar exactamente el tipo de foco que el cerebro TDAH maneja mejor: alta responsabilidad, consecuencias inmediatas y concretas, and feedback sensorial constante. Muchos tops con TDAH describen el manejo del fuego como uno de los estados de mayor concentración que experimentan.
+      </p>
+
+      <!-- SECTION 04 -->
+      <div class="seccion-header">
+        <div class="brasa-num" aria-hidden="true">04</div>
+        <h2>Seguridad: lo que no es negociable</h2>
+      </div>
+
+      <p>
+        El fireplay es una práctica de riesgo real. El fuego no perdona errores, no tiene marcha atrás, y los accidentes ocurren principalmente cuando se salta la preparación. La seguridad no es la parte aburrida — es la que hace posible que todo lo demás funcione.
+      </p>
+
+      <div class="seguridad-lista">
+        <div class="seg-item seg-item--critico">
+          <span class="seg-icono" aria-hidden="true">!</span>
+          <div>
+            <span class="seg-titulo">Extintor y agua siempre a mano</span>
+            <p class="seg-texto">Un extintor de CO₂ y una fuente de agua fría deben estar en el espacio antes de encender cualquier cosa. No «cerca». En el espacio. Accesibles en tres segundos.</p>
+          </div>
+        </div>
+        <div class="seg-item seg-item--critico">
+          <span class="seg-icono" aria-hidden="true">!</span>
+          <div>
+            <span class="seg-titulo">Formación antes de práctica</span>
+            <p class="seg-texto">El fireplay no se aprende de vídeos de YouTube. Requiere formación presencial con alguien que ya domine la técnica. Los fallos de técnica no producen suspenso: producen quemaduras.</p>
+          </div>
+        </div>
+        <div class="seg-item">
+          <span class="seg-icono" aria-hidden="true">→</span>
+          <div>
+            <span class="seg-titulo">Zonas excluidas</span>
+            <p class="seg-texto">Cara, cuello, genitales, articulaciones y zonas con vello abundante quedan excluidas de cualquier práctica de fuego directo. La zona de la espalda, los glúteos y los muslos son las zonas más habituales para comenzar.</p>
+          </div>
+        </div>
+        <div class="seg-item">
+          <span class="seg-icono" aria-hidden="true">→</span>
+          <div>
+            <span class="seg-titulo">Alcohol: solo isopropílico 70%</span>
+            <p class="seg-texto">El tipo de alcohol importa. El isopropílico al 70% tiene propiedades de combustión controlable. Otros alcoholes (etanol puro, bebidas alcohólicas) tienen comportamientos imprevisibles y no deben usarse.</p>
+          </div>
+        </div>
+        <div class="seg-item">
+          <span class="seg-icono" aria-hidden="true">→</span>
+          <div>
+            <span class="seg-titulo">Ropa y cabello: proteger o retirar</span>
+            <p class="seg-texto">Nada sintético en el espacio de práctica. El cabello largo debe estar completamente recogido y alejado. Las telas sintéticas arden diferente a las naturales y pueden fundir sobre la piel.</p>
+          </div>
+        </div>
+        <div class="seg-item">
+          <span class="seg-icono" aria-hidden="true">→</span>
+          <div>
+            <span class="seg-titulo">Palabra de seguridad y comunicación continua</span>
+            <p class="seg-texto">La persona que recibe la práctica tiene control total para detenerla en cualquier momento. La comunicación durante el fireplay es especialmente importante porque el estado alterado puede modificar la percepción del dolor.</p>
+          </div>
+        </div>
+        <div class="seg-item">
+          <span class="seg-icono" aria-hidden="true">→</span>
+          <div>
+            <span class="seg-titulo">Aftercare con foco en la piel</span>
+            <p class="seg-texto">Tras la práctica, revisión visual de toda la piel tratada. Hidratación con aloe vera o gel de aloe fresco. Observar las siguientes horas para detectar cualquier reacción retardada. La hipersensibilidad post-fuego puede durar 24–48 horas.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 05 -->
+      <div class="seccion-header">
+        <div class="brasa-num" aria-hidden="true">05</div>
+        <h2>La dimensión ritual</h2>
+      </div>
+
+      <p>
+        El fireplay tiene un componente ritual que pocas prácticas BDSM igualan. El fuego como elemento ha estado presente en los rituales humanos desde el origen de la cultura: purificación, transformación, comunidad, paso. Cuando se usa en una práctica consensuada, esa carga simbólica no desaparece — se integra.
+      </p>
+      <p>
+        La preparación del espacio —disponer los materiales, comprobar la seguridad, establecer el clima— es ya parte de la práctica. El encendido de la llama tiene un peso dramático propio. Y el cierre, el apagado y el aftercare, completan un arco narrativo que muchos practicantes describen como una de las experiencias más completas que han tenido en el BDSM.
+      </p>
+
+      <blockquote class="pull-quote">
+        <span class="pq-llama" aria-hidden="true">🔥</span>
+        <p>El fuego es el elemento que más humanos han usado para marcar lo sagrado. Que aparezca en las prácticas más íntimas no es accidental: hay algo en él que señala «esto importa».</p>
+      </blockquote>
+
+      <h3>Fireplay y el vínculo entre personas</h3>
+      <p>
+        La confianza que implica dejar que alguien maneje fuego sobre tu cuerpo es cualitativamente diferente a otras formas de entrega. No es más importante — es diferente. Hay algo en la literalidad del elemento que hace que el vínculo establecido durante la práctica tenga una textura específica. Los practicantes habituales hablan de una calidad de presencia mutua durante el fireplay que resulta difícil de describir pero inmediata de reconocer.
+      </p>
+
+      <!-- CTA -->
+      <div class="cta-box">
+        <div class="cta-llamas" aria-hidden="true">
+          <svg viewBox="0 0 300 40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="cta-llamas-svg">
+            <path d="M0,40 C30,20 45,5 70,18 C90,28 100,8 120,16 C140,24 150,4 170,14 C190,24 200,40 210,32 C225,20 240,5 265,18 C280,26 290,12 300,20 L300,40 Z" fill="url(#cta-grad)"/>
+            <defs>
+              <linearGradient id="cta-grad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#FF6B00" stop-opacity="0.9"/>
+                <stop offset="100%" stop-color="#CC2200" stop-opacity="0.3"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="cta-contenido">
+          <p class="cta-titulo">Fireplay en Fragua47</p>
+          <p class="cta-texto">
+            Organizamos sesiones de introducción al fireplay con formadores que llevan años trabajando con fuego en contextos de práctica segura. Si tienes curiosidad y quieres entender la práctica antes de experimentarla, estos espacios existen exactamente para eso.
+          </p>
+          <a href="/eventos/" class="cta-enlace">Ver próximos eventos →</a>
+        </div>
+      </div>
+
+    </div><!-- /cuerpo -->
+
+    <footer class="articulo-footer">
+      <div class="footer-meta">
+        <p class="footer-tags">
+          <span class="tag-label">Temas</span>
+          <a href="/blog/" class="tag">Fireplay</a>
+          <a href="/blog/" class="tag">TDAH</a>
+          <a href="/blog/" class="tag">Sensaciones</a>
+          <a href="/blog/" class="tag">BDSM</a>
+          <a href="/blog/" class="tag">Neurología</a>
+        </p>
+        <a href="/blog/" class="volver-blog">← Volver al blog</a>
+      </div>
+    </footer>
+
+  </article>
+
+</Layout>
+
+<style>
+  /* ── Breadcrumb ── */
+  .breadcrumb {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.67rem;
+    color: #8a4a10;
+    margin-bottom: 0.9rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    align-items: center;
+  }
+  .breadcrumb a { color: #8a4a10; text-decoration: none; transition: color 0.2s; }
+  .breadcrumb a:hover { color: #E05010; }
+  .breadcrumb span[aria-current] { color: #3d1a00; font-style: italic; }
+
+  /* ════════════════════════════════════
+     FUEGO WRAP
+  ════════════════════════════════════ */
+  .fuego-wrap {
+    max-width: 720px;
+    margin: 0 auto 3rem;
+    background: #faf5ee;
+    box-shadow:
+      0 2px 8px rgba(30,8,0,0.18),
+      0 16px 56px rgba(30,8,0,0.22),
+      0 0 80px rgba(220,80,0,0.06);
+  }
+
+  /* ════════════════════════════════════
+     MASTHEAD
+  ════════════════════════════════════ */
+  .masthead {
+    position: relative;
+    overflow: hidden;
+    background: #0d0501;
+  }
+
+  .llamas-top {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    z-index: 1;
+    pointer-events: none;
+  }
+  .llamas-top svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .masthead-interior {
+    display: grid;
+    grid-template-columns: 1fr 38%;
+    min-height: 420px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .masthead-texto {
+    background: linear-gradient(135deg, #0d0501 0%, #1a0800 60%, #150600 100%);
+    padding: 2.6rem 2.6rem 4rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    color: rgba(255,220,170,0.55);
+    border-right: 1px solid rgba(255,100,0,0.15);
+  }
+
+  .masthead-texto::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 80% at 0% 100%, rgba(200,60,0,0.15) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 60% at 100% 50%, rgba(255,100,0,0.08) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .masthead-kicker {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    z-index: 1;
+  }
+  .kicker-label {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #FF6B00;
+  }
+  .kicker-sep {
+    color: rgba(255,180,80,0.25);
+    font-size: 0.55rem;
+  }
+
+  /* Ember stamp */
+  .brasa-stamp {
+    position: absolute;
+    top: 1.6rem;
+    right: 1.8rem;
+    width: 56px;
+    height: 56px;
+    opacity: 0.9;
+    z-index: 5;
+  }
+
+  h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #ffeedd;
+    line-height: 1.15;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 0 40px rgba(255,100,0,0.4);
+  }
+
+  .masthead-acento {
+    width: 44px;
+    height: 1.5px;
+    background: linear-gradient(to right, #FF6B00, #FFB347, #FF6B00);
+    opacity: 0.85;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .masthead-subtitulo {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.84rem;
+    line-height: 1.72;
+    color: rgba(255,220,170,0.65);
+    margin: 0;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+  }
+
+  .masthead-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    flex-wrap: wrap;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.61rem;
+    color: rgba(255,200,120,0.42);
+    letter-spacing: 0.5px;
+    padding-top: 1.2rem;
+    border-top: 1px solid rgba(255,100,0,0.12);
+    position: relative;
+    z-index: 1;
+  }
+  .meta-punto { opacity: 0.35; }
+  .meta-autor {
+    color: rgba(255,180,80,0.7);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,100,0,0.45);
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .meta-autor:hover { color: #FF8C00; border-color: #FF6B00; }
+
+  /* ── Flame image panel ── */
+  .masthead-llama {
+    position: relative;
+    overflow: hidden;
+    background: #080200;
+  }
+
+  /* Glow de brasa debajo de la imagen */
+  .masthead-llama::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 100%, rgba(255,80,0,0.22) 0%, transparent 65%),
+      radial-gradient(ellipse 50% 40% at 50% 80%, rgba(255,160,0,0.12) 0%, transparent 55%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .llama-img {
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    opacity: 0.18;
+    mix-blend-mode: screen;
+  }
+
+  /* ════════════════════════════════════
+     CUERPO
+  ════════════════════════════════════ */
+  .cuerpo {
+    padding: 2.4rem 3rem 2rem;
+  }
+
+  .entradilla {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 1rem;
+    line-height: 1.82;
+    color: #1a0d00;
+    margin-bottom: 2.2rem;
+    padding-left: 1.4rem;
+    border-left: 3px solid #E05010;
+    background: rgba(224,80,16,0.03);
+  }
+
+  /* ── Section header ── */
+  .seccion-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 2.6rem 0 0.9rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1.5px solid #1a0d00;
+    position: relative;
+  }
+
+  .seccion-header::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 60px;
+    height: 1.5px;
+    background: linear-gradient(to right, #E05010, #FF8C00);
+  }
+
+  .brasa-num {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: rgba(224,80,16,0.20);
+    line-height: 1;
+    flex-shrink: 0;
+    letter-spacing: 0;
+  }
+
+  h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #1a0d00;
+    margin: 0;
+  }
+
+  h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: #C04000;
+    margin: 1.6rem 0 0.5rem;
+  }
+
+  .cuerpo p {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.87rem;
+    line-height: 1.84;
+    color: #1a0d00;
+    margin-bottom: 0.9rem;
+  }
+
+  .cuerpo strong { font-weight: 700; color: #0d0500; }
+  .cuerpo em { color: #C04000; font-style: italic; }
+
+  /* ── Tipos de fuego grid ── */
+  .tipo-fuego-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 1.4rem 0 1rem;
+    border: 1.5px solid rgba(224,80,16,0.2);
+  }
+
+  .tf-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 1.3rem;
+    border-bottom: 1px solid rgba(224,80,16,0.1);
+    align-items: flex-start;
+    background: rgba(255,255,250,0.6);
+    transition: background 0.2s;
+  }
+  .tf-item:last-child { border-bottom: none; }
+  .tf-item:hover { background: rgba(255,100,0,0.04); }
+
+  .tf-icono {
+    color: #E05010;
+    font-size: 0.7rem;
+    flex-shrink: 0;
+    margin-top: 0.35rem;
+    filter: drop-shadow(0 0 4px rgba(224,80,16,0.5));
+  }
+
+  .tf-titulo {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #B03800;
+    margin-bottom: 0.35rem;
+  }
+
+  .tf-texto {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.81rem;
+    line-height: 1.65;
+    color: #2a1200;
+    margin: 0;
+  }
+
+  /* ── Pull quote ── */
+  .pull-quote {
+    position: relative;
+    margin: 1.8rem 0 1.8rem 1rem;
+    padding: 0.8rem 1.4rem 0.8rem 3rem;
+    border-left: 3px solid #E05010;
+    background: rgba(224,80,16,0.04);
+  }
+
+  .pq-llama {
+    position: absolute;
+    top: 50%;
+    left: 0.5rem;
+    transform: translateY(-50%);
+    font-size: 1.4rem;
+    line-height: 1;
+    filter: drop-shadow(0 0 6px rgba(255,100,0,0.6));
+  }
+
+  .pull-quote p {
+    font-family: 'Cinzel', serif !important;
+    font-size: 0.86rem !important;
+    line-height: 1.65 !important;
+    font-style: italic;
+    color: #1a0d00 !important;
+    font-weight: 400;
+    margin: 0 !important;
+    letter-spacing: 0.3px;
+  }
+
+  /* ── Cuerpo map ── */
+  .cuerpo-map {
+    margin: 1.4rem 0 1rem;
+    border: 1.5px solid rgba(224,80,16,0.25);
+    overflow: hidden;
+  }
+
+  .cuerpo-map-titulo {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #ffeedd;
+    background: linear-gradient(135deg, #1a0500, #2a0a00);
+    padding: 0.7rem 1.2rem;
+    border-bottom: 1px solid rgba(255,100,0,0.25);
+  }
+
+  .cuerpo-map-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(224,80,16,0.12);
+  }
+
+  .cm-item {
+    background: #faf5ee;
+    padding: 0.9rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .cm-item--activo .cm-icono {
+    color: #E05010;
+  }
+
+  .cm-icono {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    color: #8a4a10;
+    line-height: 1;
+    font-weight: 700;
+  }
+
+  .cm-titulo {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #1a0d00;
+  }
+
+  .cm-desc {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.72rem;
+    line-height: 1.5;
+    color: #5a3010;
+  }
+
+  /* ── TDAH panel ── */
+  .tdah-panel {
+    margin: 1.6rem 0 1.2rem;
+    border: 1.5px solid rgba(224,80,16,0.25);
+    overflow: hidden;
+  }
+
+  .tdah-panel-titulo {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #ffeedd;
+    background: linear-gradient(135deg, #1a0500, #2a0a00);
+    padding: 0.7rem 1.2rem;
+    border-bottom: 1px solid rgba(255,100,0,0.2);
+  }
+
+  .tdah-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+
+  .tdah-item {
+    display: flex;
+    gap: 0.8rem;
+    padding: 1rem 1.2rem;
+    border-bottom: 1px solid rgba(224,80,16,0.1);
+    border-right: 1px solid rgba(224,80,16,0.1);
+    align-items: flex-start;
+    background: #faf5ee;
+    transition: background 0.2s;
+  }
+  .tdah-item:nth-child(even) { border-right: none; }
+  .tdah-item:nth-last-child(-n+2) { border-bottom: none; }
+  .tdah-item:hover { background: rgba(255,100,0,0.04); }
+
+  .tdah-check {
+    color: #E05010;
+    font-size: 0.6rem;
+    flex-shrink: 0;
+    margin-top: 0.4rem;
+    filter: drop-shadow(0 0 3px rgba(224,80,16,0.5));
+  }
+
+  .tdah-item strong {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.68rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #B03800;
+    margin-bottom: 0.3rem;
+  }
+
+  .tdah-item p {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.78rem !important;
+    line-height: 1.62 !important;
+    color: #2a1200 !important;
+    margin: 0 !important;
+  }
+
+  /* ── Seguridad lista ── */
+  .seguridad-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 1.4rem 0 1rem;
+  }
+
+  .seg-item {
+    display: flex;
+    gap: 1rem;
+    padding: 0.9rem 1.2rem;
+    border-bottom: 1px solid rgba(224,80,16,0.1);
+    border-left: 3px solid rgba(224,80,16,0.2);
+    align-items: flex-start;
+    background: rgba(255,255,250,0.5);
+    transition: background 0.2s;
+  }
+  .seg-item:last-child { border-bottom: none; }
+
+  .seg-item--critico {
+    border-left-color: #CC2200;
+    background: rgba(204,34,0,0.04);
+  }
+  .seg-item--critico:hover { background: rgba(204,34,0,0.07); }
+  .seg-item:not(.seg-item--critico):hover { background: rgba(224,80,16,0.04); }
+
+  .seg-icono {
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #E05010;
+    flex-shrink: 0;
+    line-height: 1.5;
+    width: 1rem;
+    text-align: center;
+  }
+
+  .seg-item--critico .seg-icono {
+    color: #CC2200;
+    font-size: 1.1rem;
+  }
+
+  .seg-titulo {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: #1a0d00;
+    margin-bottom: 0.3rem;
+  }
+
+  .seg-texto {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.81rem;
+    line-height: 1.65;
+    color: #2a1200;
+    margin: 0;
+  }
+
+  /* ── CTA ── */
+  .cta-box {
+    margin: 2.4rem 0 0.5rem;
+    background: #0d0501;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-llamas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    pointer-events: none;
+  }
+  .cta-llamas-svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .cta-contenido {
+    padding: 2.8rem 2rem 1.8rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-titulo {
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffeedd;
+    margin-bottom: 0.6rem;
+    margin-top: 0;
+    text-shadow: 0 0 20px rgba(255,100,0,0.3);
+  }
+
+  .cta-texto {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.84rem;
+    line-height: 1.72;
+    color: rgba(255,220,170,0.72);
+    margin-bottom: 1.2rem;
+  }
+
+  .cta-enlace {
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #FF8C00;
+    text-decoration: none;
+    border-bottom: 1.5px solid #E05010;
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .cta-enlace:hover { color: #FFB347; border-color: #FF8C00; }
+
+  /* ── Footer ── */
+  .articulo-footer {
+    padding: 0 3rem 2rem;
+  }
+
+  .footer-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding-top: 1rem;
+    border-top: 1.5px solid rgba(26,13,0,0.15);
+  }
+
+  .footer-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.38rem;
+    align-items: center;
+    margin: 0;
+  }
+
+  .tag-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #8a4a10;
+    margin-right: 0.18rem;
+  }
+
+  .tag {
+    background: transparent;
+    color: #C04000;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.61rem;
+    padding: 0.1rem 0.52rem;
+    border: 1px solid rgba(200,64,0,0.5);
+    transition: background 0.18s, color 0.18s;
+    letter-spacing: 0.4px;
+  }
+  .tag:hover { background: #C04000; color: #faf5ee; }
+
+  .volver-blog {
+    font-family: 'Cinzel', serif;
+    font-size: 0.57rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #8a4a10;
+    text-decoration: none;
+    transition: color 0.18s;
+    white-space: nowrap;
+  }
+  .volver-blog:hover { color: #E05010; }
+
+  ::selection { background: rgba(224,80,16,0.18); color: #0d0500; }
+
+  /* ── Responsive ── */
+  @media (max-width: 768px) {
+    .masthead-interior {
+      grid-template-columns: 1fr;
+    }
+    .masthead-llama {
+      height: 200px;
+      order: -1;
+    }
+    .masthead-texto {
+      padding: 2rem 2rem 3.5rem;
+      min-height: unset;
+    }
+    .cuerpo { padding: 1.6rem 1.5rem 1.4rem; }
+    .articulo-footer { padding: 0 1.5rem 1.6rem; }
+    .cuerpo-map-grid { grid-template-columns: repeat(2, 1fr); }
+    .tdah-grid { grid-template-columns: 1fr; }
+    .tdah-item:nth-child(even) { border-right: 1px solid rgba(224,80,16,0.1); }
+    .tdah-item:nth-last-child(-n+2) { border-bottom: 1px solid rgba(224,80,16,0.1); }
+    .tdah-item:last-child { border-bottom: none; }
+    h1 { font-size: 1.6rem; }
+    .footer-meta { flex-direction: column; align-items: flex-start; }
+  }
+
+  @media (max-width: 500px) {
+    .masthead-texto { padding: 1.8rem 1.4rem 3rem; }
+    .cuerpo-map-grid { grid-template-columns: 1fr; }
+    .brasa-stamp { width: 44px; height: 44px; top: 1.2rem; right: 1.2rem; }
+    h1 { font-size: 1.4rem; letter-spacing: 2px; }
+    .cta-contenido { padding: 2.4rem 1.4rem 1.6rem; }
+  }
+</style>
+

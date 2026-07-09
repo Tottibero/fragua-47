@@ -43,7 +43,7 @@ const posts = [
 
     <ul class="lista-posts" role="list">
       {posts.map(post => (
-        <li class="post-card">
+        <li class="post-card panel-forja">
           <div class="post-enlace">
             {post.imagen && (
               <a href={`/blog/${post.slug}/`} class="post-imagen-wrap" tabindex="-1" aria-hidden="true">
@@ -156,16 +156,11 @@ const posts = [
   }
 
   .post-card {
-    background: #d4b896;
-    border: 3px solid #2a1208;
-    outline: 1px solid #2a1208;
-    outline-offset: 4px;
-    box-shadow: 5px 5px 0 #2a1208;
     transition: box-shadow 0.15s ease, transform 0.15s ease;
   }
 
   .post-card:hover {
-    box-shadow: 7px 7px 0 #2a1208;
+    --stamp: 7px;
     transform: translate(-1px, -1px);
   }
 
