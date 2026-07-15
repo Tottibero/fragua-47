@@ -2,41 +2,127 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout description="Sobre Fragua47. Quiénes somos, nuestra historia y valores como comunidad BDSM.">
-	<article>
-		<h2>Sobre Nosotros</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-		<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-	</article>
+<Layout title="Sobre Nosotros" description="Sobre Fragua47. Quiénes somos, nuestra misión y la comunidad BDSM de Valladolid.">
+	<div class="pagina-sobre">
+
+		<div class="sobre-header">
+			<p class="pre-titulo">— quiénes somos —</p>
+			<h1>Sobre <span class="accent">Fragua47</span></h1>
+			<p class="sobre-intro">Somos una asociación sin ánimo de lucro nacida en Valladolid de la locura colectiva de un grupo de personas con un mismo sueño: tener un espacio propio donde vivir, compartir y aprender del mundo BDSM de forma segura y libre.</p>
+		</div>
+
+		<div class="sobre-doc panel-forja panel-forja--riveted">
+
+			<div class="bloque">
+				<h3>Quiénes somos</h3>
+				<p>Fragua47 es una asociación sin ánimo de lucro formada por personas de la comunidad BDSM de Valladolid. Nacimos de la ilusión de un grupo pequeño por tener un lugar propio donde reunirnos, sin depender de nadie más, y hoy seguimos creciendo gracias a cada socio y cada persona que se acerca al proyecto.</p>
+			</div>
+
+			<div class="bloque">
+				<h3>Nuestra misión</h3>
+				<p>Trabajamos por la difusión de la cultura BDSM: divulgación, formación y visibilidad para desmontar mitos y acercar esta práctica desde el respeto, el consentimiento y el conocimiento. Creemos en una comunidad informada, cuidada y libre de prejuicios, dentro y fuera de nuestras puertas.</p>
+			</div>
+
+			<div class="bloque">
+				<h3>La comunidad</h3>
+				<p>Detrás de Fragua47 hay una comunidad viva: gente que organiza, que enseña, que aprende, que acompaña a quien llega por primera vez. Un espacio construido entre todos, ladrillo a ladrillo, para que cualquiera pueda explorar su lado kink con seguridad y sin juicios.</p>
+			</div>
+
+			<hr class="linea" />
+
+			<div class="bloque bloque-cierre">
+				<p>Si quieres conocernos mejor, visita <a href="/local/">El Local</a> o <a href="/hazte-socio/">hazte socio</a> de la fragua.</p>
+			</div>
+
+		</div>
+
+	</div>
 </Layout>
 
 <style>
-	article {
-		max-width: 720px;
-		margin: 3rem auto;
-		line-height: 1.9;
+	.pagina-sobre {
+		width: 100%;
+		max-width: 760px;
+		margin: 1.5rem auto 3rem;
 		font-family: 'Cinzel', serif;
-		font-size: 1rem;
-		font-weight: 600;
-		color: #3d2010;
 	}
 
-	h2 {
-		font-size: 1.4rem;
+	.sobre-header {
+		text-align: center;
+		margin-bottom: 1.6rem;
+	}
+
+	.pre-titulo {
+		font-size: 0.55rem;
+		letter-spacing: 2.5px;
+		text-transform: uppercase;
+		color: #5a3018;
+		margin-bottom: 0.3rem;
+	}
+
+	h1 {
+		font-family: 'Metamorphous', cursive;
+		font-size: 1.6rem;
 		letter-spacing: 3px;
 		text-transform: uppercase;
 		color: #2a1208;
-		margin-bottom: 1.5rem;
+		margin: 0 0 0.9rem;
 	}
 
-	p {
-		margin-bottom: 1.2rem;
+	h1 .accent { color: #b44814; }
+
+	.sobre-intro {
+		font-family: system-ui, -apple-system, sans-serif;
+		font-size: 0.85rem;
+		line-height: 1.75;
 		color: #3d2010;
+		max-width: 600px;
+		margin: 0 auto;
 	}
 
-	::selection {
-		background: rgba(180, 80, 20, 0.35);
-		color: #ffe0b0;
+	.sobre-doc {
+		padding: 1.6rem 1.8rem 1.8rem;
 	}
+
+	.bloque { margin: 1.3rem 0; }
+	.bloque:first-of-type { margin-top: 0.2rem; }
+
+	.sobre-doc h3 {
+		font-family: 'Metamorphous', cursive;
+		font-size: 0.95rem;
+		letter-spacing: 1.5px;
+		text-transform: uppercase;
+		color: #2a1208;
+		margin: 0 0 0.5rem;
+	}
+
+	.sobre-doc p {
+		font-family: system-ui, -apple-system, sans-serif;
+		font-size: 0.82rem;
+		line-height: 1.75;
+		color: #2a1208;
+		margin: 0 0 0.7rem;
+	}
+	.sobre-doc p:last-child { margin-bottom: 0; }
+
+	.sobre-doc a { color: #6a2808; }
+
+	.linea {
+		border: none;
+		border-top: 1.5px solid #2a1208;
+		margin: 1.2rem 0;
+	}
+
+	.bloque-cierre p {
+		font-style: italic;
+		color: #5a3018;
+		text-align: center;
+	}
+
+	@media (max-width: 768px) {
+		h1 { font-size: 1.25rem; }
+		.sobre-doc { padding: 1.3rem 1.1rem 1.5rem; }
+	}
+
+	::selection { background: rgba(180, 80, 20, 0.35); color: #ffe0b0; }
 </style>

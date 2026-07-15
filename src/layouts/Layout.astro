@@ -69,6 +69,13 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://fragua47.org').href;
 
 		<div class="footer-wrap">
 			<footer>
+				<nav class="footer-nav" aria-label="Enlaces legales">
+					<a href="/normas/">Normas</a>
+					<span class="footer-sep" aria-hidden="true">·</span>
+					<a href="/privacidad/">Privacidad</a>
+					<span class="footer-sep" aria-hidden="true">·</span>
+					<a href="/sobre-nosotros/">Sobre nosotros</a>
+				</nav>
 				<p class="footer-copy">© {new Date().getFullYear()} Fragua47 · Valladolid</p>
 			</footer>
 		</div>
@@ -502,6 +509,26 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://fragua47.org').href;
 		text-transform: uppercase;
 		color: #3a1a04;
 		margin: 0;
+	}
+
+	.footer-nav {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 0.6rem;
+		padding-top: 0;
+		margin-bottom: 0.7rem;
+	}
+
+	.footer-nav a {
+		font-size: 0.62rem;
+		letter-spacing: 1.5px;
+	}
+
+	.footer-sep {
+		color: #6a4a24;
+		font-size: 0.62rem;
 	}
 
 	nav {
