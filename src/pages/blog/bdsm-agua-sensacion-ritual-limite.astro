@@ -1,0 +1,735 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const titulo = 'Agua: Sensación, Ritual y Límite en la Práctica BDSM';
+const descripcion = 'El agua en el BDSM: juego de temperaturas, estética acuática, watersports, el mito de la "tortura del agua" y las reglas de seguridad innegociables cuando el agua entra en escena.';
+const fechaISO = '2026-07-09';
+const fechaModificadaISO = '2026-07-09';
+const fechaMostrar = '9 de julio de 2026';
+const canonicalURL = 'https://fragua47.org/blog/bdsm-agua-sensacion-ritual-limite/';
+
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": titulo,
+  "description": descripcion,
+  "datePublished": fechaISO,
+  "dateModified": fechaModificadaISO,
+  "author": { "@type": "Person", "name": "tottibero" },
+  "publisher": { "@type": "Organization", "name": "Fragua47", "url": "https://fragua47.org", "logo": { "@type": "ImageObject", "url": "https://fragua47.org/favicon-32.png" } },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalURL },
+  "inLanguage": "es-ES",
+  "keywords": ["agua","BDSM y agua","watersports","sensación","juego de temperaturas","seguridad BDSM","ritual","aftercare","kink acuático","waterbondage"]
+});
+---
+
+<Layout title={titulo} description={descripcion} ogType="article">
+  <script type="application/ld+json" slot="head" set:html={jsonLd} />
+  <meta slot="head" property="article:published_time" content={fechaISO} />
+  <meta slot="head" property="article:modified_time" content={fechaModificadaISO} />
+  <meta slot="head" property="article:author" content="tottibero" />
+  <meta slot="head" property="article:section" content="Práctica y Seguridad" />
+  <meta slot="head" property="article:tag" content="agua" />
+  <meta slot="head" property="article:tag" content="watersports" />
+  <meta slot="head" property="article:tag" content="sensación" />
+  <meta slot="head" property="article:tag" content="seguridad" />
+  <meta slot="head" property="article:tag" content="ritual" />
+  <meta slot="head" property="article:tag" content="BDSM" />
+
+  <!-- Breadcrumb — fuera de la hoja de agua -->
+  <nav class="breadcrumb" aria-label="Ruta de navegación">
+    <a href="/">Inicio</a><span aria-hidden="true">›</span>
+    <a href="/blog/">Blog</a><span aria-hidden="true">›</span>
+    <span aria-current="page">Agua: Sensación, Ritual y Límite</span>
+  </nav>
+
+  <!-- ░░ HOJA DE AGUA ░░ -->
+  <div class="aqua-wrap">
+
+    <!-- Burbujas ambientales -->
+    <span class="amb-burbuja" style="--x:5%; --y:10%; --s:20px; --d:9s;" aria-hidden="true"></span>
+    <span class="amb-burbuja" style="--x:93%; --y:16%; --s:13px; --d:7s;" aria-hidden="true"></span>
+    <span class="amb-burbuja" style="--x:90%; --y:46%; --s:24px; --d:11s;" aria-hidden="true"></span>
+    <span class="amb-burbuja" style="--x:4%; --y:60%; --s:15px; --d:8s;" aria-hidden="true"></span>
+    <span class="amb-burbuja" style="--x:95%; --y:80%; --s:18px; --d:10s;" aria-hidden="true"></span>
+    <span class="amb-burbuja" style="--x:6%; --y:88%; --s:11px; --d:6.5s;" aria-hidden="true"></span>
+
+    <!-- Ola superior -->
+    <div class="ola ola-top" aria-hidden="true">
+      <svg width="100%" height="26" viewBox="0 0 400 26" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,14 C40,2 80,26 120,14 C160,2 200,26 240,14 C280,2 320,26 360,14 C380,8 390,10 400,14 L400,26 L0,26 Z" fill="#0e6b82"/>
+        <path d="M0,18 C40,9 80,25 120,18 C160,9 200,25 240,18 C280,9 320,25 360,18 C380,14 390,15 400,18 L400,26 L0,26 Z" fill="#0a4a5a" opacity="0.55"/>
+      </svg>
+    </div>
+
+    <!-- ── Contenido del artículo ── -->
+    <article class="aqua-content" itemscope itemtype="https://schema.org/Article">
+
+      <!-- Sello de gota -->
+      <div class="sello" aria-hidden="true">
+        <svg viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="35" cy="35" r="33" fill="#0e6b82" opacity="0.92"/>
+          <circle cx="35" cy="35" r="30" fill="none" stroke="#eef7f8" stroke-width="1.2" opacity="0.6"/>
+          <path d="M35,16 C35,16 22,33 22,42 C22,50.5 27.9,57 35,57 C42.1,57 48,50.5 48,42 C48,33 35,16 35,16 Z"
+                fill="none" stroke="#eef7f8" stroke-width="2" opacity="0.85"/>
+        </svg>
+      </div>
+
+      <header class="articulo-header">
+        <p class="pre-titulo">— sensación · ritual · límite —</p>
+        <h1 itemprop="headline">{titulo}</h1>
+
+        <div class="burbuja-sep" aria-hidden="true">
+          <span class="burbuja" style="--s:6px; --y:2px;"></span>
+          <span class="burbuja" style="--s:11px; --y:-3px;"></span>
+          <span class="burbuja" style="--s:5px; --y:4px;"></span>
+          <span class="burbuja" style="--s:14px; --y:-1px;"></span>
+          <span class="burbuja" style="--s:7px; --y:3px;"></span>
+        </div>
+
+        <div class="meta-articulo">
+          <time itemprop="datePublished" datetime={fechaISO}>{fechaMostrar}</time>
+          <span aria-hidden="true" class="meta-sep">·</span>
+          <span itemprop="author">Fragua47 · <a href="https://fetlife.com/tottibero" class="autor-enlace" target="_blank" rel="noopener noreferrer">tottibero</a></span>
+          <span aria-hidden="true" class="meta-sep">·</span>
+          <span>Práctica y seguridad</span>
+        </div>
+
+        <p class="entradilla" itemprop="description">
+          Nacemos de ella, nos limpiamos con ella, buscamos su sonido para calmarnos. El agua es
+          el elemento con el que empezamos y terminamos casi cualquier cosa, y el BDSM no es una
+          excepción: aparece en el contraste de temperaturas, en la estética de la piel mojada,
+          en el ritual del baño compartido después de una escena intensa. También es, mal gestionada,
+          uno de los elementos más peligrosos que existen. Esto es lo que conviene saber antes de
+          dejarla entrar en juego.
+        </p>
+      </header>
+
+      <div class="cuerpo-articulo" itemprop="articleBody">
+
+        <div class="burbuja-sep burbuja-sep--section" aria-hidden="true">
+          <span class="burbuja" style="--s:6px; --y:2px;"></span>
+          <span class="burbuja" style="--s:9px; --y:-2px;"></span>
+          <span class="burbuja" style="--s:5px; --y:3px;"></span>
+          <span class="burbuja" style="--s:8px; --y:-1px;"></span>
+        </div>
+
+        <h2>Un elemento con memoria</h2>
+        <p>
+          Antes de ser un juego, el agua fue un rito. Casi todas las culturas han usado la inmersión
+          o el lavado como frontera simbólica entre un estado y otro: el <em>misogi</em> sintoísta
+          bajo una cascada, el bautismo, el <em>mikve</em> judío, el hammam y el onsen como espacios
+          de purificación colectiva. Sumergirse marca un antes y un después. No es casual que tantas
+          escenas de BDSM terminen, precisamente, en una ducha o una bañera compartida: el cuerpo
+          reconoce el agua como umbral mucho antes de que lo pensemos.
+        </p>
+        <p>
+          Incluso la cuerda tiene memoria de agua. Muchos de los nudos que hoy se usan en <em>kinbaku</em>
+          y shibari proceden de tradiciones marineras y de pesca — nudos pensados para sujetar redes,
+          velas y cargas bajo tensión constante, no cuerpos. Si leíste nuestro artículo sobre
+          <a href="/blog/shunga-abunae-eroguro-erotismo-arte-japones/">shunga y erotismo japonés</a>,
+          recordarás a la <em>ama</em> de Hokusai, la pescadora de perlas que bucea a pulmón libre:
+          esa misma cultura marítima —cuerda, mar, cuerpo— es uno de los hilos que conectan la estética
+          acuática con la práctica del atado.
+        </p>
+
+        <div class="img-ph" data-num="01">
+          <div class="img-ph-frame">
+            <div class="img-ph-inner">
+              <svg class="img-ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C12 2 5 10.5 5 15.5C5 19.09 8.13 22 12 22C15.87 22 19 19.09 19 15.5C19 10.5 12 2 12 2Z"/></svg>
+              <span class="img-ph-num">Imagen 01</span>
+            </div>
+          </div>
+          <figcaption>Espacio reservado — fotografía o ilustración de referencia sobre ritual/purificación con agua.</figcaption>
+        </div>
+
+        <div class="burbuja-sep burbuja-sep--section" aria-hidden="true">
+          <span class="burbuja" style="--s:6px; --y:2px;"></span>
+          <span class="burbuja" style="--s:9px; --y:-2px;"></span>
+          <span class="burbuja" style="--s:5px; --y:3px;"></span>
+          <span class="burbuja" style="--s:8px; --y:-1px;"></span>
+        </div>
+
+        <h2>El agua como sensación</h2>
+        <p>
+          Antes de cualquier otra cosa, el agua es temperatura. El contraste entre un hielo que
+          recorre la piel y el aliento cálido que le sigue, entre una ducha helada y una manta después,
+          entre la cera tibia y el agua fría que la fija de golpe: el <em>temperature play</em> es
+          una de las puertas de entrada más accesibles al juego sensorial, precisamente porque no
+          requiere equipo especial ni experiencia previa. Solo atención al detalle y comunicación
+          constante sobre lo que se siente, no solo sobre lo que se hace.
+        </p>
+        <p>
+          El sonido cuenta tanto como el tacto. El goteo constante, el chorro de un espray, el eco
+          de una ducha en una habitación cerrada: son estímulos que la persona sumisa puede anticipar
+          pero no controlar del todo, y esa anticipación es, en sí misma, parte del juego. Combinado
+          con los ojos vendados o la privación sensorial, el agua se convierte en uno de los recursos
+          más eficaces para inducir ese estado de entrega —lo que muchas personas describen como
+          <em>subspace</em>— sin necesidad de dolor.
+        </p>
+        <p>
+          Y luego está el ritual de la ducha compartida al cerrar la escena: lavar juntos lo que
+          quedó en la piel —cera, marcas, sudor— es, para muchas parejas y grupos, tan parte del
+          <em>aftercare</em> como el abrazo o la manta. El agua no solo estimula: también cierra.
+        </p>
+
+        <div class="img-ph" data-num="02">
+          <div class="img-ph-frame">
+            <div class="img-ph-inner">
+              <svg class="img-ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C12 2 5 10.5 5 15.5C5 19.09 8.13 22 12 22C15.87 22 19 19.09 19 15.5C19 10.5 12 2 12 2Z"/></svg>
+              <span class="img-ph-num">Imagen 02</span>
+            </div>
+          </div>
+          <figcaption>Espacio reservado — fotografía de práctica: juego de temperaturas, ducha o bañera.</figcaption>
+        </div>
+
+        <div class="burbuja-sep burbuja-sep--section" aria-hidden="true">
+          <span class="burbuja" style="--s:6px; --y:2px;"></span>
+          <span class="burbuja" style="--s:9px; --y:-2px;"></span>
+          <span class="burbuja" style="--s:5px; --y:3px;"></span>
+          <span class="burbuja" style="--s:8px; --y:-1px;"></span>
+        </div>
+
+        <h2>El agua como estética</h2>
+        <p>
+          Hay algo en la piel mojada, en el látex brillante bajo el agua, en un cuerpo atado dentro
+          de una bañera, que ha fascinado a la fotografía y al arte erótico durante siglos —la misma
+          <em>ama</em> de Hokusai poseída por dos pulpos en 1814 es, entre otras cosas, la imagen
+          fundacional de esa fascinación por el cuerpo y el mar—. Hoy esa estética se reparte entre
+          el <em>wetlook</em>, el juego de rol acuático o de sirena, y la fotografía de bondage en
+          bañeras y piscinas, un subgénero con identidad propia dentro de la fotografía kink.
+        </p>
+        <p>
+          No es solo una cuestión visual. El agua cambia físicamente cómo se siente una atadura:
+          la cuerda mojada aprieta distinto, el cuerpo pesa distinto, la piel percibe el roce de
+          otra manera. Quien haya probado un baño de inmersión sensorial —temperatura constante,
+          oscuridad, flotación— sabe que el agua puede simular una forma muy particular de privación
+          sensorial, mucho más suave que la venda o el tapón de oídos, pero igual de intensa en sus
+          efectos.
+        </p>
+
+        <h3>Watersports: un kink con nombre propio</h3>
+        <p>
+          Dentro del universo del agua hay un kink que merece mención aparte porque a menudo carga
+          con más estigma del que merece: el <em>watersports</em> o juego con orina. Como cualquier
+          otra práctica, no tiene nada de vergonzoso mientras se dé desde el consentimiento y la
+          información: conviene hablar antes de posibles infecciones urinarias, hidratación,
+          superficies fáciles de limpiar y límites claros sobre dónde sí y dónde no. Nombrarlo con
+          naturalidad es la mejor forma de quitarle el peso que no le corresponde.
+        </p>
+
+        <div class="burbuja-sep burbuja-sep--section" aria-hidden="true">
+          <span class="burbuja" style="--s:6px; --y:2px;"></span>
+          <span class="burbuja" style="--s:9px; --y:-2px;"></span>
+          <span class="burbuja" style="--s:5px; --y:3px;"></span>
+          <span class="burbuja" style="--s:8px; --y:-1px;"></span>
+        </div>
+
+        <h2>Cuando el agua se convierte en amenaza</h2>
+        <p>
+          El imaginario del <em>dungeon</em> está lleno de agua oscura: la silla de goteo constante,
+          la celda que se inunda, la escena de interrogatorio en penumbra. Buena parte de esa
+          iconografía viene de la llamada «tortura china del agua» —una leyenda urbana con mucha
+          más presencia en el cine y la literatura de terror que en la historia real— y del
+          <em>waterboarding</em>, una técnica de interrogatorio documentada y real, no una práctica
+          erótica ni recreativa bajo ningún concepto.
+        </p>
+        <p>
+          Lo dejamos así de claro porque es importante: esta sección habla de estética e imaginería,
+          no de una guía de práctica. Cualquier juego que restrinja la respiración o sumerja el
+          rostro es <strong>edge play de alto riesgo</strong>, sin margen de error y sin posibilidad
+          real de usar una palabra de seguridad una vez que empieza. No es terreno para la
+          improvisación, la curiosidad o el «solo un poco»: es, directamente, terreno que
+          recomendamos no pisar sin formación específica, y que la inmensa mayoría de la comunidad
+          BDSM evita por completo.
+        </p>
+
+        <div class="img-ph" data-num="03">
+          <div class="img-ph-frame">
+            <div class="img-ph-inner">
+              <svg class="img-ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C12 2 5 10.5 5 15.5C5 19.09 8.13 22 12 22C15.87 22 19 19.09 19 15.5C19 10.5 12 2 12 2Z"/></svg>
+              <span class="img-ph-num">Imagen 03</span>
+            </div>
+          </div>
+          <figcaption>Espacio reservado — imagen de referencia sobre la estética oscura del agua en el arte/dungeon (uso ilustrativo, no instructivo).</figcaption>
+        </div>
+
+        <div class="burbuja-sep burbuja-sep--section" aria-hidden="true">
+          <span class="burbuja" style="--s:6px; --y:2px;"></span>
+          <span class="burbuja" style="--s:9px; --y:-2px;"></span>
+          <span class="burbuja" style="--s:5px; --y:3px;"></span>
+          <span class="burbuja" style="--s:8px; --y:-1px;"></span>
+        </div>
+
+        <h2>Seguridad: lo innegociable</h2>
+        <p>
+          El agua no perdona la distracción. Estas son las reglas que no se negocian en cualquier
+          escena donde el agua tenga un papel, por pequeño que sea:
+        </p>
+        <ul class="lista-seguridad">
+          <li><strong>Nunca dejar a nadie atado o inmovilizado solo cerca del agua</strong>, ni un momento, ni «solo para ir a por una toalla».</li>
+          <li><strong>Herramientas de liberación rápida siempre a mano</strong> — tijeras de seguridad, ataduras que se sueltan de un tirón — nunca nudos que dependan de tiempo o destreza para deshacerse.</li>
+          <li><strong>Ningún aparato eléctrico cerca del agua</strong>, sin excepciones: ni velas eléctricas, ni juguetes con batería expuesta, ni cargadores cerca de la bañera.</li>
+          <li><strong>Comprobar la temperatura en tiempo real</strong>, con la mano de quien dirige la escena, no de memoria.</li>
+          <li><strong>Vigilar la hipotermia</strong> en juegos prolongados con agua fría: temblores, confusión o piel amoratada son señal de parar ya.</li>
+          <li><strong>Palabras de seguridad que sigan funcionando</strong> con la boca cerrada, un mordaza puesta o las manos ocupadas — un gesto, un objeto que se suelta, una campanilla.</li>
+          <li><strong>Alguien sobrio y presente</strong>, sin excepciones, si hay alcohol de por medio en cualquier otro punto de la velada.</li>
+          <li><strong>Revisar la piel y los materiales</strong> — el látex mojado resbala distinto, la cuerda mojada aprieta más de lo esperado.</li>
+        </ul>
+        <p>
+          Ninguna de estas reglas está pensada para quitarle emoción al juego. Están para que la
+          intensidad venga de la sensación, no del riesgo real de que algo salga mal.
+        </p>
+
+        <div class="burbuja-sep burbuja-sep--section" aria-hidden="true">
+          <span class="burbuja" style="--s:6px; --y:2px;"></span>
+          <span class="burbuja" style="--s:9px; --y:-2px;"></span>
+          <span class="burbuja" style="--s:5px; --y:3px;"></span>
+          <span class="burbuja" style="--s:8px; --y:-1px;"></span>
+        </div>
+
+        <h2>El ritual después del ritual</h2>
+        <p>
+          Empezábamos diciendo que nacemos y nos limpiamos con agua, que la usamos para marcar
+          el paso de un estado a otro. Después de una escena intensa, esa misma agua vuelve a
+          hacer su trabajo: una ducha compartida, calentita, sin prisa, es de las formas de
+          <em>aftercare</em> más simples y más efectivas que existen. Lava lo físico y, casi
+          siempre, ayuda a lavar también lo emocional — el regreso, poco a poco, a la ternura
+          ordinaria.
+        </p>
+        <p>
+          El agua abre el juego y lo cierra. Solo hace falta respetarla como lo que es: el elemento
+          más generoso y, a la vez, el que menos margen de error concede.
+        </p>
+
+      </div><!-- /cuerpo-articulo -->
+
+      <footer class="articulo-footer">
+        <div class="burbuja-sep burbuja-sep--section" aria-hidden="true">
+          <span class="burbuja" style="--s:6px; --y:2px;"></span>
+          <span class="burbuja" style="--s:9px; --y:-2px;"></span>
+          <span class="burbuja" style="--s:5px; --y:3px;"></span>
+          <span class="burbuja" style="--s:8px; --y:-1px;"></span>
+        </div>
+        <div class="footer-meta">
+          <p class="footer-tags">
+            <span class="tag-label">Temas</span>
+            <a href="/blog/" class="tag">Sensación</a>
+            <a href="/blog/" class="tag">Ritual</a>
+            <a href="/blog/" class="tag">Seguridad</a>
+            <a href="/blog/" class="tag">Cultura BDSM</a>
+          </p>
+          <a href="/blog/" class="volver-blog">← Volver al blog</a>
+        </div>
+      </footer>
+
+    </article>
+
+    <!-- Fila de burbujas inferior -->
+    <div class="ola ola-bottom" aria-hidden="true">
+      <svg width="100%" height="26" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <pattern id="bub-a" width="34" height="26" patternUnits="userSpaceOnUse">
+            <circle cx="8" cy="18" r="5" fill="none" stroke="#0e6b82" stroke-width="1.1" opacity="0.8"/>
+            <circle cx="22" cy="9" r="3" fill="none" stroke="#0e6b82" stroke-width="1" opacity="0.6"/>
+            <circle cx="30" cy="20" r="2" fill="#0e6b82" opacity="0.4"/>
+          </pattern>
+          <pattern id="bub-b" width="34" height="26" patternUnits="userSpaceOnUse" x="17" y="6">
+            <circle cx="8" cy="18" r="5" fill="none" stroke="#0e6b82" stroke-width="1.1" opacity="0.8"/>
+            <circle cx="22" cy="9" r="3" fill="none" stroke="#0e6b82" stroke-width="1" opacity="0.6"/>
+            <circle cx="30" cy="20" r="2" fill="#0e6b82" opacity="0.4"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="26" fill="url(#bub-b)"/>
+        <rect width="100%" height="26" fill="url(#bub-a)"/>
+      </svg>
+    </div>
+
+  </div><!-- /aqua-wrap -->
+</Layout>
+
+<style>
+  /* ── Breadcrumb ── */
+  .breadcrumb {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.67rem;
+    color: #0e5266;
+    margin-bottom: 0.9rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    align-items: center;
+  }
+  .breadcrumb a { color: #0e5266; text-decoration: none; transition: color 0.2s; }
+  .breadcrumb a:hover { color: #0e6b82; }
+  .breadcrumb span[aria-current] { color: #0a3540; font-style: italic; }
+
+  /* ═══════════════════════════════════════════
+     HOJA DE AGUA
+  ═══════════════════════════════════════════ */
+  .aqua-wrap {
+    position: relative;
+    max-width: 720px;
+    margin: 0 auto 2.5rem;
+    overflow: hidden;
+
+    background:
+      radial-gradient(ellipse 60% 40% at 12% 18%, rgba(80,190,210,0.14) 0%, transparent 58%),
+      radial-gradient(ellipse 55% 45% at 88% 75%, rgba(60,160,190,0.12) 0%, transparent 54%),
+      radial-gradient(ellipse 90% 70% at 50% 50%, rgba(240,250,251,0.5) 0%, transparent 72%),
+      repeating-linear-gradient(178deg, transparent 0px, transparent 9px, rgba(20,110,130,0.028) 9px, rgba(20,110,130,0.028) 10px),
+      #eef7f8;
+
+    box-shadow:
+      0 2px 6px  rgba(10,50,60,0.11),
+      0 8px 30px rgba(10,50,60,0.13),
+      3px 5px 0  rgba(80,170,190,0.14),
+      inset 0 0 44px rgba(60,150,175,0.06);
+
+    outline: 1px solid rgba(14,107,130,0.28);
+    outline-offset: -9px;
+  }
+
+  /* ── Burbujas ambientales ── */
+  .amb-burbuja {
+    position: absolute;
+    left: var(--x); top: var(--y);
+    width: var(--s); height: var(--s);
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 25%, rgba(255,255,255,0.65), rgba(80,190,210,0.20) 55%, transparent 76%);
+    border: 1px solid rgba(14,107,130,0.16);
+    pointer-events: none;
+    z-index: 1;
+    animation: burbuja-flotar var(--d, 8s) ease-in-out infinite;
+  }
+  @keyframes burbuja-flotar {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-9px); }
+  }
+  @media (max-width: 500px) { .amb-burbuja { display: none; } }
+
+  /* ── Olas superior/inferior ── */
+  .ola { width: 100%; line-height: 0; overflow: hidden; position: relative; z-index: 2; }
+  .ola-top { border-top: 2px solid #0e6b82; }
+  .ola-bottom { border-bottom: 2px solid #0e6b82; }
+
+  /* ── Burbujas separadoras ── */
+  .burbuja-sep {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    max-width: 300px;
+    height: 18px;
+    margin: 0.4rem auto 0.5rem;
+  }
+  .burbuja-sep--section { max-width: 100%; margin: 1.1rem 0 0.6rem; }
+
+  .burbuja {
+    width: var(--s, 8px);
+    height: var(--s, 8px);
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #ffffff, rgba(80,190,210,0.55) 60%, rgba(14,107,130,0.4) 100%);
+    box-shadow: 0 0 0 1px rgba(14,107,130,0.22);
+    transform: translateY(var(--y, 0));
+  }
+
+  /* ── Contenido ── */
+  .aqua-content {
+    position: relative;
+    z-index: 3;
+    padding: 1.6rem 3.2rem 1.6rem 2.8rem;
+  }
+
+  /* ── Sello ── */
+  .sello {
+    position: absolute;
+    top: 1.8rem;
+    right: 2.2rem;
+    width: 60px;
+    height: 60px;
+    transform: rotate(-9deg);
+    z-index: 4;
+    opacity: 0.85;
+  }
+
+  /* ── Cabecera ── */
+  .articulo-header {
+    margin-bottom: 1.2rem;
+    padding-right: 4.5rem;
+  }
+
+  .pre-titulo {
+    font-family: 'Cinzel', serif;
+    font-size: 0.56rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #0e6b82;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+  }
+
+  h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(0.88rem, 2vw, 1.25rem);
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #0a2c35;
+    text-align: center;
+    line-height: 1.48;
+    margin: 0 0 0.4rem;
+  }
+
+  /* ── Meta ── */
+  .meta-articulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.63rem;
+    color: #3a7d8f;
+    letter-spacing: 0.5px;
+    font-style: italic;
+    margin-bottom: 1.1rem;
+  }
+  .meta-sep { opacity: 0.42; }
+
+  .autor-enlace {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid #0e6b82;
+    transition: color 0.2s;
+  }
+  .autor-enlace:hover { color: #0e6b82; }
+
+  /* ── Entradilla ── */
+  .entradilla {
+    padding: 0.8rem 1rem 0.8rem 1.3rem;
+    border-left: 2.5px solid #0e6b82;
+    background: rgba(14,107,130,0.05);
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.84rem;
+    line-height: 1.72;
+    color: #12333c;
+    font-style: italic;
+    margin: 0;
+  }
+
+  /* ── Cuerpo ── */
+  .cuerpo-articulo { margin-top: 0.2rem; }
+
+  h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.72rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.86rem;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #0a2c35;
+    margin: 0 0 0.65rem;
+    padding-top: 0.15rem;
+  }
+
+  h2::before {
+    content: '';
+    display: inline-block;
+    flex-shrink: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1.5px solid #0e6b82;
+    box-shadow:
+      inset 0 0 0 2.8px #eef7f8,
+      inset 0 0 0 4.2px #0e6b82;
+  }
+
+  h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #0e5266;
+    margin: 1.45rem 0 0.48rem;
+    padding-left: 0.8rem;
+    border-left: 2.5px solid #0e6b82;
+  }
+
+  .cuerpo-articulo p {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.87rem;
+    line-height: 1.80;
+    color: #12333c;
+    margin-bottom: 0.82rem;
+  }
+
+  .cuerpo-articulo strong { font-weight: 700; color: #0a2c35; }
+  .cuerpo-articulo em { font-style: italic; color: #0e6b82; }
+
+  .cuerpo-articulo a {
+    color: #0e6b82;
+    text-decoration: underline;
+    text-decoration-color: rgba(14,107,130,0.4);
+    transition: color 0.2s;
+  }
+  .cuerpo-articulo a:hover { color: #093f4d; }
+
+  /* ── Lista de seguridad ── */
+  .lista-seguridad {
+    list-style: none;
+    padding: 0;
+    margin: 0.4rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+  .lista-seguridad li {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.83rem;
+    line-height: 1.65;
+    color: #12333c;
+    padding-left: 1.3rem;
+    position: relative;
+  }
+  .lista-seguridad li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.32rem;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #ffffff, rgba(80,190,210,0.6) 60%, rgba(14,107,130,0.5) 100%);
+    box-shadow: 0 0 0 1px rgba(14,107,130,0.25);
+  }
+
+  /* ── Footer ── */
+  .articulo-footer { margin-top: 0.3rem; padding-bottom: 0.2rem; }
+
+  .footer-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding-top: 0.4rem;
+  }
+
+  .footer-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.38rem;
+    align-items: center;
+    margin: 0;
+  }
+
+  .tag-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #3a7d8f;
+    margin-right: 0.18rem;
+  }
+
+  .tag {
+    background: transparent;
+    color: #0e6b82;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.61rem;
+    padding: 0.1rem 0.52rem;
+    border: 1px solid rgba(14,107,130,0.55);
+    transition: background 0.18s, color 0.18s, border-color 0.18s;
+    letter-spacing: 0.4px;
+  }
+  .tag:hover { background: #0e6b82; color: #eef7f8; border-color: #0e6b82; }
+
+  .volver-blog {
+    font-family: 'Cinzel', serif;
+    font-size: 0.57rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #3a7d8f;
+    text-decoration: none;
+    transition: color 0.18s;
+    white-space: nowrap;
+  }
+  .volver-blog:hover { color: #0e6b82; }
+
+  ::selection { background: rgba(14,107,130,0.18); color: #0a2c35; }
+
+  /* ── Marcadores de imagen (a rellenar más adelante) ── */
+  .img-ph { margin: 1rem 0 0.5rem; }
+
+  .img-ph-frame {
+    border: 1px solid rgba(14,107,130,0.42);
+    padding: 4px;
+    position: relative;
+  }
+  .img-ph-frame::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    border: 0.5px solid rgba(14,107,130,0.18);
+    pointer-events: none;
+  }
+
+  .img-ph-inner {
+    aspect-ratio: 16 / 9;
+    background:
+      repeating-linear-gradient(
+        45deg,
+        transparent 0px, transparent 7px,
+        rgba(14,107,130,0.045) 7px, rgba(14,107,130,0.045) 8px
+      ),
+      #e2f2f3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    padding: 1rem;
+    color: rgba(14,107,130,0.35);
+  }
+
+  .img-ph-icon { width: 26px; height: auto; }
+
+  .img-ph-num {
+    font-family: 'Cinzel', serif;
+    font-size: 0.46rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(14,107,130,0.5);
+  }
+
+  .img-ph figcaption {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.63rem;
+    color: #3a7d8f;
+    font-style: italic;
+    text-align: center;
+    margin-top: 0.3rem;
+    line-height: 1.48;
+    padding: 0 0.2rem;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 768px) {
+    .aqua-content { padding: 1.3rem 1.4rem 1.3rem 1.3rem; }
+    .articulo-header { padding-right: 3.8rem; }
+    .sello { width: 48px; height: 48px; top: 1.3rem; right: 1.3rem; }
+    h1 { font-size: 0.88rem; letter-spacing: 1.5px; }
+    h2 { font-size: 0.8rem; }
+    .cuerpo-articulo p { font-size: 0.83rem; }
+    .footer-meta { flex-direction: column; align-items: flex-start; }
+    .entradilla { font-size: 0.8rem; }
+  }
+</style>

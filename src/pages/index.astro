@@ -70,12 +70,28 @@ import Layout from '../layouts/Layout.astro';
 			</div>
 			<hr class="linea" />
 			<div class="footer-card">
+				<a href="/eventos/barbacoa-de-verano/" class="btn-forja btn-forja--outline">Más información</a>
 				<button class="btn-inscribete btn-forja" id="btn-inscribete">Inscríbete ⚒</button>
 			</div>
 		</div>
 
 		<div class="collage-evento frame-forja">
 			<img src="/barbacoa-verano.webp" alt="Barbacoa de Verano" loading="lazy" class="evento-img-unica" />
+		</div>
+	</section>
+
+	<section class="banner-socio panel-forja panel-forja--riveted">
+		<div class="banner-socio-cabecera">
+			<img src="/forjaSocios.webp" alt="Hazte fragüero" class="banner-socio-img frame-forja" loading="lazy" width="1200" height="655" />
+			<div class="banner-socio-texto">
+				<p class="pre-titulo">— únete —</p>
+				<h3><a href="/hazte-socio/" class="banner-socio-titulo-link">Hazte Socio</a></h3>
+				<p class="cuerpo">Fragua47 es una asociación sin ánimo de lucro, y es gracias a nuestros socios que podemos mantener el local, organizar eventos y seguir construyendo este espacio para todos. Cada cuota es un ladrillo más en esta fragua colectiva.</p>
+			</div>
+		</div>
+		<div class="banner-socio-footer">
+			<p class="cuerpo">Por solo <strong>25€/mes</strong>: entrada gratuita a eventos y acceso ilimitado a la Mazmorra bajo reserva.</p>
+			<a href="/hazte-socio/" class="btn-forja">Hazte Socio ⚒</a>
 		</div>
 	</section>
 
@@ -425,6 +441,70 @@ import Layout from '../layouts/Layout.astro';
 	.footer-card {
 		display: flex;
 		justify-content: center;
+		gap: 0.6rem;
+		flex-wrap: wrap;
+	}
+
+	/* ── Banner hazte socio ── */
+
+	.banner-socio {
+		padding: 2.6rem 2.8rem;
+		margin: 0 auto 1.8rem;
+	}
+
+	.banner-socio-cabecera {
+		display: flex;
+		align-items: center;
+		gap: 2rem;
+		flex-wrap: wrap;
+	}
+
+	.banner-socio-img {
+		width: 190px;
+		height: 104px;
+		object-fit: cover;
+		flex-shrink: 0;
+	}
+
+	.banner-socio-texto { flex: 1; min-width: 240px; }
+
+	.banner-socio-texto .pre-titulo { text-align: left; margin-bottom: 0.2rem; font-size: 0.65rem; }
+
+	.banner-socio h3 {
+		text-align: left;
+		margin-bottom: 0.5rem;
+		font-size: 1.9rem;
+	}
+
+	.banner-socio-titulo-link {
+		color: inherit;
+		text-decoration: none;
+		transition: color 0.2s;
+	}
+	.banner-socio-titulo-link:hover { color: #b44814; }
+
+	.banner-socio-texto .cuerpo { margin-bottom: 0; font-size: 0.9rem; }
+
+	.banner-socio-footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1.4rem;
+		flex-wrap: wrap;
+		margin-top: 1.4rem;
+		padding-top: 1.4rem;
+		border-top: 1px solid rgba(42,18,8,0.25);
+	}
+
+	.banner-socio-footer .cuerpo { margin-bottom: 0; font-size: 0.9rem; }
+
+	@media (max-width: 768px) {
+		.banner-socio { padding: 1.8rem; }
+		.banner-socio-cabecera { flex-direction: column; text-align: center; }
+		.banner-socio-texto { min-width: 0; }
+		.banner-socio-texto .pre-titulo,
+		.banner-socio h3 { text-align: center; }
+		.banner-socio-footer { flex-direction: column; text-align: center; }
 	}
 
 	/* ── Modal ── */

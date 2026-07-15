@@ -2,41 +2,154 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout description="Normas de Fragua47. Conoce las reglas de convivencia y el código de conducta de la comunidad.">
-	<article>
-		<h2>Normas de la Comunidad</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-		<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-	</article>
+<Layout title="Normas de la Comunidad" description="Normas de Fragua47. Consentimiento, límites, privacidad y código de conducta de la comunidad.">
+	<div class="pagina-normas">
+
+		<div class="normas-header">
+			<p class="pre-titulo">— código de conducta —</p>
+			<h1>Normas de la <span class="accent">Comunidad</span></h1>
+			<p class="normas-intro">Fragua47 es un espacio construido sobre la confianza. Estas normas no son un trámite: son la base que hace posible que cualquiera pueda explorar, jugar y socializar con seguridad. Se aplican en todos nuestros eventos, físicos y online, y a todas las personas que forman parte de la comunidad, sin excepción.</p>
+		</div>
+
+		<div class="normas-doc panel-forja panel-forja--riveted">
+
+			<div class="bloque">
+				<h3>1. El consentimiento es la norma fundamental</h3>
+				<p>Nada se da por hecho. Todo contacto físico, toda escena y toda interacción se negocian y se consienten explícitamente, sin importar la experiencia de las personas implicadas o lo que haya pasado en otras ocasiones. El consentimiento se puede retirar en cualquier momento, sin necesidad de justificarlo, y debe respetarse de inmediato.</p>
+				<p>Practicamos bajo los principios de <strong>RACK</strong> (prácticas de riesgo asumido y consciente) o <strong>SSC</strong> (seguro, sensato y consensuado). Antes de jugar con alguien, negocia límites, palabras de seguridad y expectativas con claridad.</p>
+			</div>
+
+			<div class="bloque">
+				<h3>2. Palabras de seguridad</h3>
+				<p>En cualquier escena debe existir una palabra de seguridad clara para ambas partes, acordada antes de empezar. Si no se ha negociado un sistema propio, se usa el estándar de semáforo: <strong>verde</strong> (todo bien), <strong>naranja</strong> (cuidado, bajar intensidad) y <strong>rojo</strong> (parar inmediatamente). Una palabra de seguridad se respeta siempre, sin preguntas ni reproches.</p>
+			</div>
+
+			<div class="bloque">
+				<h3>3. Respeto y trato hacia las personas</h3>
+				<p>Un "no" se respeta siempre, venga de quien venga y en el contexto que sea. No se presiona ni se insiste tras una negativa. El trato entre miembros de la comunidad se basa en el respeto mutuo, dentro y fuera de las escenas: la forma en que alguien juega o se relaciona en un evento no es una invitación abierta fuera de él.</p>
+				<p><strong>Tolerancia cero</strong> con el acoso, la coacción, la discriminación por orientación sexual, identidad de género, cuerpo, origen o cualquier otra condición, y con cualquier comportamiento que vulnere el consentimiento de otra persona. El incumplimiento de esta norma puede suponer la expulsión inmediata del evento y de la comunidad.</p>
+			</div>
+
+			<div class="bloque">
+				<h3>4. Privacidad y discreción</h3>
+				<p>Lo que ocurre en nuestros eventos se queda entre quienes asisten. No se comparte fuera de la comunidad quién estuvo presente, con quién ni qué hizo. No se hacen fotos ni vídeos de otras personas sin su permiso explícito, y nunca de escenas o momentos de juego. Respeta el anonimato y los alias de quienes prefieren mantener su identidad reservada.</p>
+			</div>
+
+			<div class="bloque">
+				<h3>5. Alcohol y sustancias</h3>
+				<p>El consentimiento requiere estar en plenas facultades. Si vas a jugar o a negociar una escena, hazlo con la cabeza clara: el consumo de alcohol, si lo hay, debe ser siempre moderado. No se permite el consumo de otras sustancias en nuestros eventos. Nadie puede iniciar ni continuar una escena con una persona visiblemente afectada por el alcohol u otras sustancias.</p>
+			</div>
+
+			<div class="bloque">
+				<h3>6. Organización y a quién acudir</h3>
+				<p>En cada evento habrá organización identificable y disponible durante toda su duración. Si presencias o vives una situación que incomode, vulnere tus límites o los de otra persona, acude a la organización: estamos para escuchar, mediar y actuar. Toda consulta se trata con confidencialidad.</p>
+			</div>
+
+			<div class="bloque">
+				<h3>7. Newcomers y nueva gente</h3>
+				<p>No hace falta experiencia previa, pareja ni conocer a nadie para venir. Si es tu primera vez, dínoslo: te acompañamos, te presentamos a gente y resolvemos cualquier duda antes y durante el evento. Todo el mundo fue nuevo alguna vez.</p>
+			</div>
+
+			<div class="bloque">
+				<h3>8. Mayoría de edad</h3>
+				<p>Todos nuestros eventos son exclusivamente para personas mayores de 18 años. Puede requerirse verificación de identidad y edad al confirmar asistencia o en el acceso.</p>
+			</div>
+
+			<hr class="linea" />
+
+			<div class="bloque bloque-cierre">
+				<p>Estas normas se revisan y actualizan cuando la comunidad lo necesita. Si tienes dudas, sugerencias o quieres hablar con nosotros sobre cualquiera de estos puntos, contacta con la organización a través de <a href="/contacto/">contacto</a>.</p>
+			</div>
+
+		</div>
+
+	</div>
 </Layout>
 
 <style>
-	article {
-		max-width: 720px;
-		margin: 3rem auto;
-		line-height: 1.9;
+	.pagina-normas {
+		width: 100%;
+		max-width: 760px;
+		margin: 1.5rem auto 3rem;
 		font-family: 'Cinzel', serif;
-		font-size: 1rem;
-		font-weight: 600;
-		color: #3d2010;
 	}
 
-	h2 {
-		font-size: 1.4rem;
+	.normas-header {
+		text-align: center;
+		margin-bottom: 1.6rem;
+	}
+
+	.pre-titulo {
+		font-size: 0.55rem;
+		letter-spacing: 2.5px;
+		text-transform: uppercase;
+		color: #5a3018;
+		margin-bottom: 0.3rem;
+	}
+
+	h1 {
+		font-family: 'Metamorphous', cursive;
+		font-size: 1.6rem;
 		letter-spacing: 3px;
 		text-transform: uppercase;
 		color: #2a1208;
-		margin-bottom: 1.5rem;
+		margin: 0 0 0.9rem;
 	}
 
-	p {
-		margin-bottom: 1.2rem;
+	h1 .accent { color: #b44814; }
+
+	.normas-intro {
+		font-family: system-ui, -apple-system, sans-serif;
+		font-size: 0.85rem;
+		line-height: 1.75;
 		color: #3d2010;
+		max-width: 600px;
+		margin: 0 auto;
 	}
 
-	::selection {
-		background: rgba(180, 80, 20, 0.35);
-		color: #ffe0b0;
+	.normas-doc {
+		padding: 1.6rem 1.8rem 1.8rem;
 	}
+
+	.bloque { margin: 1.3rem 0; }
+	.bloque:first-of-type { margin-top: 0.2rem; }
+
+	.normas-doc h3 {
+		font-family: 'Metamorphous', cursive;
+		font-size: 0.95rem;
+		letter-spacing: 1.5px;
+		text-transform: uppercase;
+		color: #2a1208;
+		margin: 0 0 0.5rem;
+	}
+
+	.normas-doc p {
+		font-family: system-ui, -apple-system, sans-serif;
+		font-size: 0.82rem;
+		line-height: 1.75;
+		color: #2a1208;
+		margin: 0 0 0.7rem;
+	}
+	.normas-doc p:last-child { margin-bottom: 0; }
+
+	.normas-doc a { color: #6a2808; }
+
+	.linea {
+		border: none;
+		border-top: 1.5px solid #2a1208;
+		margin: 1.2rem 0;
+	}
+
+	.bloque-cierre p {
+		font-style: italic;
+		color: #5a3018;
+		text-align: center;
+	}
+
+	@media (max-width: 768px) {
+		h1 { font-size: 1.25rem; }
+		.normas-doc { padding: 1.3rem 1.1rem 1.5rem; }
+	}
+
+	::selection { background: rgba(180, 80, 20, 0.35); color: #ffe0b0; }
 </style>
