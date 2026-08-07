@@ -2,41 +2,26 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Hazte Socio" description="Hazte socio de Fragua47. Únete a nuestra comunidad y disfruta de todos los beneficios.">
+<Layout title="Colabora con Nosotros" description="Colabora con Fragua47. Únete a nuestra comunidad y ayúdanos a construir juntos la asociación.">
 	<link slot="head" rel="preload" as="image" type="image/webp" href="/forjaSocios.webp" />
 	<div class="pagina">
 
 		<div class="col-izquierda">
-			<img src="/forjaSocios.webp" alt="Hazte fragüero" class="portada frame-forja" loading="eager" width="1200" height="655" />
+			<img src="/forjaSocios.webp" alt="Colabora con Fragua47" class="portada frame-forja" loading="eager" width="1200" height="655" />
 			<div class="text-col panel-forja panel-forja--riveted">
-				<p class="pre-titulo">— únete —</p>
-				<h2>Hazte Socio</h2>
+				<p class="pre-titulo">— construyamos juntos —</p>
+				<h2>Colabora con Nosotros</h2>
+				<p class="pregunta">¿Quieres construir con nosotros la asociación?</p>
 				<hr class="titulo-linea" />
-				<ul class="beneficios">
-					<li>
-						<svg class="icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v2m0 8v2M9.5 9.5A2.5 2.5 0 0 1 12 8c1.38 0 2.5.9 2.5 2s-1.12 2-2.5 2-2.5.9-2.5 2 1.12 2 2.5 2a2.5 2.5 0 0 0 2.5-1.5"/></svg>
-						<span>Por sólo <strong>25 euros al mes</strong></span>
-					</li>
-					<li>
-						<svg class="icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-						<span>hazte <strong>fragüero</strong></span>
-					</li>
-					<li>
-						<svg class="icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
-						<span>entrada <strong>GRATUITA</strong> a eventos</span>
-					</li>
-					<li>
-						<svg class="icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0 3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
-						<span>acceso a la <strong>MAZMORRA</strong> ilimitado bajo reserva</span>
-					</li>
-				</ul>
+				<p class="cuerpo-colabora">Fragua47 no la levanta nadie en solitario: se forja a golpe de martillo, entre todas las manos dispuestas a sujetar el yunque. Cada quien que se suma trae su propio fuego, y ese fuego es lo que mantiene viva la fragua.</p>
+					<p class="cuerpo-colabora">Si sientes esa llamada, si tienes ganas e ilusión por formar parte de algo más grande que tú, si lo que ves aquí te hace latir un poco más fuerte el corazón, no lo dejes para otro día. Cuéntanos quién eres a través del formulario y empecemos a escribir juntos la siguiente página de esta historia.</p>
 			</div>
 		</div>
 
 		<div class="documento panel-forja panel-forja--doc">
 			<div class="doc-header">
 				<img src="/VectLogoF47.webp" alt="Logo Fragua47" class="doc-logo" width="300" height="343" />
-				<h3>Solicitud de membresía</h3>
+				<h3>Solicitud de colaboración</h3>
 				<span class="doc-sello">⚒</span>
 			</div>
 			<p class="doc-sub">— Formulario oficial de incorporación · Fragua47 · Valladolid —</p>
@@ -81,7 +66,7 @@ import Layout from '../layouts/Layout.astro';
 				<p class="privacidad-nota">Al enviar aceptas nuestra <a href="/privacidad/">política de privacidad</a>.</p>
 				<div class="doc-footer">
 					<p class="form-msg" id="form-msg"></p>
-					<button type="submit" id="form-btn" class="btn-forja">Quiero ser fragüero ⚒</button>
+					<button type="submit" id="form-btn" class="btn-forja">Quiero colaborar ⚒</button>
 				</div>
 			</form>
 		</div>
@@ -144,40 +129,25 @@ import Layout from '../layouts/Layout.astro';
 		margin: 0.4rem 0 0.9rem;
 	}
 
-	.beneficios {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-	}
-
-	.beneficios li {
-		display: flex;
-		align-items: center;
-		gap: 0.8rem;
+	.pregunta {
 		font-family: system-ui, -apple-system, sans-serif;
-		font-size: 0.8rem;
-		font-weight: 400;
+		font-size: 0.85rem;
+		font-style: italic;
+		text-align: center;
+		color: #5a3018;
+		margin: 0 0 0.6rem;
+	}
+
+	.cuerpo-colabora {
+		font-family: system-ui, -apple-system, sans-serif;
+		font-size: 0.85rem;
+		line-height: 1.6;
 		color: #2a1208;
-		border-bottom: 1px solid rgba(42, 18, 8, 0.2);
-		padding: 0.55rem 0;
+		margin: 0 0 0.9rem;
 	}
 
-	.beneficios li:last-child {
-		border-bottom: none;
-	}
-
-	.icono {
-		width: 0.85rem;
-		height: 0.85rem;
-		min-width: 0.85rem;
-		color: #b44814;
-		stroke: #b44814;
-		flex-shrink: 0;
-	}
-
-	.beneficios strong {
-		font-weight: 700;
-		color: #b44814;
+	.cuerpo-colabora:last-child {
+		margin-bottom: 0;
 	}
 
 	/* ── Documento ── */
@@ -437,6 +407,6 @@ import Layout from '../layouts/Layout.astro';
 			msg.textContent = 'Error al enviar. Inténtalo de nuevo.';
 		}
 		btn.disabled = false;
-		btn.textContent = 'Quiero ser fragüero ⚒';
+		btn.textContent = 'Quiero colaborar ⚒';
 	});
 </script>
