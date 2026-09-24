@@ -24,6 +24,11 @@ import Layout from '../layouts/Layout.astro';
 					FetLife
 				</a>
 			</div>
+			<nav class="accesos-principales" aria-label="Accesos a Fragua47">
+				<a href="https://bar.fragua47.org" class="btn-forja btn-forja--sm">Bar</a>
+				<a href="https://eventos.fragua47.org" class="btn-forja btn-forja--sm">Eventos</a>
+				<a href="https://gestion.fragua47.org" class="btn-forja btn-forja--sm">Gestión</a>
+			</nav>
 		</div>
 	</article>
 
@@ -241,6 +246,15 @@ import Layout from '../layouts/Layout.astro';
 		gap: 0.6rem;
 		flex-wrap: wrap;
 		margin-top: 1rem;
+	}
+
+	.accesos-principales {
+		display: flex;
+		gap: 0.6rem;
+		flex-wrap: wrap;
+		margin-top: 0.6rem;
+		padding-top: 0.75rem;
+		border-top: 1px solid rgba(42, 18, 8, 0.25);
 	}
 
 	.btn-social svg {
