@@ -1,0 +1,439 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+	title="Halloween en la Fragua"
+	description="Halloween en la Fragua · Fragua47 — Nº 10, sábado 24 de octubre de 2026. Una noche de disfraces, misterio y juego."
+	ogImage="https://fragua47.org/halloween-bdsm.png"
+>
+	<div class="pagina-evento">
+
+		<nav class="breadcrumb" aria-label="Ruta de navegación">
+			<a href="/">Inicio</a><span aria-hidden="true">›</span>
+			<a href="/eventos/">Eventos</a><span aria-hidden="true">›</span>
+			<span aria-current="page">Halloween en la Fragua</span>
+		</nav>
+
+		<div class="hero-evento frame-forja">
+			<img src="/halloween-bdsm.png" alt="Ilustración de Halloween en un cementerio con cinco personajes monstruosos" class="hero-img" />
+		</div>
+
+		<div class="ficha-evento panel-forja panel-forja--riveted">
+			<p class="pre-titulo">— evento nº 10 —</p>
+			<h1>Halloween en la Fragua</h1>
+			<p class="subtitulo">Ven a sacar tu lado más monstruoso.</p>
+			<hr class="linea" />
+			<div class="datos-evento">
+				<div class="dato-fila">
+					<span class="dato-label">
+						<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+						Fecha
+					</span>
+					<span class="dato-valor">24 de Octubre 2026 · Sábado</span>
+				</div>
+				<div class="dato-fila">
+					<span class="dato-label">Horario</span>
+					<span class="dato-valor">21:00–03:00 h</span>
+				</div>
+				<div class="dato-fila">
+					<span class="dato-label">
+						<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M15 8.5a4 4 0 1 0 0 7"/><line x1="6.5" y1="10.5" x2="13" y2="10.5"/><line x1="6.5" y1="13.5" x2="13" y2="13.5"/></svg>
+						Precio
+					</span>
+					<span class="dato-valor">25€ entrada</span>
+				</div>
+				<div class="dato-fila">
+					<span class="dato-label">
+						<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v4a4 4 0 0 1-4 4h-1a3 3 0 0 0-6 0H8a4 4 0 0 1-4-4V4z"/><path d="M6 20h12"/><path d="M12 12v8"/></svg>
+						Dress code
+					</span>
+					<span class="dato-valor">Preferiblemente disfraz; como mínimo, vestimenta negra o fetish</span>
+				</div>
+				<div class="dato-fila">
+					<span class="dato-label">
+						<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+						Lugar
+					</span>
+					<span class="dato-valor dato-privado">Se indicará al confirmar asistencia</span>
+				</div>
+			</div>
+			<hr class="linea" />
+			<div class="footer-card">
+				<a href="/eventos/" class="btn-forja btn-forja--outline">← Volver a eventos</a>
+				<button class="btn-inscribete btn-forja" id="btn-inscribete">Inscríbete ⚒</button>
+			</div>
+		</div>
+
+		<div class="tabs-evento panel-forja">
+			<div class="tab-panel" id="panel-info" data-panel="info">
+				<p>Este Halloween, la Fragua se llena de criaturas para celebrar una noche de disfraces, misterio y juego. Una edición muy especial: la número 10 de nuestras fiestas temáticas.</p>
+
+				<div class="bloque">
+					<h3>Entrada</h3>
+					<p><strong>25€</strong> por persona.</p>
+				</div>
+
+				<div class="bloque">
+					<h3>Dress code</h3>
+					<p>Se recomienda venir disfrazado; como mínimo, con vestimenta negra o fetish.</p>
+				</div>
+
+				<div class="bloque">
+					<h3>Ubicación</h3>
+					<p>La dirección exacta se enviará por privado a quienes confirmen su asistencia.</p>
+				</div>
+
+				<div class="bloque">
+					<h3>Normas</h3>
+					<p>Como en todos nuestros eventos, se aplican las <a href="/normas/">normas de la comunidad</a>. Consulta o participación siempre desde el consentimiento y el respeto.</p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Modal inscripción -->
+	<div class="modal-overlay" id="modal-overlay">
+		<div class="modal-documento panel-forja panel-forja--doc">
+			<button class="modal-cerrar" id="modal-cerrar" aria-label="Cerrar">✕</button>
+			<div class="doc-header">
+				<img src="/VectLogoF47.webp" alt="Logo Fragua47" class="modal-logo" width="300" height="343" />
+				<h5>Inscripción</h5>
+				<span class="doc-sello">⚒</span>
+			</div>
+			<p class="doc-sub">— HALLOWEEN EN LA FRAGUA · Fragua47 —</p>
+			<hr class="doc-linea" />
+			<form id="form-inscripcion">
+				<div class="fila-campos">
+					<div class="campo">
+						<label for="correo-evento">Correo <span class="req">*</span></label>
+						<input type="email" id="correo-evento" name="correo" required placeholder="tu@correo.com" />
+					</div>
+					<div class="campo">
+						<label for="alias-evento">Alias <span class="req">*</span></label>
+						<input type="text" id="alias-evento" name="alias" required placeholder="¿Cómo te conocemos?" />
+					</div>
+				</div>
+				<div class="campo">
+					<label for="fetlife-evento">FetLife <span class="opcional">(opcional)</span></label>
+					<input type="text" id="fetlife-evento" name="fetlife" placeholder="Tu nick en FetLife" />
+				</div>
+				<hr class="doc-linea" />
+				<div class="doc-footer">
+					<p class="form-msg" id="inscripcion-msg"></p>
+					<button type="submit" id="inscripcion-btn" class="btn-enviar btn-forja">Enviar inscripción ⚒</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+</Layout>
+
+<script is:inline>
+	// ── Modal ──
+	const btn     = document.getElementById('btn-inscribete');
+	const overlay = document.getElementById('modal-overlay');
+	const cerrar  = document.getElementById('modal-cerrar');
+	btn?.addEventListener('click', () => overlay.classList.add('abierto'));
+	cerrar?.addEventListener('click', () => overlay.classList.remove('abierto'));
+	overlay?.addEventListener('click', (e) => { if (e.target === overlay) overlay.classList.remove('abierto'); });
+	document.addEventListener('keydown', (e) => {
+		if (e.key === 'Escape') overlay?.classList.remove('abierto');
+	});
+
+	document.getElementById('form-inscripcion')?.addEventListener('submit', async (e) => {
+		e.preventDefault();
+		const form = e.target;
+		const ibtn = document.getElementById('inscripcion-btn');
+		const msg  = document.getElementById('inscripcion-msg');
+		ibtn.disabled = true; ibtn.textContent = 'Enviando...';
+		msg.className = 'form-msg'; msg.textContent = '';
+		const correo  = document.getElementById('correo-evento').value.trim();
+		const alias   = document.getElementById('alias-evento').value.trim();
+		const fetlife = document.getElementById('fetlife-evento').value.trim();
+		const res = await fetch('/api/inscripcion', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify({ correo, alias, fetlife }) });
+		if (res.ok) {
+			msg.className = 'form-msg ok';
+			msg.textContent = '¡Inscripción enviada! Te confirmamos pronto.';
+			form.reset();
+		} else {
+			msg.className = 'form-msg error';
+			msg.textContent = 'Error al enviar. Inténtalo de nuevo.';
+		}
+		ibtn.disabled = false; ibtn.textContent = 'Enviar inscripción ⚒';
+	});
+</script>
+
+<style>
+	.pagina-evento {
+		width: 100%;
+		max-width: 760px;
+		margin: 1rem auto 2.5rem;
+		font-family: 'Cinzel', serif;
+	}
+
+	.breadcrumb {
+		font-family: system-ui, -apple-system, sans-serif;
+		font-size: 0.67rem;
+		color: #6a3010;
+		margin-bottom: 0.9rem;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.35rem;
+		align-items: center;
+	}
+	.breadcrumb a { color: #6a3010; text-decoration: none; transition: color 0.2s; }
+	.breadcrumb a:hover { color: #b44814; }
+	.breadcrumb span[aria-current] { color: #3d2010; font-style: italic; }
+
+	.hero-evento {
+		width: 100%;
+		aspect-ratio: 13 / 6;
+		overflow: hidden;
+		margin-bottom: 1.4rem;
+	}
+
+	.hero-img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: 50% 100%;
+		display: block;
+	}
+
+	.ficha-evento {
+		padding: 1.2rem 1.5rem;
+		margin-bottom: 1.4rem;
+	}
+
+	.pre-titulo {
+		font-size: 0.55rem;
+		letter-spacing: 2.5px;
+		text-transform: uppercase;
+		color: #5a3018;
+		margin-bottom: 0.3rem;
+		text-align: center;
+	}
+
+	h1 {
+		font-family: 'Metamorphous', cursive;
+		font-size: 1.6rem;
+		letter-spacing: 3px;
+		text-transform: uppercase;
+		color: #2a1208;
+		margin: 0;
+		text-align: center;
+	}
+
+	.subtitulo {
+		font-family: system-ui, -apple-system, sans-serif;
+		font-style: italic;
+		font-size: 0.8rem;
+		color: #6a2808;
+		text-align: center;
+		margin: 0.3rem 0 0;
+	}
+
+	.linea {
+		border: none;
+		border-top: 1.5px solid #2a1208;
+		margin: 0.6rem 0;
+	}
+
+	.datos-evento {
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+	}
+
+	.dato-fila {
+		display: flex;
+		align-items: baseline;
+		gap: 0.6rem;
+		padding: 0.35rem 0;
+	}
+
+	.dato-fila + .dato-fila {
+		border-top: 1px solid rgba(42,18,8,0.15);
+	}
+
+	.dato-label {
+		font-family: 'Cinzel', serif;
+		font-size: 0.6rem;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		color: #6a2808;
+		font-weight: 700;
+		min-width: 5.5rem;
+		flex-shrink: 0;
+		display: flex;
+		align-items: center;
+		gap: 0.35rem;
+	}
+
+	.dato-label svg { width: 0.85rem; height: 0.85rem; flex-shrink: 0; }
+
+	.dato-valor {
+		font-family: system-ui, -apple-system, sans-serif;
+		color: #2a1208;
+		font-size: 0.82rem;
+		font-weight: 600;
+	}
+
+	.dato-privado { font-weight: 700; }
+
+	.footer-card {
+		display: flex;
+		justify-content: center;
+		gap: 0.6rem;
+		flex-wrap: wrap;
+	}
+
+	/* ── Contenido ── */
+
+	.tabs-evento { padding: 0; overflow: hidden; }
+
+	.tab-panel {
+		padding: 1.4rem 1.6rem 1.6rem;
+	}
+
+	.tab-panel p {
+		font-family: system-ui, -apple-system, sans-serif;
+		font-size: 0.8rem;
+		line-height: 1.75;
+		color: #2a1208;
+		margin: 0 0 0.7rem;
+	}
+
+	.tab-panel a { color: #6a2808; }
+
+	.bloque { margin: 1.1rem 0; }
+	.bloque:first-of-type { margin-top: 0.3rem; }
+
+	.tab-panel h3 {
+		font-family: 'Metamorphous', cursive;
+		font-size: 0.95rem;
+		letter-spacing: 1.5px;
+		text-transform: uppercase;
+		color: #2a1208;
+		margin: 0 0 0.5rem;
+	}
+
+	/* ── Modal (idéntico al de /eventos/) ── */
+
+	.modal-overlay {
+		display: none;
+		position: fixed;
+		inset: 0;
+		background: rgba(20, 8, 2, 0.75);
+		z-index: 500;
+		align-items: center;
+		justify-content: center;
+	}
+	.modal-overlay.abierto { display: flex; }
+
+	.modal-documento {
+		padding: 1.8rem 2rem;
+		width: 100%;
+		max-width: 480px;
+		font-family: 'Cinzel', serif;
+	}
+
+	.modal-cerrar {
+		position: absolute;
+		top: 0.6rem;
+		right: 0.8rem;
+		background: none;
+		border: none;
+		font-size: 1rem;
+		color: #2a1208;
+		cursor: pointer;
+		padding: 0;
+	}
+	.modal-cerrar:hover { color: #b44814; }
+
+	.doc-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.8rem;
+		margin-bottom: 0.3rem;
+	}
+	.modal-logo { height: 24px; width: auto; flex-shrink: 0; }
+	.doc-sello { font-size: 1.2rem; font-weight: 900; color: #b44814; letter-spacing: 2px; }
+
+	h5 {
+		font-size: 0.95rem;
+		letter-spacing: 4px;
+		text-transform: uppercase;
+		color: #2a1208;
+		margin: 0;
+		text-align: center;
+		font-family: 'Cinzel', serif;
+	}
+
+	.doc-sub {
+		font-size: 0.55rem;
+		letter-spacing: 1.5px;
+		color: #5a3018;
+		text-align: center;
+		margin: 0 0 0.4rem;
+		text-transform: uppercase;
+	}
+
+	.doc-linea { border: none; border-top: 1.5px solid #2a1208; margin: 0.8rem 0; }
+	.fila-campos { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+	.campo { display: flex; flex-direction: column; margin-bottom: 0.9rem; }
+
+	label {
+		font-family: 'Cinzel', serif;
+		font-size: 0.6rem;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		color: #2a1208;
+		margin-bottom: 0.3rem;
+		font-weight: 700;
+	}
+	.req { color: #b44814; }
+	.opcional {
+		font-family: system-ui, -apple-system, sans-serif;
+		font-weight: 400;
+		text-transform: none;
+		letter-spacing: 0;
+		color: #5a3018;
+		font-size: 0.65rem;
+	}
+
+	input {
+		background: rgba(255,255,255,0.3);
+		border: none;
+		border-bottom: 1.5px solid #2a1208;
+		padding: 0.4rem 0.3rem;
+		font-family: system-ui, -apple-system, sans-serif;
+		font-size: 0.82rem;
+		color: #1c0a02;
+		outline: none;
+		transition: border-color 0.2s, background 0.2s;
+	}
+	input:focus { border-color: #b44814; background: rgba(255,255,255,0.5); }
+	input::placeholder { color: #7a5035; font-style: italic; font-size: 0.75rem; }
+
+	.doc-footer { display: flex; align-items: center; justify-content: flex-end; gap: 0.8rem; flex-wrap: wrap; }
+	.form-msg { font-family: system-ui, -apple-system, sans-serif; font-size: 0.72rem; margin: 0; }
+	.form-msg.ok    { color: #2a6a1a; }
+	.form-msg.error { color: #b41414; }
+
+	@media (max-width: 768px) {
+		.hero-evento { aspect-ratio: 4 / 3; }
+		.hero-img { object-position: 100% 100%; }
+		h1 { font-size: 1.25rem; }
+		.dato-fila { flex-direction: column; gap: 0.15rem; }
+		.dato-label { min-width: 0; }
+		.tab-panel { padding: 1.2rem 1rem 1.4rem; }
+		.fila-campos { grid-template-columns: 1fr; }
+		.modal-documento { margin: 1rem; }
+	}
+
+	::selection { background: rgba(180, 80, 20, 0.35); color: #ffe0b0; }
+</style>
