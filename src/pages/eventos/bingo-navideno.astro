@@ -17,11 +17,6 @@ import Layout from '../../layouts/Layout.astro';
 
 		<div class="hero-evento frame-forja">
 			<img src="/bingo-navideno.png" alt="Cartel del Bingo Navideño de Fragua47" class="hero-img" />
-			<div class="hero-cartel-copy" aria-hidden="true">
-				<span>¡Que ruede el bombo!</span>
-				<strong>Bingo<br />Navideño</strong>
-				<small>19 diciembre · 25 €</small>
-			</div>
 		</div>
 
 		<div class="ficha-evento panel-forja panel-forja--riveted">
@@ -206,32 +201,6 @@ import Layout from '../../layouts/Layout.astro';
 		object-fit: cover;
 		object-position: 50% 0%;
 		display: block;
-	}
-
-	.hero-cartel-copy {
-		position: absolute;
-		inset: 0 auto 0 2.5%;
-		width: 28%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		gap: 0.35rem;
-		color: #fff7ee;
-		text-align: center;
-		text-shadow: 2px 2px 0 #1a0805, -1px -1px 0 #1a0805, 1px -1px 0 #1a0805, -1px 1px 0 #1a0805;
-	}
-	.hero-cartel-copy span,
-	.hero-cartel-copy small {
-		color: #ffd23f;
-		font: 600 clamp(0.55rem, 1.15vw, 0.9rem)/1.2 'Cinzel', serif;
-		letter-spacing: 0.04em;
-	}
-	.hero-cartel-copy strong {
-		color: #e8352b;
-		font: 3.2rem/0.85 'Metamorphous', cursive;
-		text-transform: uppercase;
-		-webkit-text-stroke: 1px #1a0805;
 	}
 
 	.ficha-evento {
@@ -459,9 +428,6 @@ import Layout from '../../layouts/Layout.astro';
 	@media (max-width: 768px) {
 		.hero-evento { aspect-ratio: 4 / 3; }
 		.hero-img { object-position: 50% 0%; }
-		.hero-cartel-copy { width: 31%; left: 1%; gap: 0.2rem; }
-		.hero-cartel-copy strong { font-size: clamp(1.05rem, 5vw, 2rem); }
-		.hero-cartel-copy span, .hero-cartel-copy small { font-size: clamp(0.4rem, 1.8vw, 0.7rem); }
 		h1 { font-size: 1.25rem; }
 		.dato-fila { flex-direction: column; gap: 0.15rem; }
 		.dato-label { min-width: 0; }
